@@ -10,8 +10,9 @@
 
 <!-- usage note: edit this section. -->
 
-This repository is a template manuscript (a.k.a. rootstock).
-Actual manuscript instances will clone this repository (see [`SETUP.md`](SETUP.md)) and replace this paragraph with a description of their manuscript.
+This repository includes the manuscript and analysis code for a current development of modification to the conventional calculation of Polygenic Risk Score (PRS).
+The manuscript is collaboratively written on GitHub using [Manubot](https://github.com/greenelab/manubot-rootstock).
+
 
 ## Manubot
 
