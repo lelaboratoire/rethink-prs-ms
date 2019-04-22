@@ -35,3 +35,7 @@ __pycache__/
 ## Windows
 Thumbs.db
 [Dd]esktop.ini
+
+## R
+.Rproj.user
+rethink-prs.Rproj
