@@ -2,7 +2,7 @@
 author-meta:
 - John Doe
 - Jane Roe
-date-meta: '2019-04-22'
+date-meta: '2019-05-10'
 keywords:
 - markdown
 - publishing
@@ -18,10 +18,10 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/rethink-prs/v/df9bee6ed70d34b2f1376913687f437f1309bbef/))
+([permalink](https://trang1618.github.io/rethink-prs/v/5b0d07b804a91e9298156a4118a90872020926e4/))
 was automatically generated
-from [trang1618/rethink-prs@df9bee6](https://github.com/trang1618/rethink-prs/tree/df9bee6ed70d34b2f1376913687f437f1309bbef)
-on April 22, 2019.
+from [trang1618/rethink-prs@5b0d07b](https://github.com/trang1618/rethink-prs/tree/5b0d07b804a91e9298156a4118a90872020926e4)
+on May 10, 2019.
 </em></small>
 
 ## Authors
@@ -51,9 +51,9 @@ on April 22, 2019.
 
 
 
-## Abstract {.page_break_before}
+## Abstract
 
-
+This study reformulates the PRS.
 
 
 ## References {.page_break_before}
