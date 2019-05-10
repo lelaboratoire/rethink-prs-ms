@@ -18,9 +18,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/rethink-prs/v/5b0d07b804a91e9298156a4118a90872020926e4/))
+([permalink](https://trang1618.github.io/rethink-prs/v/c6a0822410f35e9cbb52ab892d8b25292fb16987/))
 was automatically generated
-from [trang1618/rethink-prs@5b0d07b](https://github.com/trang1618/rethink-prs/tree/5b0d07b804a91e9298156a4118a90872020926e4)
+from [trang1618/rethink-prs@c6a0822](https://github.com/trang1618/rethink-prs/tree/c6a0822410f35e9cbb52ab892d8b25292fb16987)
 on May 10, 2019.
 </em></small>
 
@@ -54,6 +54,8 @@ on May 10, 2019.
 ## Abstract
 
 This study reformulates the PRS.
+
+
 
 
 ## References {.page_break_before}
