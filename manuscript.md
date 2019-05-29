@@ -18,9 +18,9 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/rethink-prs/v/fe400877018c1bc8fdda90e6a88aff453abd8330/))
+([permalink](https://trang1618.github.io/rethink-prs/v/f3bac7d0672fc68613f55381b12b8875bbf1043a/))
 was automatically generated
-from [trang1618/rethink-prs@fe40087](https://github.com/trang1618/rethink-prs/tree/fe400877018c1bc8fdda90e6a88aff453abd8330)
+from [trang1618/rethink-prs@f3bac7d](https://github.com/trang1618/rethink-prs/tree/f3bac7d0672fc68613f55381b12b8875bbf1043a)
 on May 29, 2019.
 </em></small>
 
