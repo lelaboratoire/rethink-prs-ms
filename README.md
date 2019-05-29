@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/trang1618/rethink-prs/tree/gh-pages) branch hosts the contents of this directory at https://trang1618.github.io/rethink-prs/.
-The permalink for this webpage version is https://trang1618.github.io/rethink-prs/v/c6a0822410f35e9cbb52ab892d8b25292fb16987/.
+The permalink for this webpage version is https://trang1618.github.io/rethink-prs/v/fe400877018c1bc8fdda90e6a88aff453abd8330/.
 To redirect to the permalink for the latest manuscript version at anytime, use the link https://trang1618.github.io/rethink-prs/v/freeze/.
 
 ## Files
@@ -36,4 +36,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`c6a0822410f35e9cbb52ab892d8b25292fb16987`](https://github.com/trang1618/rethink-prs/commit/c6a0822410f35e9cbb52ab892d8b25292fb16987).
+[`fe400877018c1bc8fdda90e6a88aff453abd8330`](https://github.com/trang1618/rethink-prs/commit/fe400877018c1bc8fdda90e6a88aff453abd8330).
