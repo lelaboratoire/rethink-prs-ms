@@ -2,7 +2,7 @@
 author-meta:
 - John Doe
 - Jane Roe
-date-meta: '2019-05-10'
+date-meta: '2019-05-29'
 keywords:
 - markdown
 - publishing
@@ -18,10 +18,10 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/rethink-prs/v/c6a0822410f35e9cbb52ab892d8b25292fb16987/))
+([permalink](https://trang1618.github.io/rethink-prs/v/fe400877018c1bc8fdda90e6a88aff453abd8330/))
 was automatically generated
-from [trang1618/rethink-prs@c6a0822](https://github.com/trang1618/rethink-prs/tree/c6a0822410f35e9cbb52ab892d8b25292fb16987)
-on May 10, 2019.
+from [trang1618/rethink-prs@fe40087](https://github.com/trang1618/rethink-prs/tree/fe400877018c1bc8fdda90e6a88aff453abd8330)
+on May 29, 2019.
 </em></small>
 
 ## Authors

@@ -1,5 +1,5 @@
 {
-  "date": "May 10, 2019",
+  "date": "May 29, 2019",
   "authors": [
     {
       "github": "johndoe",
@@ -46,7 +46,7 @@
     "repo_slug": "trang1618/rethink-prs",
     "repo_owner": "trang1618",
     "repo_name": "rethink-prs",
-    "commit": "c6a0822410f35e9cbb52ab892d8b25292fb16987"
+    "commit": "fe400877018c1bc8fdda90e6a88aff453abd8330"
   },
   "manuscript_stats": {
     "reference_counts": {
