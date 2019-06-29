@@ -46,13 +46,13 @@
     "repo_slug": "trang1618/rethink-prs-ms",
     "repo_owner": "trang1618",
     "repo_name": "rethink-prs-ms",
-    "commit": "b859d6f62b414f38a70ea01df3bd806e53f8b90f"
+    "commit": "66dffac4b3d98a19bedc6f43c2c89760be047818"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 6,
       "total": 6
     },
-    "word_count": 713
+    "word_count": 716
   }
 }
