@@ -1,5 +1,5 @@
 ---
-title: "Manuscript Title"
+title: "Expanding polygenic risk scores to include gene-gene interactions"
 keywords:
   - markdown
   - publishing
@@ -7,21 +7,51 @@ keywords:
 lang: en-US
 author_info:
   -
-    github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+    github: trang1618
+    name: Trang T. Le
+    initials: TTL
+    orcid: 0000-0003-3737-6565
+    twitter: trang1618
+    email: ttle@pennmedicine.upenn.edu
     affiliations:
-      - Department of Something, University of Whatever
-    funders: Grant XXXXXXXX
+      - Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+    symbol_str: "☯"
   -
-    github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+    github: hoytgong
+    name: Hoyt Gong
+    initials: HG
+    orcid: 
+    twitter: 
+    email: hoytgong@wharton.upenn.edu
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Life Sciences and Management, Wharton School, University of Pennsylvania
+    symbol_str: "☯"
+  -
+    github: 
+    name: Patryk Orzechowski
+    initials: PO
+    orcid: 0000-0003-3578-9809
+    twitter: 
+    email: patryk@upenn.edu
+    affiliations:
+      - Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+  -
+    github: 
+    name: Elisabetta Manduchi
+    initials: EM
+    orcid: 0000-0002-4110-3714
+    twitter: 
+    email: manduchi@pennmedicine.upenn.edu
+    affiliations:
+      - Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+  -
+    github: EpistasisLab
+    name: Jason H. Moore
+    initials: JHM
+    orcid: 0000-0002-5015-1099
+    twitter: moorejh
+    email: jhmoore@upenn.edu
+    affiliations:
+      - Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+    funders: National Institutes of Health Grant Nos. LM010098, LM012601, AI116794
+    symbol_str: "†"
