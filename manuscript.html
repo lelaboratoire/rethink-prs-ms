@@ -4,11 +4,14 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="John Doe" />
-  <meta name="author" content="Jane Roe" />
-  <meta name="dcterms.date" content="2019-06-29" />
+  <meta name="author" content="Trang T. Le" />
+  <meta name="author" content="Hoyt Gong" />
+  <meta name="author" content="Patryk Orzechowski" />
+  <meta name="author" content="Elisabetta Manduchi" />
+  <meta name="author" content="Jason H. Moore" />
+  <meta name="dcterms.date" content="2019-07-09" />
   <meta name="keywords" content="markdown, publishing, manubot" />
-  <title>Manuscript Title</title>
+  <title>Expanding polygenic risk scores to include gene-gene interactions</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -21,14 +24,19 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Manuscript Title</h1>
+<h1 class="title">Expanding polygenic risk scores to include gene-gene interactions</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://trang1618.github.io/rethink-prs-ms/v/66dffac4b3d98a19bedc6f43c2c89760be047818/">permalink</a>) was automatically generated from <a href="https://github.com/trang1618/rethink-prs-ms/tree/66dffac4b3d98a19bedc6f43c2c89760be047818">trang1618/rethink-prs-ms@66dffac</a> on June 29, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/83d58b741556049c1d20e896bee964bf688c06b7/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/83d58b741556049c1d20e896bee964bf688c06b7">lelaboratoire/rethink-prs-ms@83d58b7</a> on July 9, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
-<li><p><strong>John Doe</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/johndoe">johndoe</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/johndoe">johndoe</a><br> <small> Department of Something, University of Whatever · Funded by Grant XXXXXXXX </small></p></li>
-<li><p><strong>Jane Roe</strong><br> <img src="images/orcid.svg" alt="ORCID icon" class="inline_icon" /> <a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/janeroe">janeroe</a><br> <small> Department of Something, University of Whatever; Department of Whatever, University of Something </small></p></li>
+<li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
+<li><p><strong>Hoyt Gong</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0001-9339-4763">0000-0001-9339-4763</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/hoytgong">hoytgong</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/GongHoyt">GongHoyt</a><br> <small> Life Sciences and Management, Wharton School, University of Pennsylvania </small></p></li>
+<li><p><strong>Patryk Orzechowski</strong><sup></sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3578-9809">0000-0003-3578-9809</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
+<li><p><strong>Elisabetta Manduchi</strong><sup></sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0002-4110-3714">0000-0002-4110-3714</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
+<li><p><strong>Jason H. Moore</strong><sup>†</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0002-5015-1099">0000-0002-5015-1099</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/EpistasisLab">EpistasisLab</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/moorejh">moorejh</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 · Funded by National Institutes of Health Grant Nos. LM010098, LM012601, AI116794 </small></p></li>
 </ul>
+<p><sup>☯</sup> — These authors contributed equally to this work.</p>
+<p><sup>†</sup> — Direct correspondence to jhmoore@upenn.edu.</p>
 <h2 id="abstract">Abstract</h2>
 <p>This study reformulates the PRS.</p>
 <h2 id="introduction">Introduction</h2>

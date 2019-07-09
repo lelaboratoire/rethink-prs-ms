@@ -1,14 +1,17 @@
 ---
 author-meta:
-- John Doe
-- Jane Roe
-date-meta: '2019-06-29'
+- Trang T. Le
+- Hoyt Gong
+- Patryk Orzechowski
+- Elisabetta Manduchi
+- Jason H. Moore
+date-meta: '2019-07-09'
 keywords:
 - markdown
 - publishing
 - manubot
 lang: en-US
-title: Manuscript Title
+title: Expanding polygenic risk scores to include gene-gene interactions
 ...
 
 
@@ -18,37 +21,68 @@ title: Manuscript Title
 
 <small><em>
 This manuscript
-([permalink](https://trang1618.github.io/rethink-prs-ms/v/66dffac4b3d98a19bedc6f43c2c89760be047818/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/83d58b741556049c1d20e896bee964bf688c06b7/))
 was automatically generated
-from [trang1618/rethink-prs-ms@66dffac](https://github.com/trang1618/rethink-prs-ms/tree/66dffac4b3d98a19bedc6f43c2c89760be047818)
-on June 29, 2019.
+from [lelaboratoire/rethink-prs-ms@83d58b7](https://github.com/lelaboratoire/rethink-prs-ms/tree/83d58b741556049c1d20e896bee964bf688c06b7)
+on July 9, 2019.
 </em></small>
 
 ## Authors
 
 
 
-+ **John Doe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Trang T. Le**<sup>☯</sup><br>
+    ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
+    [0000-0003-3737-6565](https://orcid.org/0000-0003-3737-6565)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [johndoe](https://github.com/johndoe)
+    [trang1618](https://github.com/trang1618)
     · ![Twitter icon](images/twitter.svg){.inline_icon}
-    [johndoe](https://twitter.com/johndoe)<br>
+    [trang1618](https://twitter.com/trang1618)<br>
   <small>
-     Department of Something, University of Whatever
-     · Funded by Grant XXXXXXXX
+     Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
   </small>
 
-+ **Jane Roe**<br>
-    ![ORCID icon](images/orcid.svg){.inline_icon}
-    [XXXX-XXXX-XXXX-XXXX](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
++ **Hoyt Gong**<sup>☯</sup><br>
+    ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
+    [0000-0001-9339-4763](https://orcid.org/0000-0001-9339-4763)
     · ![GitHub icon](images/github.svg){.inline_icon}
-    [janeroe](https://github.com/janeroe)<br>
+    [hoytgong](https://github.com/hoytgong)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [GongHoyt](https://twitter.com/GongHoyt)<br>
   <small>
-     Department of Something, University of Whatever; Department of Whatever, University of Something
+     Life Sciences and Management, Wharton School, University of Pennsylvania
   </small>
 
++ **Patryk Orzechowski**<sup></sup><br>
+    ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
+    [0000-0003-3578-9809](https://orcid.org/0000-0003-3578-9809)<br>
+  <small>
+     Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+  </small>
+
++ **Elisabetta Manduchi**<sup></sup><br>
+    ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
+    [0000-0002-4110-3714](https://orcid.org/0000-0002-4110-3714)<br>
+  <small>
+     Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+  </small>
+
++ **Jason H. Moore**<sup>†</sup><br>
+    ![ORCID icon](images/orcid.svg){height="13px" width="13px"}
+    [0000-0002-5015-1099](https://orcid.org/0000-0002-5015-1099)
+    · ![GitHub icon](images/github.svg){.inline_icon}
+    [EpistasisLab](https://github.com/EpistasisLab)
+    · ![Twitter icon](images/twitter.svg){.inline_icon}
+    [moorejh](https://twitter.com/moorejh)<br>
+  <small>
+     Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104
+     · Funded by National Institutes of Health Grant Nos. LM010098, LM012601, AI116794
+  </small>
+
+
+<sup>☯</sup> --- These authors contributed equally to this work.
+
+<sup>†</sup> --- Direct correspondence to jhmoore@upenn.edu.
 
 
 ## Abstract

@@ -1,58 +1,102 @@
 {
-  "date": "June 29, 2019",
+  "date": "July 9, 2019",
   "authors": [
     {
-      "github": "johndoe",
-      "name": "John Doe",
-      "initials": "JD",
-      "orcid": "XXXX-XXXX-XXXX-XXXX",
-      "twitter": "johndoe",
-      "email": "john.doe@something.com",
+      "github": "trang1618",
+      "name": "Trang T. Le",
+      "initials": "TTL",
+      "orcid": "0000-0003-3737-6565",
+      "twitter": "trang1618",
+      "email": "ttle@pennmedicine.upenn.edu",
       "affiliations": [
-        "Department of Something, University of Whatever"
+        "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
       ],
-      "funders": "Grant XXXXXXXX",
+      "symbol_str": "\u262f",
       "affiliation_numbers": [
         1
       ]
     },
     {
-      "github": "janeroe",
-      "name": "Jane Roe",
-      "initials": "JR",
-      "orcid": "XXXX-XXXX-XXXX-XXXX",
-      "email": "jane.roe@whatever.edu",
+      "github": "hoytgong",
+      "name": "Hoyt Gong",
+      "initials": "HG",
+      "orcid": "0000-0001-9339-4763",
+      "twitter": "GongHoyt",
+      "email": "hoytgong@wharton.upenn.edu",
       "affiliations": [
-        "Department of Something, University of Whatever",
-        "Department of Whatever, University of Something"
+        "Life Sciences and Management, Wharton School, University of Pennsylvania"
+      ],
+      "symbol_str": "\u262f",
+      "affiliation_numbers": [
+        2
+      ]
+    },
+    {
+      "github": null,
+      "name": "Patryk Orzechowski",
+      "initials": "PO",
+      "orcid": "0000-0003-3578-9809",
+      "twitter": null,
+      "email": "patryk@upenn.edu",
+      "affiliations": [
+        "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
       ],
       "affiliation_numbers": [
-        1,
-        2
+        1
+      ]
+    },
+    {
+      "github": null,
+      "name": "Elisabetta Manduchi",
+      "initials": "EM",
+      "orcid": "0000-0002-4110-3714",
+      "twitter": null,
+      "email": "manduchi@pennmedicine.upenn.edu",
+      "affiliations": [
+        "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
+      ],
+      "affiliation_numbers": [
+        1
+      ]
+    },
+    {
+      "github": "EpistasisLab",
+      "name": "Jason H. Moore",
+      "initials": "JHM",
+      "orcid": "0000-0002-5015-1099",
+      "twitter": "moorejh",
+      "email": "jhmoore@upenn.edu",
+      "affiliations": [
+        "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104"
+      ],
+      "funders": "National Institutes of Health Grant Nos. LM010098, LM012601, AI116794",
+      "symbol_str": "\u2020",
+      "affiliation_numbers": [
+        1
       ]
     }
   ],
   "affiliations": [
     {
-      "affiliation": "Department of Something, University of Whatever",
+      "affiliation": "Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104",
       "affiliation_number": 1
     },
     {
-      "affiliation": "Department of Whatever, University of Something",
+      "affiliation": "Life Sciences and Management, Wharton School, University of Pennsylvania",
       "affiliation_number": 2
     }
   ],
   "ci_source": {
-    "repo_slug": "trang1618/rethink-prs-ms",
-    "repo_owner": "trang1618",
+    "repo_slug": "lelaboratoire/rethink-prs-ms",
+    "repo_owner": "lelaboratoire",
     "repo_name": "rethink-prs-ms",
-    "commit": "66dffac4b3d98a19bedc6f43c2c89760be047818"
+    "commit": "83d58b741556049c1d20e896bee964bf688c06b7"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 6,
       "total": 6
     },
-    "word_count": 716
+    "word_count": 734
   }
 }
