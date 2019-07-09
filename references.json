@@ -132,6 +132,73 @@
     "id": "12kQ0EOWQ"
   },
   {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1186/1471-2105-14-138",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "An efficient algorithm to perform multiple testing in epistasis screening",
+    "volume": "14",
+    "author": [
+      {
+        "given": "François Van",
+        "family": "Lishout"
+      },
+      {
+        "given": "Jestinah M",
+        "family": "Mahachie John"
+      },
+      {
+        "given": "Elena S",
+        "family": "Gusareva"
+      },
+      {
+        "given": "Victor",
+        "family": "Urrea"
+      },
+      {
+        "given": "Isabelle",
+        "family": "Cleynen"
+      },
+      {
+        "given": "Emilie",
+        "family": "Théâtre"
+      },
+      {
+        "given": "Benoît",
+        "family": "Charloteaux"
+      },
+      {
+        "given": "Malu Luz",
+        "family": "Calle"
+      },
+      {
+        "given": "Louis",
+        "family": "Wehenkel"
+      },
+      {
+        "given": "Kristel Van",
+        "family": "Steen"
+      }
+    ],
+    "container-title": "BMC Bioinformatics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          4,
+          24
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f4v3n7",
+    "container-title-short": "BMC Bioinformatics",
+    "PMCID": "PMC3648350",
+    "PMID": "23617239",
+    "id": "S6nj6BFK"
+  },
+  {
     "publisher": "Public Library of Science (PLoS)",
     "issue": "12",
     "DOI": "10.1371/journal.pcbi.1002822",

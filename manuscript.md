@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/83d58b741556049c1d20e896bee964bf688c06b7/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/6ec24bc871401c2f17e2d5ee85c38f13a0227c01/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@83d58b7](https://github.com/lelaboratoire/rethink-prs-ms/tree/83d58b741556049c1d20e896bee964bf688c06b7)
+from [lelaboratoire/rethink-prs-ms@6ec24bc](https://github.com/lelaboratoire/rethink-prs-ms/tree/6ec24bc871401c2f17e2d5ee85c38f13a0227c01)
 on July 9, 2019.
 </em></small>
 
@@ -87,7 +87,7 @@ on July 9, 2019.
 
 ## Abstract
 
-This study reformulates the PRS.
+This study expands the PRS to account for gene-gene interaction effects.
 
 
 ## Introduction
@@ -127,6 +127,46 @@ interactions]
 [explain more technical details of MDR]
 
 END OF INTRO -> rest is all methods & performing MDR
+
+
+## Methods
+
+### Multilocus Risk Score (MRS)
+Compute risks from significant interactions
+i = 1...n subjects
+p SNPs
+j = 1...k significant combinations
+We apply the software... [@S6nj6BFK] to obtain the significance level of each combination of SNPs.
+allow for parallel computation
+The maximum value of $k$ is $C^d_p$.
+For each subject $i$, the $d$-way interaction risk score is calculated as
+$$R_d(i) = \sum{j = 1}^k \chi_j^2 * HLO_j(X_{ij})$$
+where $\chi_j^2$ is the test statistic of each multi-locus combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $HLO_j$ is the $j^{th}$ re-coded HLO-matrix and $X_j$ is one of $k$ combination of SNPs.
+
+
+
+
+### Simulated data
+[Patryk...]
+
+For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and calculated risk score for each individual in the holdout set.
+We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method where
+
+
+
+
+## Results
+### Information gain
+
+### iPRS outperforms standard PRS
+
+![MM12 produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the original method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MM12D_auROC_.pdf)
+
+
+
+
+
+
 
 
 ## References {.page_break_before}

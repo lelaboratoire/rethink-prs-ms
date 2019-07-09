@@ -26,7 +26,7 @@
 <header id="title-block-header">
 <h1 class="title">Expanding polygenic risk scores to include gene-gene interactions</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/83d58b741556049c1d20e896bee964bf688c06b7/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/83d58b741556049c1d20e896bee964bf688c06b7">lelaboratoire/rethink-prs-ms@83d58b7</a> on July 9, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/6ec24bc871401c2f17e2d5ee85c38f13a0227c01/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/6ec24bc871401c2f17e2d5ee85c38f13a0227c01">lelaboratoire/rethink-prs-ms@6ec24bc</a> on July 9, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -38,7 +38,7 @@
 <p><sup>☯</sup> — These authors contributed equally to this work.</p>
 <p><sup>†</sup> — Direct correspondence to jhmoore@upenn.edu.</p>
 <h2 id="abstract">Abstract</h2>
-<p>This study reformulates the PRS.</p>
+<p>This study expands the PRS to account for gene-gene interaction effects.</p>
 <h2 id="introduction">Introduction</h2>
 <p><span class="citation" data-cites="kmJZ4oOW">[<a href="#ref-kmJZ4oOW">1</a>]</span></p>
 <p>As the field of traditional genomics rapidly expands its sequencing technologies and translational abilities, novel applications of genomic data are starting to arise in addressing disease burden.</p>
@@ -51,6 +51,18 @@
 <p>[In this study we aim to reformulate the PRS score with MDR reduction to better detect GxG interactions. MDR as a form of feature engineering the proper encoding for detecting GxG interactions]</p>
 <p>[explain more technical details of MDR]</p>
 <p>END OF INTRO -&gt; rest is all methods &amp; performing MDR</p>
+<h2 id="methods">Methods</h2>
+<h3 id="multilocus-risk-score-mrs">Multilocus Risk Score (MRS)</h3>
+<p>Compute risks from significant interactions i = 1…n subjects p SNPs j = 1…k significant combinations We apply the software… <span class="citation" data-cites="S6nj6BFK">[<a href="#ref-S6nj6BFK">7</a>]</span> to obtain the significance level of each combination of SNPs. allow for parallel computation The maximum value of <span class="math inline">\(k\)</span> is <span class="math inline">\(C^d_p\)</span>. For each subject <span class="math inline">\(i\)</span>, the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[R_d(i) = \sum{j = 1}^k \chi_j^2 * HLO_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each multi-locus combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(HLO_j\)</span> is the <span class="math inline">\(j^{th}\)</span> re-coded HLO-matrix and <span class="math inline">\(X_j\)</span> is one of <span class="math inline">\(k\)</span> combination of SNPs.</p>
+<h3 id="simulated-data">Simulated data</h3>
+<p>[Patryk…]</p>
+<p>For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the <span class="math inline">\(\chi^2\)</span> coefficients and calculated risk score for each individual in the holdout set. We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method where</p>
+<h2 id="results">Results</h2>
+<h3 id="information-gain">Information gain</h3>
+<h3 id="iprs-outperforms-standard-prs">iPRS outperforms standard PRS</h3>
+<figure>
+<embed src="images/ori_vs_MM12D_auROC_.pdf" /><figcaption>MM12 produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the original method performs poorly (auROC &lt; 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).</figcaption>
+</figure>
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs">
@@ -85,6 +97,12 @@ DOI: <a href="https://doi.org/10.1038/nrg1521">10.1038/nrg1521</a> · PMID: <a h
 William Y. S. Wang, Bryan J. Barratt, David G. Clayton, John A. Todd<br />
 <em>Nature Reviews Genetics</em> (2005-02) <a href="https://doi.org/fcqz33">https://doi.org/fcqz33</a><br />
 DOI: <a href="https://doi.org/10.1038/nrg1522">10.1038/nrg1522</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15716907">15716907</a></p>
+</div>
+<div id="ref-S6nj6BFK">
+<p>7. <strong>An efficient algorithm to perform multiple testing in epistasis screening</strong><br />
+François Van Lishout, Jestinah M Mahachie John, Elena S Gusareva, Victor Urrea, Isabelle Cleynen, Emilie Théâtre, Benoît Charloteaux, Malu Luz Calle, Louis Wehenkel, Kristel Van Steen<br />
+<em>BMC Bioinformatics</em> (2013-04-24) <a href="https://doi.org/f4v3n7">https://doi.org/f4v3n7</a><br />
+DOI: <a href="https://doi.org/10.1186/1471-2105-14-138">10.1186/1471-2105-14-138</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23617239">23617239</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3648350">PMC3648350</a></p>
 </div>
 </div>
 <!-- default theme -->
