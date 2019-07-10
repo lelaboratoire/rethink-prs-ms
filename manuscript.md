@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-09'
+date-meta: '2019-07-10'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/6ec24bc871401c2f17e2d5ee85c38f13a0227c01/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/1d6dde4ea1ee544ebdc203b8e865b65cf203ec53/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@6ec24bc](https://github.com/lelaboratoire/rethink-prs-ms/tree/6ec24bc871401c2f17e2d5ee85c38f13a0227c01)
-on July 9, 2019.
+from [lelaboratoire/rethink-prs-ms@1d6dde4](https://github.com/lelaboratoire/rethink-prs-ms/tree/1d6dde4ea1ee544ebdc203b8e865b65cf203ec53)
+on July 10, 2019.
 </em></small>
 
 ## Authors
@@ -140,7 +140,7 @@ We apply the software... [@S6nj6BFK] to obtain the significance level of each co
 allow for parallel computation
 The maximum value of $k$ is $C^d_p$.
 For each subject $i$, the $d$-way interaction risk score is calculated as
-$$R_d(i) = \sum{j = 1}^k \chi_j^2 * HLO_j(X_{ij})$$
+$$R_d(i) = \sum_{j = 1}^k \chi_j^2 \times HLO_j(X_{ij})$$
 where $\chi_j^2$ is the test statistic of each multi-locus combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $HLO_j$ is the $j^{th}$ re-coded HLO-matrix and $X_j$ is one of $k$ combination of SNPs.
 
 

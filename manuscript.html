@@ -9,7 +9,7 @@
   <meta name="author" content="Patryk Orzechowski" />
   <meta name="author" content="Elisabetta Manduchi" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2019-07-09" />
+  <meta name="dcterms.date" content="2019-07-10" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Expanding polygenic risk scores to include gene-gene interactions</title>
   <style>
@@ -26,7 +26,7 @@
 <header id="title-block-header">
 <h1 class="title">Expanding polygenic risk scores to include gene-gene interactions</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/6ec24bc871401c2f17e2d5ee85c38f13a0227c01/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/6ec24bc871401c2f17e2d5ee85c38f13a0227c01">lelaboratoire/rethink-prs-ms@6ec24bc</a> on July 9, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/1d6dde4ea1ee544ebdc203b8e865b65cf203ec53/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/1d6dde4ea1ee544ebdc203b8e865b65cf203ec53">lelaboratoire/rethink-prs-ms@1d6dde4</a> on July 10, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -53,7 +53,7 @@
 <p>END OF INTRO -&gt; rest is all methods &amp; performing MDR</p>
 <h2 id="methods">Methods</h2>
 <h3 id="multilocus-risk-score-mrs">Multilocus Risk Score (MRS)</h3>
-<p>Compute risks from significant interactions i = 1…n subjects p SNPs j = 1…k significant combinations We apply the software… <span class="citation" data-cites="S6nj6BFK">[<a href="#ref-S6nj6BFK">7</a>]</span> to obtain the significance level of each combination of SNPs. allow for parallel computation The maximum value of <span class="math inline">\(k\)</span> is <span class="math inline">\(C^d_p\)</span>. For each subject <span class="math inline">\(i\)</span>, the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[R_d(i) = \sum{j = 1}^k \chi_j^2 * HLO_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each multi-locus combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(HLO_j\)</span> is the <span class="math inline">\(j^{th}\)</span> re-coded HLO-matrix and <span class="math inline">\(X_j\)</span> is one of <span class="math inline">\(k\)</span> combination of SNPs.</p>
+<p>Compute risks from significant interactions i = 1…n subjects p SNPs j = 1…k significant combinations We apply the software… <span class="citation" data-cites="S6nj6BFK">[<a href="#ref-S6nj6BFK">7</a>]</span> to obtain the significance level of each combination of SNPs. allow for parallel computation The maximum value of <span class="math inline">\(k\)</span> is <span class="math inline">\(C^d_p\)</span>. For each subject <span class="math inline">\(i\)</span>, the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[R_d(i) = \sum_{j = 1}^k \chi_j^2 \times HLO_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each multi-locus combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(HLO_j\)</span> is the <span class="math inline">\(j^{th}\)</span> re-coded HLO-matrix and <span class="math inline">\(X_j\)</span> is one of <span class="math inline">\(k\)</span> combination of SNPs.</p>
 <h3 id="simulated-data">Simulated data</h3>
 <p>[Patryk…]</p>
 <p>For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the <span class="math inline">\(\chi^2\)</span> coefficients and calculated risk score for each individual in the holdout set. We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method where</p>
