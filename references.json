@@ -1,5 +1,480 @@
 [
   {
+    "publisher": "American Medical Association (AMA)",
+    "issue": "18",
+    "DOI": "10.1001/jama.2019.3893",
+    "type": "article-journal",
+    "page": "1820",
+    "source": "Crossref",
+    "title": "What Are Polygenic Scores and Why Are They Important?",
+    "volume": "321",
+    "author": [
+      {
+        "given": "Leo P.",
+        "family": "Sugrue"
+      },
+      {
+        "given": "Rahul S.",
+        "family": "Desikan"
+      }
+    ],
+    "container-title": "JAMA",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          5,
+          14
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfx8wg",
+    "container-title-short": "JAMA",
+    "PMID": "30958510",
+    "id": "1Dlv3tAGh"
+  },
+  {
+    "publisher": "American Medical Association (AMA)",
+    "issue": "10",
+    "DOI": "10.1001/jamaoncol.2016.1025",
+    "type": "article-journal",
+    "page": "1295",
+    "source": "Crossref",
+    "title": "Breast Cancer Risk From Modifiable and Nonmodifiable Risk Factors Among White Women in the United States",
+    "volume": "2",
+    "author": [
+      {
+        "given": "Paige",
+        "family": "Maas"
+      },
+      {
+        "given": "Myrto",
+        "family": "Barrdahl"
+      },
+      {
+        "given": "Amit D.",
+        "family": "Joshi"
+      },
+      {
+        "given": "Paul L.",
+        "family": "Auer"
+      },
+      {
+        "given": "Mia M.",
+        "family": "Gaudet"
+      },
+      {
+        "given": "Roger L.",
+        "family": "Milne"
+      },
+      {
+        "given": "Fredrick R.",
+        "family": "Schumacher"
+      },
+      {
+        "given": "William F.",
+        "family": "Anderson"
+      },
+      {
+        "given": "David",
+        "family": "Check"
+      },
+      {
+        "given": "Subham",
+        "family": "Chattopadhyay"
+      },
+      {
+        "given": "Laura",
+        "family": "Baglietto"
+      },
+      {
+        "given": "Christine D.",
+        "family": "Berg"
+      },
+      {
+        "given": "Stephen J.",
+        "family": "Chanock"
+      },
+      {
+        "given": "David G.",
+        "family": "Cox"
+      },
+      {
+        "given": "Jonine D.",
+        "family": "Figueroa"
+      },
+      {
+        "given": "Mitchell H.",
+        "family": "Gail"
+      },
+      {
+        "given": "Barry I.",
+        "family": "Graubard"
+      },
+      {
+        "given": "Christopher A.",
+        "family": "Haiman"
+      },
+      {
+        "given": "Susan E.",
+        "family": "Hankinson"
+      },
+      {
+        "given": "Robert N.",
+        "family": "Hoover"
+      },
+      {
+        "given": "Claudine",
+        "family": "Isaacs"
+      },
+      {
+        "given": "Laurence N.",
+        "family": "Kolonel"
+      },
+      {
+        "given": "Loic",
+        "family": "Le Marchand"
+      },
+      {
+        "given": "I-Min",
+        "family": "Lee"
+      },
+      {
+        "given": "Sara",
+        "family": "Lindström"
+      },
+      {
+        "given": "Kim",
+        "family": "Overvad"
+      },
+      {
+        "given": "Isabelle",
+        "family": "Romieu"
+      },
+      {
+        "given": "Maria-Jose",
+        "family": "Sanchez"
+      },
+      {
+        "given": "Melissa C.",
+        "family": "Southey"
+      },
+      {
+        "given": "Daniel O.",
+        "family": "Stram"
+      },
+      {
+        "given": "Rosario",
+        "family": "Tumino"
+      },
+      {
+        "given": "Tyler J.",
+        "family": "VanderWeele"
+      },
+      {
+        "given": "Walter C.",
+        "family": "Willett"
+      },
+      {
+        "given": "Shumin",
+        "family": "Zhang"
+      },
+      {
+        "given": "Julie E.",
+        "family": "Buring"
+      },
+      {
+        "given": "Federico",
+        "family": "Canzian"
+      },
+      {
+        "given": "Susan M.",
+        "family": "Gapstur"
+      },
+      {
+        "given": "Brian E.",
+        "family": "Henderson"
+      },
+      {
+        "given": "David J.",
+        "family": "Hunter"
+      },
+      {
+        "given": "Graham G",
+        "family": "Giles"
+      },
+      {
+        "given": "Ross L.",
+        "family": "Prentice"
+      },
+      {
+        "given": "Regina G.",
+        "family": "Ziegler"
+      },
+      {
+        "given": "Peter",
+        "family": "Kraft"
+      },
+      {
+        "given": "Montse",
+        "family": "Garcia-Closas"
+      },
+      {
+        "given": "Nilanjan",
+        "family": "Chatterjee"
+      }
+    ],
+    "container-title": "JAMA Oncology",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          10,
+          1
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gf4w2z",
+    "container-title-short": "JAMA Oncol",
+    "PMCID": "PMC5719876",
+    "PMID": "27228256",
+    "id": "Z12fynub"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "3",
+    "DOI": "10.1007/s00125-003-1321-3",
+    "type": "article-journal",
+    "page": "549-554",
+    "source": "Crossref",
+    "title": "Multifactor-dimensionality reduction shows a two-locus interaction associated with Type 2 diabetes mellitus",
+    "volume": "47",
+    "author": [
+      {
+        "given": "Y. M.",
+        "family": "Cho"
+      },
+      {
+        "given": "M. D.",
+        "family": "Ritchie"
+      },
+      {
+        "given": "J. H.",
+        "family": "Moore"
+      },
+      {
+        "given": "J. Y.",
+        "family": "Park"
+      },
+      {
+        "given": "K.-U.",
+        "family": "Lee"
+      },
+      {
+        "given": "H. D.",
+        "family": "Shin"
+      },
+      {
+        "given": "H. K.",
+        "family": "Lee"
+      },
+      {
+        "given": "K. S.",
+        "family": "Park"
+      }
+    ],
+    "container-title": "Diabetologia",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2004,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bmnr5t",
+    "container-title-short": "Diabetologia",
+    "PMID": "14730379",
+    "id": "oTOXwsyb"
+  },
+  {
+    "publisher": "Elsevier BV",
+    "issue": "3",
+    "DOI": "10.1016/j.ajhg.2015.01.001",
+    "type": "article-journal",
+    "page": "377-385",
+    "source": "Crossref",
+    "title": "Dominance Genetic Variation Contributes Little to the Missing Heritability for Human Complex Traits",
+    "volume": "96",
+    "author": [
+      {
+        "given": "Zhihong",
+        "family": "Zhu"
+      },
+      {
+        "given": "Andrew",
+        "family": "Bakshi"
+      },
+      {
+        "given": "Anna A.E.",
+        "family": "Vinkhuyzen"
+      },
+      {
+        "given": "Gibran",
+        "family": "Hemani"
+      },
+      {
+        "given": "Sang Hong",
+        "family": "Lee"
+      },
+      {
+        "given": "Ilja M.",
+        "family": "Nolte"
+      },
+      {
+        "given": "Jana V.",
+        "family": "van Vliet-Ostaptchouk"
+      },
+      {
+        "given": "Harold",
+        "family": "Snieder"
+      },
+      {
+        "given": "Tonu",
+        "family": "Esko"
+      },
+      {
+        "given": "Lili",
+        "family": "Milani"
+      },
+      {
+        "given": "Reedik",
+        "family": "Mägi"
+      },
+      {
+        "given": "Andres",
+        "family": "Metspalu"
+      },
+      {
+        "given": "William G.",
+        "family": "Hill"
+      },
+      {
+        "given": "Bruce S.",
+        "family": "Weir"
+      },
+      {
+        "given": "Michael E.",
+        "family": "Goddard"
+      },
+      {
+        "given": "Peter M.",
+        "family": "Visscher"
+      },
+      {
+        "given": "Jian",
+        "family": "Yang"
+      }
+    ],
+    "container-title": "The American Journal of Human Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2015,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f64772",
+    "container-title-short": "The American Journal of Human Genetics",
+    "PMCID": "PMC4375616",
+    "PMID": "25683123",
+    "id": "wBOguD8h"
+  },
+  {
+    "publisher": "Elsevier BV",
+    "issue": "1",
+    "DOI": "10.1016/j.ajhg.2016.05.013",
+    "type": "article-journal",
+    "page": "139-153",
+    "source": "Crossref",
+    "title": "Contrasting the Genetic Architecture of 30 Complex Traits from Summary Association Data",
+    "volume": "99",
+    "author": [
+      {
+        "given": "Huwenbo",
+        "family": "Shi"
+      },
+      {
+        "given": "Gleb",
+        "family": "Kichaev"
+      },
+      {
+        "given": "Bogdan",
+        "family": "Pasaniuc"
+      }
+    ],
+    "container-title": "The American Journal of Human Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f8xxkd",
+    "container-title-short": "The American Journal of Human Genetics",
+    "PMCID": "PMC5005444",
+    "PMID": "27346688",
+    "id": "132N8vjSs"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "6",
+    "DOI": "10.1038/ejhg.2011.17",
+    "type": "article-journal",
+    "page": "696-703",
+    "source": "Crossref",
+    "title": "Model-Based Multifactor Dimensionality Reduction to detect epistasis for quantitative traits in the presence of error-free and noisy data",
+    "volume": "19",
+    "author": [
+      {
+        "given": "Jestinah M",
+        "family": "Mahachie John"
+      },
+      {
+        "given": "François",
+        "family": "Van Lishout"
+      },
+      {
+        "given": "Kristel",
+        "family": "Van Steen"
+      }
+    ],
+    "container-title": "European Journal of Human Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2011,
+          3,
+          16
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bndfnk",
+    "container-title-short": "Eur J Hum Genet",
+    "PMCID": "PMC3110049",
+    "PMID": "21407267",
+    "id": "kN4MaLuT"
+  },
+  {
     "publisher": "Springer Nature",
     "issue": "6968",
     "DOI": "10.1038/nature02168",
@@ -25,6 +500,35 @@
     "container-title-short": "Nature",
     "PMID": "14685227",
     "id": "UKO9Qhy3"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "7256",
+    "DOI": "10.1038/nature08185",
+    "type": "article-journal",
+    "page": "748-752",
+    "source": "Crossref",
+    "title": "Common polygenic variation contributes to risk of schizophrenia and bipolar disorder",
+    "volume": "460",
+    "author": [
+      {}
+    ],
+    "container-title": "Nature",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2009,
+          7,
+          1
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cb5f2j",
+    "container-title-short": "Nature",
+    "PMCID": "PMC3912837",
+    "PMID": "19571811",
+    "id": "mwTa2RUK"
   },
   {
     "publisher": "Springer Science and Business Media LLC",
@@ -54,6 +558,82 @@
     "PMCID": "PMC3498066",
     "PMID": "23128226",
     "id": "MSp5fjte"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "7",
+    "DOI": "10.1038/ng.608",
+    "type": "article-journal",
+    "page": "565-569",
+    "source": "Crossref",
+    "title": "Common SNPs explain a large proportion of the heritability for human height",
+    "volume": "42",
+    "author": [
+      {
+        "given": "Jian",
+        "family": "Yang"
+      },
+      {
+        "given": "Beben",
+        "family": "Benyamin"
+      },
+      {
+        "given": "Brian P",
+        "family": "McEvoy"
+      },
+      {
+        "given": "Scott",
+        "family": "Gordon"
+      },
+      {
+        "given": "Anjali K",
+        "family": "Henders"
+      },
+      {
+        "given": "Dale R",
+        "family": "Nyholt"
+      },
+      {
+        "given": "Pamela A",
+        "family": "Madden"
+      },
+      {
+        "given": "Andrew C",
+        "family": "Heath"
+      },
+      {
+        "given": "Nicholas G",
+        "family": "Martin"
+      },
+      {
+        "given": "Grant W",
+        "family": "Montgomery"
+      },
+      {
+        "given": "Michael E",
+        "family": "Goddard"
+      },
+      {
+        "given": "Peter M",
+        "family": "Visscher"
+      }
+    ],
+    "container-title": "Nature Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          6,
+          20
+        ]
+      ]
+    },
+    "URL": "https://doi.org/fjjm4v",
+    "container-title-short": "Nat Genet",
+    "PMCID": "PMC3232052",
+    "PMID": "20562875",
+    "id": "mOp2SAPs"
   },
   {
     "publisher": "Springer Nature",
@@ -133,6 +713,526 @@
   },
   {
     "publisher": "Springer Nature",
+    "issue": "10",
+    "DOI": "10.1038/nrg910",
+    "type": "article-journal",
+    "page": "779-789",
+    "source": "Crossref",
+    "title": "Beyond Mendel: an evolving view of human genetic disease transmission",
+    "volume": "3",
+    "author": [
+      {
+        "given": "Jose L.",
+        "family": "Badano"
+      },
+      {
+        "given": "Nicholas",
+        "family": "Katsanis"
+      }
+    ],
+    "container-title": "Nature Reviews Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2002,
+          10
+        ]
+      ]
+    },
+    "URL": "https://doi.org/cjfzf2",
+    "container-title-short": "Nat Rev Genet",
+    "PMID": "12360236",
+    "id": "KQA5cNEZ"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "9",
+    "DOI": "10.1038/s41576-018-0018-x",
+    "type": "article-journal",
+    "page": "581-590",
+    "source": "Crossref",
+    "title": "The personal and clinical utility of polygenic risk scores",
+    "volume": "19",
+    "author": [
+      {
+        "given": "Ali",
+        "family": "Torkamani"
+      },
+      {
+        "given": "Nathan E.",
+        "family": "Wineinger"
+      },
+      {
+        "given": "Eric J.",
+        "family": "Topol"
+      }
+    ],
+    "container-title": "Nature Reviews Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          5,
+          22
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gd46bh",
+    "container-title-short": "Nat Rev Genet",
+    "PMID": "29789686",
+    "id": "1GK3F1BxE"
+  },
+  {
+    "publisher": "Informa UK Limited",
+    "issue": "2",
+    "DOI": "10.1080/07853890252953473",
+    "type": "article-journal",
+    "page": "88-95",
+    "source": "Crossref",
+    "title": "New strategies for identifying gene-gene interactions in hypertension",
+    "volume": "34",
+    "author": [
+      {
+        "given": "Jason H",
+        "family": "Moore"
+      },
+      {
+        "given": "Scott M",
+        "family": "Williams"
+      }
+    ],
+    "container-title": "Annals of Medicine",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2002,
+          1
+        ]
+      ]
+    },
+    "URL": "https://doi.org/fj4r2k",
+    "container-title-short": "Annals of Medicine",
+    "id": "EDApk3zM"
+  },
+  {
+    "publisher": "Elsevier BV",
+    "issue": "1",
+    "DOI": "10.1086/321276",
+    "type": "article-journal",
+    "page": "138-147",
+    "source": "Crossref",
+    "title": "Multifactor-Dimensionality Reduction Reveals High-Order Interactions among Estrogen-Metabolism Genes in Sporadic Breast Cancer",
+    "volume": "69",
+    "author": [
+      {
+        "given": "Marylyn D.",
+        "family": "Ritchie"
+      },
+      {
+        "given": "Lance W.",
+        "family": "Hahn"
+      },
+      {
+        "given": "Nady",
+        "family": "Roodi"
+      },
+      {
+        "given": "L. Renee",
+        "family": "Bailey"
+      },
+      {
+        "given": "William D.",
+        "family": "Dupont"
+      },
+      {
+        "given": "Fritz F.",
+        "family": "Parl"
+      },
+      {
+        "given": "Jason H.",
+        "family": "Moore"
+      }
+    ],
+    "container-title": "The American Journal of Human Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2001,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bh3x75",
+    "container-title-short": "The American Journal of Human Genetics",
+    "PMCID": "PMC1226028",
+    "PMID": "11404819",
+    "id": "E26QhGxD"
+  },
+  {
+    "publisher": "BMJ",
+    "DOI": "10.1136/bmj.j5757",
+    "type": "article-journal",
+    "page": "j5757",
+    "source": "Crossref",
+    "title": "Polygenic hazard score to guide screening for aggressive prostate cancer: development and validation in large scale cohorts",
+    "author": [
+      {
+        "given": "Tyler M",
+        "family": "Seibert"
+      },
+      {
+        "given": "Chun Chieh",
+        "family": "Fan"
+      },
+      {
+        "given": "Yunpeng",
+        "family": "Wang"
+      },
+      {
+        "given": "Verena",
+        "family": "Zuber"
+      },
+      {
+        "given": "Roshan",
+        "family": "Karunamuni"
+      },
+      {
+        "given": "J Kellogg",
+        "family": "Parsons"
+      },
+      {
+        "given": "Rosalind A",
+        "family": "Eeles"
+      },
+      {
+        "given": "Douglas F",
+        "family": "Easton"
+      },
+      {
+        "given": "ZSofia",
+        "family": "Kote-Jarai"
+      },
+      {
+        "given": "Ali Amin",
+        "family": "Al Olama"
+      },
+      {
+        "given": "Sara Benlloch",
+        "family": "Garcia"
+      },
+      {
+        "given": "Kenneth",
+        "family": "Muir"
+      },
+      {
+        "given": "Henrik",
+        "family": "Grönberg"
+      },
+      {
+        "given": "Fredrik",
+        "family": "Wiklund"
+      },
+      {
+        "given": "Markus",
+        "family": "Aly"
+      },
+      {
+        "given": "Johanna",
+        "family": "Schleutker"
+      },
+      {
+        "given": "Csilla",
+        "family": "Sipeky"
+      },
+      {
+        "given": "Teuvo LJ",
+        "family": "Tammela"
+      },
+      {
+        "given": "Børge G",
+        "family": "Nordestgaard"
+      },
+      {
+        "given": "Sune F",
+        "family": "Nielsen"
+      },
+      {
+        "given": "Maren",
+        "family": "Weischer"
+      },
+      {
+        "given": "Rasmus",
+        "family": "Bisbjerg"
+      },
+      {
+        "given": "M Andreas",
+        "family": "Røder"
+      },
+      {
+        "given": "Peter",
+        "family": "Iversen"
+      },
+      {
+        "given": "Tim J",
+        "family": "Key"
+      },
+      {
+        "given": "Ruth C",
+        "family": "Travis"
+      },
+      {
+        "given": "David E",
+        "family": "Neal"
+      },
+      {
+        "given": "Jenny L",
+        "family": "Donovan"
+      },
+      {
+        "given": "Freddie C",
+        "family": "Hamdy"
+      },
+      {
+        "given": "Paul",
+        "family": "Pharoah"
+      },
+      {
+        "given": "Nora",
+        "family": "Pashayan"
+      },
+      {
+        "given": "Kay-Tee",
+        "family": "Khaw"
+      },
+      {
+        "given": "Christiane",
+        "family": "Maier"
+      },
+      {
+        "given": "Walther",
+        "family": "Vogel"
+      },
+      {
+        "given": "Manuel",
+        "family": "Luedeke"
+      },
+      {
+        "given": "Kathleen",
+        "family": "Herkommer"
+      },
+      {
+        "given": "Adam S",
+        "family": "Kibel"
+      },
+      {
+        "given": "Cezary",
+        "family": "Cybulski"
+      },
+      {
+        "given": "Dominika",
+        "family": "Wokolorczyk"
+      },
+      {
+        "given": "Wojciech",
+        "family": "Kluzniak"
+      },
+      {
+        "given": "Lisa",
+        "family": "Cannon-Albright"
+      },
+      {
+        "given": "Hermann",
+        "family": "Brenner"
+      },
+      {
+        "given": "Katarina",
+        "family": "Cuk"
+      },
+      {
+        "given": "Kai-Uwe",
+        "family": "Saum"
+      },
+      {
+        "given": "Jong Y",
+        "family": "Park"
+      },
+      {
+        "given": "Thomas A",
+        "family": "Sellers"
+      },
+      {
+        "given": "Chavdar",
+        "family": "Slavov"
+      },
+      {
+        "given": "Radka",
+        "family": "Kaneva"
+      },
+      {
+        "given": "Vanio",
+        "family": "Mitev"
+      },
+      {
+        "given": "Jyotsna",
+        "family": "Batra"
+      },
+      {
+        "given": "Judith A",
+        "family": "Clements"
+      },
+      {
+        "given": "Amanda",
+        "family": "Spurdle"
+      },
+      {
+        "given": "Manuel R",
+        "family": "Teixeira"
+      },
+      {
+        "given": "Paula",
+        "family": "Paulo"
+      },
+      {
+        "given": "Sofia",
+        "family": "Maia"
+      },
+      {
+        "given": "Hardev",
+        "family": "Pandha"
+      },
+      {
+        "given": "Agnieszka",
+        "family": "Michael"
+      },
+      {
+        "given": "Andrzej",
+        "family": "Kierzek"
+      },
+      {
+        "given": "David S",
+        "family": "Karow"
+      },
+      {
+        "given": "Ian G",
+        "family": "Mills"
+      },
+      {
+        "given": "Ole A",
+        "family": "Andreassen"
+      },
+      {
+        "given": "Anders M",
+        "family": "Dale"
+      },
+      {}
+    ],
+    "container-title": "BMJ",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          1,
+          10
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gcsrzs",
+    "container-title-short": "BMJ",
+    "PMCID": "PMC5759091",
+    "PMID": "29321194",
+    "id": "gkABDVTx"
+  },
+  {
+    "publisher": "Ovid Technologies (Wolters Kluwer Health)",
+    "issue": "22",
+    "DOI": "10.1161/circulationaha.116.024436",
+    "type": "article-journal",
+    "page": "2091-2101",
+    "source": "Crossref",
+    "title": "Polygenic Risk Score Identifies Subgroup With Higher Burden of Atherosclerosis and Greater Relative Benefit From Statin Therapy in the Primary Prevention Setting",
+    "volume": "135",
+    "author": [
+      {
+        "given": "Pradeep",
+        "family": "Natarajan"
+      },
+      {
+        "given": "Robin",
+        "family": "Young"
+      },
+      {
+        "given": "Nathan O.",
+        "family": "Stitziel"
+      },
+      {
+        "given": "Sandosh",
+        "family": "Padmanabhan"
+      },
+      {
+        "given": "Usman",
+        "family": "Baber"
+      },
+      {
+        "given": "Roxana",
+        "family": "Mehran"
+      },
+      {
+        "given": "Samantha",
+        "family": "Sartori"
+      },
+      {
+        "given": "Valentin",
+        "family": "Fuster"
+      },
+      {
+        "given": "Dermot F.",
+        "family": "Reilly"
+      },
+      {
+        "given": "Adam",
+        "family": "Butterworth"
+      },
+      {
+        "given": "Daniel J.",
+        "family": "Rader"
+      },
+      {
+        "given": "Ian",
+        "family": "Ford"
+      },
+      {
+        "given": "Naveed",
+        "family": "Sattar"
+      },
+      {
+        "given": "Sekar",
+        "family": "Kathiresan"
+      }
+    ],
+    "container-title": "Circulation",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          5,
+          30
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gbgqhb",
+    "container-title-short": "Circulation",
+    "PMCID": "PMC5484076",
+    "PMID": "28223407",
+    "id": "JjyayEbB"
+  },
+  {
+    "publisher": "Springer Nature",
     "issue": "1",
     "DOI": "10.1186/1471-2105-14-138",
     "type": "article-journal",
@@ -199,6 +1299,84 @@
     "id": "S6nj6BFK"
   },
   {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1186/1756-0381-6-1",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Risk score modeling of multiple gene to gene interactions using aggregated-multifactor dimensionality reduction",
+    "volume": "6",
+    "author": [
+      {
+        "given": "Hongying",
+        "family": "Dai"
+      },
+      {
+        "given": "Richard J",
+        "family": "Charnigo"
+      },
+      {
+        "given": "Mara L",
+        "family": "Becker"
+      },
+      {
+        "given": "J Steven",
+        "family": "Leeder"
+      },
+      {
+        "given": "Alison A",
+        "family": "Motsinger-Reif"
+      }
+    ],
+    "container-title": "BioData Mining",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2013,
+          1,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gb5fmn",
+    "container-title-short": "BioData Mining",
+    "PMCID": "PMC3560267",
+    "PMID": "23294634",
+    "id": "93PfLXPZ"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "1",
+    "DOI": "10.1186/s13059-016-1107-9",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "The continuum of causality in human genetic disorders",
+    "volume": "17",
+    "author": [
+      {
+        "given": "Nicholas",
+        "family": "Katsanis"
+      }
+    ],
+    "container-title": "Genome Biology",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          11,
+          17
+        ]
+      ]
+    },
+    "URL": "https://doi.org/f9fzd3",
+    "container-title-short": "Genome Biol",
+    "PMCID": "PMC5114767",
+    "PMID": "27855690",
+    "id": "LpJAX4ST"
+  },
+  {
     "publisher": "Public Library of Science (PLoS)",
     "issue": "12",
     "DOI": "10.1371/journal.pcbi.1002822",
@@ -243,43 +1421,5 @@
     "PMCID": "PMC3531285",
     "PMID": "23300413",
     "id": "iFUfVw9V"
-  },
-  {
-    "publisher": "Public Library of Science (PLoS)",
-    "issue": "4",
-    "DOI": "10.1371/journal.pgen.1008060",
-    "type": "article-journal",
-    "page": "e1008060",
-    "source": "Crossref",
-    "title": "On the utilization of polygenic risk scores for therapeutic targeting",
-    "volume": "15",
-    "author": [
-      {
-        "given": "Greg",
-        "family": "Gibson"
-      }
-    ],
-    "container-title": "PLOS Genetics",
-    "language": "en",
-    "editor": [
-      {
-        "given": "Gregory S.",
-        "family": "Barsh"
-      }
-    ],
-    "issued": {
-      "date-parts": [
-        [
-          2019,
-          4,
-          25
-        ]
-      ]
-    },
-    "URL": "https://doi.org/gf4gdx",
-    "container-title-short": "PLoS Genet",
-    "PMCID": "PMC6483161",
-    "PMID": "31022172",
-    "id": "kmJZ4oOW"
   }
 ]
