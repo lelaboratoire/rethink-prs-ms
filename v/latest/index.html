@@ -9,7 +9,7 @@
   <meta name="author" content="Patryk Orzechowski" />
   <meta name="author" content="Elisabetta Manduchi" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2019-07-10" />
+  <meta name="dcterms.date" content="2019-07-15" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Expanding polygenic risk scores to include gene-gene interactions</title>
   <style>
@@ -26,7 +26,7 @@
 <header id="title-block-header">
 <h1 class="title">Expanding polygenic risk scores to include gene-gene interactions</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/1d6dde4ea1ee544ebdc203b8e865b65cf203ec53/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/1d6dde4ea1ee544ebdc203b8e865b65cf203ec53">lelaboratoire/rethink-prs-ms@1d6dde4</a> on July 10, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/40c30490fbba353847dc97ddbe61d090d02b1757/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/40c30490fbba353847dc97ddbe61d090d02b1757">lelaboratoire/rethink-prs-ms@40c3049</a> on July 15, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -40,20 +40,18 @@
 <h2 id="abstract">Abstract</h2>
 <p>This study expands the PRS to account for gene-gene interaction effects.</p>
 <h2 id="introduction">Introduction</h2>
-<p><span class="citation" data-cites="kmJZ4oOW">[<a href="#ref-kmJZ4oOW">1</a>]</span></p>
-<p>As the field of traditional genomics rapidly expands its sequencing technologies and translational abilities, novel applications of genomic data are starting to arise in addressing disease burden.</p>
-<p>Beginning with the completion of the Human Genome Project in 2003, increased interest in catalouging genomic data spurred the innovation of massively parallel, chip-based genotyping arrays. Leveraging these technologies, early researchers were able to characterize and catalogue gene variants across millions of individuals internationally. In particular, the advent of projects such as the International HapMap Project <span class="citation" data-cites="UKO9Qhy3">[<a href="#ref-UKO9Qhy3">2</a>]</span> and the 1000 Genomes Project sought to document haplotype <span class="citation" data-cites="MSp5fjte">[<a href="#ref-MSp5fjte">3</a>]</span> structure (i.e. gene variants) involved in specific diseases of the human genome. As such, the gross information of nucleotide polymorphisms within publicly available databases has rapidly increased in the beginning of the 21st century with the rise in omics sequencing capabilities. This genomic information, coupled with additional high resolution marks for other individual biological variants (e.g. transcripts, epigenetic marks, metabolites) has been touted to further complement precision medicine approaches using genetics.</p>
-<p>Complementing the rapid growth in our understanding of gene variants in the human genome was the emergence of using statistical techniques, formalized as genome-wide association studies (GWAS), to identify gene variants associated with common human diseases. From a population perspective, GWA studies have sought to discern genetic connections to various phenotypes by studying genotypic variation at biallelic markers across the human genome <span class="citation" data-cites="iFUfVw9V 5cdeEdUS 12kQ0EOWQ">[<a href="#ref-iFUfVw9V">4</a>,<a href="#ref-5cdeEdUS">5</a>,<a href="#ref-12kQ0EOWQ">6</a>]</span>. Such non-candidate driven GWA studies consider gene variations (i.e. SNPs, deletions, intertions, CNVs) to resulting phenotype values to ultimately report allele frequency differences among a case and control group in the form of an odds ratio. This technical revolution in the field of genomic medicine fueled our progressing capabilities to map associations of gene variants with disease on an increasingly granular level to single nucleotide polymorphisms (SNPs).</p>
-<p>Nonetheless while GWA studies indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires additional granularity on aggregating contributions of many gene variants in the form of polygenic risk scores (PRS). In tamdem with the movement towards precision medicine, the post-GWAS era strives to bring significant population-derived gene variant into individual level metrics actionable in clinical delivery settings. Importantly, PRS have been one such approach developed to explain individual inherited risk for disease by <strong>placing unique weights on a selection of SNPs from the GWAS</strong>.</p>
-<p>[put in PRS equation].</p>
-<p>[This is just one way, the most basic. many have tried to reformulate the PRS in various ways.]</p>
-<p>[cite common ones. Which ones are most common GRS scores?]</p>
-<p>[In this study we aim to reformulate the PRS score with MDR reduction to better detect GxG interactions. MDR as a form of feature engineering the proper encoding for detecting GxG interactions]</p>
-<p>[explain more technical details of MDR]</p>
-<p>END OF INTRO -&gt; rest is all methods &amp; performing MDR</p>
+<p>As the field of traditional genomics rapidly expands its sequencing technologies and translational abilities, novel applications of genomic data are starting to arise in addressing disease burden. Beginning with the completion of the Human Genome Project in 2003, increased interest in cataloguing genomic data spurred the innovation of massively parallel, chip-based genotyping arrays. Leveraging these technologies, early researchers were able to characterize and categorize gene variants across millions of individuals internationally. In particular, the advent of projects such as the International HapMap Project <span class="citation" data-cites="UKO9Qhy3">[<a href="#ref-UKO9Qhy3">1</a>]</span> and the 1000 Genomes Project sought to document haplotype <span class="citation" data-cites="MSp5fjte">[<a href="#ref-MSp5fjte">2</a>]</span> structure (i.e. gene variants) involved in specific diseases of the human genome. As such, the gross information of nucleotide polymorphisms within publicly available databases has rapidly increased in the beginning of the 21st century with the rise in omics sequencing capabilities. This genomic information, coupled with additional high resolution marks for other individual biological variants (e.g. transcripts, epigenetic marks, metabolites) has been touted to further drive precision medicine approaches using genetics.</p>
+<p>Complementing the rapid growth in our understanding of gene variants in the human genome was the emergence of using statistical techniques, formalized as genome-wide association studies (GWAS), to identify gene variants associated with common human diseases. From a population perspective, GWA studies have sought to discern genetic connections to various phenotypes by studying genotypic variation at biallelic markers across the human genome <span class="citation" data-cites="iFUfVw9V 5cdeEdUS 12kQ0EOWQ">[<a href="#ref-iFUfVw9V">3</a>,<a href="#ref-5cdeEdUS">4</a>,<a href="#ref-12kQ0EOWQ">5</a>]</span>. Such non-candidate driven GWA studies consider gene variations (i.e. SNPs, deletions, intertions, CNVs) to resulting phenotype values to ultimately report allele frequency differences among a case and control group in the form of an odds ratio. This technical revolution in the field of genomic medicine fueled our progressing capabilities to map associations of gene variants with disease on an increasingly granular level to single nucleotide polymorphisms (SNPs).</p>
+<p>In tandem with the movement towards precision medicine, the post-GWAS era strives to bring significant population-derived gene variants into individual level metrics actionable in health delivery settings. While GWA studies indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires additional granularity on aggregating contributions of many gene variants in the form of polygenic risk scores (PRS). Importantly, PRS have been one such approach developed to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS studies <span class="citation" data-cites="1Dlv3tAGh 1GK3F1BxE">[<a href="#ref-1Dlv3tAGh">6</a>,<a href="#ref-1GK3F1BxE">7</a>]</span>. (sentence on origin and history &amp; cite it) In quantifying the effect of particular combinations of genetic SNP variants towards risk prediction, PRS offers a probabilisitic susceptibility value of an individual to disease. Such genetic risk estimation scores are central to clinical decision-making, serving to reinforce individual health management in heritable disease detection and early prevention of various adult-onset conditions. The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world <span class="citation" data-cites="mwTa2RUK JjyayEbB Z12fynub gkABDVTx">[<a href="#ref-Z12fynub">10</a>,<a href="#ref-gkABDVTx">11</a>,<a href="#ref-mwTa2RUK">8</a>,<a href="#ref-JjyayEbB">9</a>]</span></p>
+<p><span class="math inline">\(PRS=\sum_{i=1}^{n} \beta_i \cdot SNP_i\)</span></p>
+<p>Where <span class="math inline">\(\beta\)</span> refers to the weighted risk contribution of the loci gene variant and <span class="math inline">\(n\)</span> refers to the total quantity of GWAS <em>hits</em> across the genome. Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the <span class="math inline">\(\beta\)</span> weight according to the specific type of statistical model used to combine risk of individual variations, the <span class="math inline">\(n\)</span> with respect to the specification of genetic variants considered, and the ability of the PRS to generalize to the entire population <span class="citation" data-cites="1Dlv3tAGh">[<a href="#ref-1Dlv3tAGh">6</a>]</span>.</p>
+<p>Historically, PRS models have previously characterized genomic architechture in a dichotimous division of Mendelian monogenic and polygenic inheritance, in which either one or many gene perturbations give rise to disease phenotypes in an individual, respectively <span class="citation" data-cites="KQA5cNEZ 1GK3F1BxE">[<a href="#ref-KQA5cNEZ">12</a>,<a href="#ref-1GK3F1BxE">7</a>]</span>. Yet while such classification models arose from former sequencing technology and study design, a more realistic genetic archtechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumultatively drive overall risk of an individual <span class="citation" data-cites="LpJAX4ST">[<a href="#ref-LpJAX4ST">13</a>]</span>. When only considering rare (minor allele frequency, MAF &lt; 0.5%), high-risk gene variants, such genomic variation only contributes approximately 1-10% towards adult-onset disease incidence <span class="citation" data-cites="1GK3F1BxE wBOguD8h">[<a href="#ref-wBOguD8h">14</a>,<a href="#ref-1GK3F1BxE">7</a>]</span>. Often, more relevant and complete sources of genetic risk is captured from complex smaller interactions of both common (MAF &gt;5%) and low-frequency (MAF &gt;0.5% and &lt;5%) genetic variants each contributing individual, appreciable effects <span class="citation" data-cites="132N8vjSs mOp2SAPs">[<a href="#ref-132N8vjSs">15</a>,<a href="#ref-mOp2SAPs">16</a>]</span>. Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible gene interaction combinations with both linear and nonlinear effects. In this context, more robust and efficient methods towards a polygeneic risk calculation are necessary in capturing the overlap between context-dependent effects of both rare and common alleles on human genetic disorder.</p>
+<p>With respect to better understanding the epistasis across an individual’s genome, various statistical models have been designed with the intent of capturing high dimensional gene-gene (GxG) interactions. The Multifactor Dimensionality Reduction (MDR) model is one such model that addresses these challenges and has been extensively applied to detect nonlinear complex GxG interactions associated with individual disease. By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes into two groups of risk based on some threshold value <span class="citation" data-cites="E26QhGxD">[<a href="#ref-E26QhGxD">17</a>]</span>. MDR has been effective in identifying epistasis that may characterize genomic susceptibility in common diseases such as hypertension <span class="citation" data-cites="EDApk3zM">[<a href="#ref-EDApk3zM">18</a>]</span> and Type 2 diabetes <span class="citation" data-cites="oTOXwsyb">[<a href="#ref-oTOXwsyb">19</a>]</span>.</p>
+<p>While created with the primary intention towards GxG interaction detection, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores <span class="citation" data-cites="93PfLXPZ">[<a href="#ref-93PfLXPZ">20</a>]</span>. Modifications built on top of the MDR framework have been proposed in order to better capture multiple significant epistasis models and potential missed interactions owning to limiations of the original model in the higher dimensions. Model-Based Multifactor Dimensionality Reduction (MB-MDR) was formulated as a flexible GxG detection framework for dichotomous traits and unrelated individuals <span class="citation" data-cites="kN4MaLuT">[<a href="#ref-kN4MaLuT">21</a>]</span>. Rather than a direct comparison against a threshold level in the original MDR method, MB-MDR merges multi-locus genotypes exhibiting significantly high or low risk levels through association testing and adds an additional category representing no evidence of risk.</p>
+<p>In this study we aim to reformulate the PRS using the MB-MDR approach in observing the model’s separability of results on an evidence-based simulated dataset from HIBACHI.</p>
 <h2 id="methods">Methods</h2>
 <h3 id="multilocus-risk-score-mrs">Multilocus Risk Score (MRS)</h3>
-<p>Compute risks from significant interactions i = 1…n subjects p SNPs j = 1…k significant combinations We apply the software… <span class="citation" data-cites="S6nj6BFK">[<a href="#ref-S6nj6BFK">7</a>]</span> to obtain the significance level of each combination of SNPs. allow for parallel computation The maximum value of <span class="math inline">\(k\)</span> is <span class="math inline">\(C^d_p\)</span>. For each subject <span class="math inline">\(i\)</span>, the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[R_d(i) = \sum_{j = 1}^k \chi_j^2 \times HLO_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each multi-locus combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(HLO_j\)</span> is the <span class="math inline">\(j^{th}\)</span> re-coded HLO-matrix and <span class="math inline">\(X_j\)</span> is one of <span class="math inline">\(k\)</span> combination of SNPs.</p>
+<p>Compute risks from significant interactions i = 1…n subjects p SNPs j = 1…k significant combinations We apply the software… <span class="citation" data-cites="S6nj6BFK">[<a href="#ref-S6nj6BFK">22</a>]</span> to obtain the significance level of each combination of SNPs. allow for parallel computation The maximum value of <span class="math inline">\(k\)</span> is <span class="math inline">\(C^d_p\)</span>. For each subject <span class="math inline">\(i\)</span>, the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[R_d(i) = \sum_{j = 1}^k \chi_j^2 \times HLO_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each multi-locus combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(HLO_j\)</span> is the <span class="math inline">\(j^{th}\)</span> re-coded HLO-matrix and <span class="math inline">\(X_j\)</span> is one of <span class="math inline">\(k\)</span> combination of SNPs.</p>
 <h3 id="simulated-data">Simulated data</h3>
 <p>[Patryk…]</p>
 <p>For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the <span class="math inline">\(\chi^2\)</span> coefficients and calculated risk score for each individual in the holdout set. We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method where</p>
@@ -66,40 +64,128 @@
 <h2 id="references" class="page_break_before">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs">
-<div id="ref-kmJZ4oOW">
-<p>1. <strong>On the utilization of polygenic risk scores for therapeutic targeting</strong><br />
-Greg Gibson<br />
-<em>PLOS Genetics</em> (2019-04-25) <a href="https://doi.org/gf4gdx">https://doi.org/gf4gdx</a><br />
-DOI: <a href="https://doi.org/10.1371/journal.pgen.1008060">10.1371/journal.pgen.1008060</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31022172">31022172</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6483161">PMC6483161</a></p>
-</div>
 <div id="ref-UKO9Qhy3">
-<p>2. <strong>The International HapMap Project</strong><em>Nature</em> (2003-12) <a href="https://doi.org/dgd">https://doi.org/dgd</a><br />
+<p>1. <strong>The International HapMap Project</strong><em>Nature</em> (2003-12) <a href="https://doi.org/dgd">https://doi.org/dgd</a><br />
 DOI: <a href="https://doi.org/10.1038/nature02168">10.1038/nature02168</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/14685227">14685227</a></p>
 </div>
 <div id="ref-MSp5fjte">
-<p>3. <strong>An integrated map of genetic variation from 1,092 human genomes</strong><em>Nature</em> (2012-10-31) <a href="https://doi.org/f4k2v2">https://doi.org/f4k2v2</a><br />
+<p>2. <strong>An integrated map of genetic variation from 1,092 human genomes</strong><em>Nature</em> (2012-10-31) <a href="https://doi.org/f4k2v2">https://doi.org/f4k2v2</a><br />
 DOI: <a href="https://doi.org/10.1038/nature11632">10.1038/nature11632</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23128226">23128226</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3498066">PMC3498066</a></p>
 </div>
 <div id="ref-iFUfVw9V">
-<p>4. <strong>Chapter 11: Genome-Wide Association Studies</strong><br />
+<p>3. <strong>Chapter 11: Genome-Wide Association Studies</strong><br />
 William S. Bush, Jason H. Moore<br />
 <em>PLoS Computational Biology</em> (2012-12-27) <a href="https://doi.org/gfr9pz">https://doi.org/gfr9pz</a><br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1002822">10.1371/journal.pcbi.1002822</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23300413">23300413</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3531285">PMC3531285</a></p>
 </div>
 <div id="ref-5cdeEdUS">
-<p>5. <strong>Genome-wide association studies for common diseases and complex traits</strong><br />
+<p>4. <strong>Genome-wide association studies for common diseases and complex traits</strong><br />
 Joel N. Hirschhorn, Mark J. Daly<br />
 <em>Nature Reviews Genetics</em> (2005-02) <a href="https://doi.org/bhcc36">https://doi.org/bhcc36</a><br />
 DOI: <a href="https://doi.org/10.1038/nrg1521">10.1038/nrg1521</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15716906">15716906</a></p>
 </div>
 <div id="ref-12kQ0EOWQ">
-<p>6. <strong>Genome-wide association studies: theoretical and practical concerns</strong><br />
+<p>5. <strong>Genome-wide association studies: theoretical and practical concerns</strong><br />
 William Y. S. Wang, Bryan J. Barratt, David G. Clayton, John A. Todd<br />
 <em>Nature Reviews Genetics</em> (2005-02) <a href="https://doi.org/fcqz33">https://doi.org/fcqz33</a><br />
 DOI: <a href="https://doi.org/10.1038/nrg1522">10.1038/nrg1522</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/15716907">15716907</a></p>
 </div>
+<div id="ref-1Dlv3tAGh">
+<p>6. <strong>What Are Polygenic Scores and Why Are They Important?</strong><br />
+Leo P. Sugrue, Rahul S. Desikan<br />
+<em>JAMA</em> (2019-05-14) <a href="https://doi.org/gfx8wg">https://doi.org/gfx8wg</a><br />
+DOI: <a href="https://doi.org/10.1001/jama.2019.3893">10.1001/jama.2019.3893</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/30958510">30958510</a></p>
+</div>
+<div id="ref-1GK3F1BxE">
+<p>7. <strong>The personal and clinical utility of polygenic risk scores</strong><br />
+Ali Torkamani, Nathan E. Wineinger, Eric J. Topol<br />
+<em>Nature Reviews Genetics</em> (2018-05-22) <a href="https://doi.org/gd46bh">https://doi.org/gd46bh</a><br />
+DOI: <a href="https://doi.org/10.1038/s41576-018-0018-x">10.1038/s41576-018-0018-x</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29789686">29789686</a></p>
+</div>
+<div id="ref-mwTa2RUK">
+<p>8. <strong>Common polygenic variation contributes to risk of schizophrenia and bipolar disorder</strong><em>Nature</em> (2009-07-01) <a href="https://doi.org/cb5f2j">https://doi.org/cb5f2j</a><br />
+DOI: <a href="https://doi.org/10.1038/nature08185">10.1038/nature08185</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/19571811">19571811</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3912837">PMC3912837</a></p>
+</div>
+<div id="ref-JjyayEbB">
+<p>9. <strong>Polygenic Risk Score Identifies Subgroup With Higher Burden of Atherosclerosis and Greater Relative Benefit From Statin Therapy in the Primary Prevention Setting</strong><br />
+Pradeep Natarajan, Robin Young, Nathan O. Stitziel, Sandosh Padmanabhan, Usman Baber, Roxana Mehran, Samantha Sartori, Valentin Fuster, Dermot F. Reilly, Adam Butterworth, … Sekar Kathiresan<br />
+<em>Circulation</em> (2017-05-30) <a href="https://doi.org/gbgqhb">https://doi.org/gbgqhb</a><br />
+DOI: <a href="https://doi.org/10.1161/circulationaha.116.024436">10.1161/circulationaha.116.024436</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/28223407">28223407</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5484076">PMC5484076</a></p>
+</div>
+<div id="ref-Z12fynub">
+<p>10. <strong>Breast Cancer Risk From Modifiable and Nonmodifiable Risk Factors Among White Women in the United States</strong><br />
+Paige Maas, Myrto Barrdahl, Amit D. Joshi, Paul L. Auer, Mia M. Gaudet, Roger L. Milne, Fredrick R. Schumacher, William F. Anderson, David Check, Subham Chattopadhyay, … Nilanjan Chatterjee<br />
+<em>JAMA Oncology</em> (2016-10-01) <a href="https://doi.org/gf4w2z">https://doi.org/gf4w2z</a><br />
+DOI: <a href="https://doi.org/10.1001/jamaoncol.2016.1025">10.1001/jamaoncol.2016.1025</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27228256">27228256</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5719876">PMC5719876</a></p>
+</div>
+<div id="ref-gkABDVTx">
+<p>11. <strong>Polygenic hazard score to guide screening for aggressive prostate cancer: development and validation in large scale cohorts</strong><br />
+Tyler M Seibert, Chun Chieh Fan, Yunpeng Wang, Verena Zuber, Roshan Karunamuni, J Kellogg Parsons, Rosalind A Eeles, Douglas F Easton, ZSofia Kote-Jarai, Ali Amin Al Olama, … <br />
+<em>BMJ</em> (2018-01-10) <a href="https://doi.org/gcsrzs">https://doi.org/gcsrzs</a><br />
+DOI: <a href="https://doi.org/10.1136/bmj.j5757">10.1136/bmj.j5757</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29321194">29321194</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5759091">PMC5759091</a></p>
+</div>
+<div id="ref-KQA5cNEZ">
+<p>12. <strong>Beyond Mendel: an evolving view of human genetic disease transmission</strong><br />
+Jose L. Badano, Nicholas Katsanis<br />
+<em>Nature Reviews Genetics</em> (2002-10) <a href="https://doi.org/cjfzf2">https://doi.org/cjfzf2</a><br />
+DOI: <a href="https://doi.org/10.1038/nrg910">10.1038/nrg910</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/12360236">12360236</a></p>
+</div>
+<div id="ref-LpJAX4ST">
+<p>13. <strong>The continuum of causality in human genetic disorders</strong><br />
+Nicholas Katsanis<br />
+<em>Genome Biology</em> (2016-11-17) <a href="https://doi.org/f9fzd3">https://doi.org/f9fzd3</a><br />
+DOI: <a href="https://doi.org/10.1186/s13059-016-1107-9">10.1186/s13059-016-1107-9</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27855690">27855690</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5114767">PMC5114767</a></p>
+</div>
+<div id="ref-wBOguD8h">
+<p>14. <strong>Dominance Genetic Variation Contributes Little to the Missing Heritability for Human Complex Traits</strong><br />
+Zhihong Zhu, Andrew Bakshi, Anna A.E. Vinkhuyzen, Gibran Hemani, Sang Hong Lee, Ilja M. Nolte, Jana V. van Vliet-Ostaptchouk, Harold Snieder, Tonu Esko, Lili Milani, … Jian Yang<br />
+<em>The American Journal of Human Genetics</em> (2015-03) <a href="https://doi.org/f64772">https://doi.org/f64772</a><br />
+DOI: <a href="https://doi.org/10.1016/j.ajhg.2015.01.001">10.1016/j.ajhg.2015.01.001</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25683123">25683123</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4375616">PMC4375616</a></p>
+</div>
+<div id="ref-132N8vjSs">
+<p>15. <strong>Contrasting the Genetic Architecture of 30 Complex Traits from Summary Association Data</strong><br />
+Huwenbo Shi, Gleb Kichaev, Bogdan Pasaniuc<br />
+<em>The American Journal of Human Genetics</em> (2016-07) <a href="https://doi.org/f8xxkd">https://doi.org/f8xxkd</a><br />
+DOI: <a href="https://doi.org/10.1016/j.ajhg.2016.05.013">10.1016/j.ajhg.2016.05.013</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27346688">27346688</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5005444">PMC5005444</a></p>
+</div>
+<div id="ref-mOp2SAPs">
+<p>16. <strong>Common SNPs explain a large proportion of the heritability for human height</strong><br />
+Jian Yang, Beben Benyamin, Brian P McEvoy, Scott Gordon, Anjali K Henders, Dale R Nyholt, Pamela A Madden, Andrew C Heath, Nicholas G Martin, Grant W Montgomery, … Peter M Visscher<br />
+<em>Nature Genetics</em> (2010-06-20) <a href="https://doi.org/fjjm4v">https://doi.org/fjjm4v</a><br />
+DOI: <a href="https://doi.org/10.1038/ng.608">10.1038/ng.608</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/20562875">20562875</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3232052">PMC3232052</a></p>
+</div>
+<div id="ref-E26QhGxD">
+<p>17. <strong>Multifactor-Dimensionality Reduction Reveals High-Order Interactions among Estrogen-Metabolism Genes in Sporadic Breast Cancer</strong><br />
+Marylyn D. Ritchie, Lance W. Hahn, Nady Roodi, L. Renee Bailey, William D. Dupont, Fritz F. Parl, Jason H. Moore<br />
+<em>The American Journal of Human Genetics</em> (2001-07) <a href="https://doi.org/bh3x75">https://doi.org/bh3x75</a><br />
+DOI: <a href="https://doi.org/10.1086/321276">10.1086/321276</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/11404819">11404819</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1226028">PMC1226028</a></p>
+</div>
+<div id="ref-EDApk3zM">
+<p>18. <strong>New strategies for identifying gene-gene interactions in hypertension</strong><br />
+Jason H Moore, Scott M Williams<br />
+<em>Annals of Medicine</em> (2002-01) <a href="https://doi.org/fj4r2k">https://doi.org/fj4r2k</a><br />
+DOI: <a href="https://doi.org/10.1080/07853890252953473">10.1080/07853890252953473</a></p>
+</div>
+<div id="ref-oTOXwsyb">
+<p>19. <strong>Multifactor-dimensionality reduction shows a two-locus interaction associated with Type 2 diabetes mellitus</strong><br />
+Y. M. Cho, M. D. Ritchie, J. H. Moore, J. Y. Park, K.-U. Lee, H. D. Shin, H. K. Lee, K. S. Park<br />
+<em>Diabetologia</em> (2004-03) <a href="https://doi.org/bmnr5t">https://doi.org/bmnr5t</a><br />
+DOI: <a href="https://doi.org/10.1007/s00125-003-1321-3">10.1007/s00125-003-1321-3</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/14730379">14730379</a></p>
+</div>
+<div id="ref-93PfLXPZ">
+<p>20. <strong>Risk score modeling of multiple gene to gene interactions using aggregated-multifactor dimensionality reduction</strong><br />
+Hongying Dai, Richard J Charnigo, Mara L Becker, J Steven Leeder, Alison A Motsinger-Reif<br />
+<em>BioData Mining</em> (2013-01-08) <a href="https://doi.org/gb5fmn">https://doi.org/gb5fmn</a><br />
+DOI: <a href="https://doi.org/10.1186/1756-0381-6-1">10.1186/1756-0381-6-1</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23294634">23294634</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3560267">PMC3560267</a></p>
+</div>
+<div id="ref-kN4MaLuT">
+<p>21. <strong>Model-Based Multifactor Dimensionality Reduction to detect epistasis for quantitative traits in the presence of error-free and noisy data</strong><br />
+Jestinah M Mahachie John, François Van Lishout, Kristel Van Steen<br />
+<em>European Journal of Human Genetics</em> (2011-03-16) <a href="https://doi.org/bndfnk">https://doi.org/bndfnk</a><br />
+DOI: <a href="https://doi.org/10.1038/ejhg.2011.17">10.1038/ejhg.2011.17</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/21407267">21407267</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3110049">PMC3110049</a></p>
+</div>
 <div id="ref-S6nj6BFK">
-<p>7. <strong>An efficient algorithm to perform multiple testing in epistasis screening</strong><br />
+<p>22. <strong>An efficient algorithm to perform multiple testing in epistasis screening</strong><br />
 François Van Lishout, Jestinah M Mahachie John, Elena S Gusareva, Victor Urrea, Isabelle Cleynen, Emilie Théâtre, Benoît Charloteaux, Malu Luz Calle, Louis Wehenkel, Kristel Van Steen<br />
 <em>BMC Bioinformatics</em> (2013-04-24) <a href="https://doi.org/f4v3n7">https://doi.org/f4v3n7</a><br />
 DOI: <a href="https://doi.org/10.1186/1471-2105-14-138">10.1186/1471-2105-14-138</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/23617239">23617239</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3648350">PMC3648350</a></p>
