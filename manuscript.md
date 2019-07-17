@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-15'
+date-meta: '2019-07-17'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/40c30490fbba353847dc97ddbe61d090d02b1757/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/0d5844beb46fb1d097035c9023061482ff255c79/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@40c3049](https://github.com/lelaboratoire/rethink-prs-ms/tree/40c30490fbba353847dc97ddbe61d090d02b1757)
-on July 15, 2019.
+from [lelaboratoire/rethink-prs-ms@0d5844b](https://github.com/lelaboratoire/rethink-prs-ms/tree/0d5844beb46fb1d097035c9023061482ff255c79)
+on July 17, 2019.
 </em></small>
 
 ## Authors
@@ -139,41 +139,64 @@ In this study we aim to reformulate the PRS using the MB-MDR approach in observi
 
 ## Methods
 
+### Multifactor Dimensionality Reduction (MDR) and model-based MDR (MB-MDR)
+
+MB-MDR is a feature selection method that detects multiple sets of significant gene-gene interactions in relation to a trait of interest, while efficiently controlling type I error rates.
+
+
 ### Multilocus Risk Score (MRS)
 Compute risks from significant interactions
 i = 1...n subjects
 p SNPs
-j = 1...k significant combinations
-We apply the software... [@S6nj6BFK] to obtain the significance level of each combination of SNPs.
-allow for parallel computation
-The maximum value of $k$ is $C^d_p$.
-For each subject $i$, the $d$-way interaction risk score is calculated as
-$$R_d(i) = \sum_{j = 1}^k \chi_j^2 \times HLO_j(X_{ij})$$
-where $\chi_j^2$ is the test statistic of each multi-locus combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $HLO_j$ is the $j^{th}$ re-coded HLO-matrix and $X_j$ is one of $k$ combination of SNPs.
-
-
+j = 1...k 
+We apply the MB-MDR software [@S6nj6BFK] to obtain the significance level of each combination of SNPs.
+[allow for parallel computation]
+If we let $k$ be the number of significant combinations then, for each subject $i$, the $d$-way interaction risk score is calculated as
+$$MRS_d(i) = \sum_{j = 1}^k \chi_j^2 \times HLO_j(X_{ij})$$
+where $\chi_j^2$ is the test statistic of each genotype combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $X_{ij}$ is the $j^{th}$ genotype combinations of subject $i$ and $HLO_j$ represents the $j^{th}$ re-coded HLO-matrix (1 = High, -1 = Low, 0 = No evidence).
+For example, if [...].
+The maximum value of $k$ is $C^d_p$ (when no threshold is imposed).
+ 
+The 
+$$MRS(i) = \sum_{d = 1}^{\bar{d}} MRS_d(i)$$
+In this study, we consider 1-way and 2-way interactions, i.e. $\bar{d} = 2$, and hence, the combined risk is simply the total of the first two: $MRS = MRS_1 + MRS_2$.
 
 
 ### Simulated data
 [Patryk...]
 
+[objective: simulate a diverse collection of datasets]
+
 For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and calculated risk score for each individual in the holdout set.
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method where
+
+### Mutual information and information gain
+We measure the interaction information (i.e. degree of synergistic effects of genetic attributes on the phenotype) of each dataset by summing up the pairwise information gain between all pairs of genetic attributes.
+Specifically,... phenotypic class $C$...
+$$IG(G_1, G_2; C) = I(G_1, G_2; C) - I(G_1;C) - I(G_2,C),$$
+where $I$ represents the mutual information between two attributes.
+
+two-way epistatic interactions
 
 
 
 
 ## Results
-### Information gain
 
-### iPRS outperforms standard PRS
+### MRS outperforms standard PRS
 
-![MM12 produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the original method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MM12D_auROC_.pdf)
+![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the original method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs}
 
+To assess whether this improvement in performance correlates with , in the following section, we untangled the two components in MRS and apply information theory to 
 
+### Assess improvement in performance
 
+As the amount of main effects increases (Fig. {@fig:improvements} left), MRS1 increasingly performs better than PRS, which is likely because encodings are inferred (top left).
+Meanwhile, MRS2's accuracy remain similar to that of PRS (middle left).
+On the other hand, when the amount of interaction effects increases (right), MRS1 performs mostly on par to PRS while MRS2
+Combinging the gain from both MR1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
 
-
+![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects](images/improvements_train_ms.svg){#fig:improvements}
 
 
 
