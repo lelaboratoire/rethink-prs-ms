@@ -243,6 +243,34 @@
     "id": "Z12fynub"
   },
   {
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "issue": "3",
+    "DOI": "10.1002/j.1538-7305.1948.tb01338.x",
+    "type": "article-journal",
+    "page": "379-423",
+    "source": "Crossref",
+    "title": "A Mathematical Theory of Communication",
+    "volume": "27",
+    "author": [
+      {
+        "given": "C. E.",
+        "family": "Shannon"
+      }
+    ],
+    "container-title": "Bell System Technical Journal",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          1948,
+          7
+        ]
+      ]
+    },
+    "URL": "https://doi.org/b39t",
+    "id": "yzGboP1g"
+  },
+  {
     "publisher": "Springer Science and Business Media LLC",
     "issue": "3",
     "DOI": "10.1007/s00125-003-1321-3",
