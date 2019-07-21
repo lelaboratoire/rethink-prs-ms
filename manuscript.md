@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/76e826f5cc70a97440a205349a679e7e4a8680f3/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/7d31e0273420d87a2e172e9fd6392d6d8d249ac4/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@76e826f](https://github.com/lelaboratoire/rethink-prs-ms/tree/76e826f5cc70a97440a205349a679e7e4a8680f3)
+from [lelaboratoire/rethink-prs-ms@7d31e02](https://github.com/lelaboratoire/rethink-prs-ms/tree/7d31e0273420d87a2e172e9fd6392d6d8d249ac4)
 on July 21, 2019.
 </em></small>
 
@@ -206,11 +206,19 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 
 ## Results
 
-### MRS outperforms standard PRS
+### Datasets
+[Patryk Orzechowski]
 
-![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the original method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs}
+[simulated datasets of $n = 1000$ individuals, $p = 10$ SNPs]
 
-To assess whether this improvement in performance correlates with , in the following section, we untangled the two components in MRS and apply information theory to 
+### MRS outperforms standard PRS in the majority of simulated datasets
+
+![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs}
+
+In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
+In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
+When MRS yields smaller auROC, the difference is small (3.3% $\pm$ 2.8%, purple lines/areas).
+To assess whether this improvement in performance correlates with the amount of interaction effects [contained] in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
 
 ### Assess improvement in performance
 
@@ -219,7 +227,7 @@ Meanwhile, MRS2's accuracy remain similar to that of PRS (middle left).
 On the other hand, when the amount of interaction effects increases (right), MRS1 performs mostly on par to PRS while MRS2
 Combinging the gain from both MR1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
 
-![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects](images/improvements_train_ms.svg){#fig:improvements}
+![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
 
 
