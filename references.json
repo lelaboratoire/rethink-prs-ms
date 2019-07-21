@@ -271,64 +271,6 @@
     "id": "yzGboP1g"
   },
   {
-    "publisher": "Springer Science and Business Media LLC",
-    "issue": "3",
-    "DOI": "10.1007/s00125-003-1321-3",
-    "type": "article-journal",
-    "page": "549-554",
-    "source": "Crossref",
-    "title": "Multifactor-dimensionality reduction shows a two-locus interaction associated with Type 2 diabetes mellitus",
-    "volume": "47",
-    "author": [
-      {
-        "given": "Y. M.",
-        "family": "Cho"
-      },
-      {
-        "given": "M. D.",
-        "family": "Ritchie"
-      },
-      {
-        "given": "J. H.",
-        "family": "Moore"
-      },
-      {
-        "given": "J. Y.",
-        "family": "Park"
-      },
-      {
-        "given": "K.-U.",
-        "family": "Lee"
-      },
-      {
-        "given": "H. D.",
-        "family": "Shin"
-      },
-      {
-        "given": "H. K.",
-        "family": "Lee"
-      },
-      {
-        "given": "K. S.",
-        "family": "Park"
-      }
-    ],
-    "container-title": "Diabetologia",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2004,
-          3
-        ]
-      ]
-    },
-    "URL": "https://doi.org/bmnr5t",
-    "container-title-short": "Diabetologia",
-    "PMID": "14730379",
-    "id": "oTOXwsyb"
-  },
-  {
     "publisher": "Elsevier BV",
     "issue": "3",
     "DOI": "10.1016/j.ajhg.2015.01.001",
@@ -811,39 +753,6 @@
     "container-title-short": "Nat Rev Genet",
     "PMID": "29789686",
     "id": "1GK3F1BxE"
-  },
-  {
-    "publisher": "Informa UK Limited",
-    "issue": "2",
-    "DOI": "10.1080/07853890252953473",
-    "type": "article-journal",
-    "page": "88-95",
-    "source": "Crossref",
-    "title": "New strategies for identifying gene-gene interactions in hypertension",
-    "volume": "34",
-    "author": [
-      {
-        "given": "Jason H",
-        "family": "Moore"
-      },
-      {
-        "given": "Scott M",
-        "family": "Williams"
-      }
-    ],
-    "container-title": "Annals of Medicine",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2002,
-          1
-        ]
-      ]
-    },
-    "URL": "https://doi.org/fj4r2k",
-    "container-title-short": "Annals of Medicine",
-    "id": "EDApk3zM"
   },
   {
     "publisher": "Elsevier BV",

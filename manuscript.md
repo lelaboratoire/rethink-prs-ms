@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-20'
+date-meta: '2019-07-21'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/c9cf23e86568418b8ba62eab7444b91696fbf82c/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/6c73a5986b504c235479db3e4be46a865541c2e8/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@c9cf23e](https://github.com/lelaboratoire/rethink-prs-ms/tree/c9cf23e86568418b8ba62eab7444b91696fbf82c)
-on July 20, 2019.
+from [lelaboratoire/rethink-prs-ms@6c73a59](https://github.com/lelaboratoire/rethink-prs-ms/tree/6c73a5986b504c235479db3e4be46a865541c2e8)
+on July 21, 2019.
 </em></small>
 
 ## Authors
@@ -106,35 +106,34 @@ This technical revolution in the field of genomic medicine fueled our progressin
 
 In tandem with the movement towards precision medicine, the post-GWAS era strives to bring significant population-derived gene variants into individual level metrics actionable in health delivery settings.
 While GWA studies indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires additional granularity on aggregating contributions of many gene variants in the form of polygenic risk scores (PRS).
-Importantly, PRS have been one such approach developed to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS studies [@1Dlv3tAGh; @1GK3F1BxE]. 
-(sentence on origin and history & cite it)
+Importantly, PRS provides an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS studies [@1Dlv3tAGh; @1GK3F1BxE]. 
 In quantifying the effect of particular combinations of genetic SNP variants towards risk prediction, PRS offers a probabilisitic susceptibility value of an individual to disease. 
 Such genetic risk estimation scores are central to clinical decision-making, serving to reinforce individual health management in heritable disease detection and early prevention of various adult-onset conditions. 
 The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@mwTa2RUK; @JjyayEbB; @Z12fynub; @gkABDVTx]
 
-$PRS=\sum_{i=1}^{n} \beta_i \cdot SNP_i$
-
-Where $\beta$ refers to the weighted risk contribution of the loci gene variant and $n$ refers to the total quantity of GWAS *hits* across the genome. 
+For each SNP $i$ of an individual's genome of $n$ possible SNPs for analysis, the PRS score is calculated via a summation across all significant SNPs as
+$$PRS=\sum_{i=1}^{n} \beta_i \cdot SNP_i$$
+where $/beta$ is the weighted risk contribution of the loci gene variant derived from risk score model parameters. 
 Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the $\beta$ weight according to the specific type of statistical model used to combine risk of individual variations, the $n$ with respect to the specification of genetic variants considered, and the ability of the PRS to generalize to the entire population [@1Dlv3tAGh].
 
 Historically, PRS models have previously characterized genomic architechture in a dichotimous division of Mendelian monogenic and polygenic inheritance, in which either one or many gene perturbations give rise to disease phenotypes in an individual, respectively [@KQA5cNEZ; @1GK3F1BxE].
 Yet while such classification models arose from former sequencing technology and study design, a more realistic genetic archtechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumultatively drive overall risk of an individual [@LpJAX4ST].
 When only considering rare (minor allele frequency, MAF < 0.5%), high-risk gene variants, such genomic variation only contributes approximately 1-10% towards adult-onset disease incidence [@1GK3F1BxE; @wBOguD8h].
-Often, more relevant and complete sources of genetic risk is captured from complex smaller interactions of both common (MAF >5%) and low-frequency (MAF >0.5% and <5%) genetic variants each contributing individual, appreciable effects [@132N8vjSs; @mOp2SAPs].
+Often, more relevant and complete sources of genetic risk is captured from complex smaller interactions of both common (MAF > 5%) and low-frequency (MAF > 0.5% and < 5%) genetic variants each contributing individual, appreciable effects [@132N8vjSs; @mOp2SAPs].
 Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible gene interaction combinations with both linear and nonlinear effects. 
 In this context, more robust and efficient methods towards a polygeneic risk calculation are necessary in capturing the overlap between context-dependent effects of both rare and common alleles on human genetic disorder.
 
 With respect to better understanding the epistasis across an individual's genome, various statistical models have been designed with the intent of capturing high dimensional gene-gene (GxG) interactions. 
-The Multifactor Dimensionality Reduction (MDR) model is one such model that addresses these challenges and has been extensively applied to detect nonlinear complex GxG interactions associated with individual disease. 
-By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes into two groups of risk based on some threshold value [@E26QhGxD]. 
-MDR has been effective in identifying epistasis that may characterize genomic susceptibility in common diseases such as hypertension [@EDApk3zM] and Type 2 diabetes [@oTOXwsyb].
-
+The Multifactor Dimensionality Reduction (MDR) method is one such nonparametric, model-free framework that addresses these challenges and has been extensively applied to detect nonlinear complex GxG interactions associated with individual disease [@E26QhGxD]. 
+By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes into two groups of risk based on some threshold value. 
 While created with the primary intention towards GxG interaction detection, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores [@93PfLXPZ].
+
 Modifications built on top of the MDR framework have been proposed in order to better capture multiple significant epistasis models and potential missed interactions owning to limiations of the original model in the higher dimensions.
 Model-Based Multifactor Dimensionality Reduction (MB-MDR) was formulated as a flexible GxG detection framework for dichotomous traits and unrelated individuals [@kN4MaLuT]. 
-Rather than a direct comparison against a threshold level in the original MDR method, MB-MDR merges multi-locus genotypes exhibiting significantly high or low risk levels through association testing and adds an additional category representing no evidence of risk. 
+Rather than a direct comparison against a threshold level in the original MDR method, MB-MDR merges multi-locus genotypes exhibiting significant High or Low risk levels through association testing and adds an additional 'No evidence of risk' categorization. 
 
-In this study we aim to reformulate the PRS using the MB-MDR approach in observing the model's separability of results on an evidence-based simulated dataset from HIBACHI.
+In the present work, we aim to reformulate the PRS using the MB-MDR approach to better capture epistatic gene interactions of individual disease risk in a novel Multilocus Risk Score (MRS).
+In observing prediction accuracy results on an evidence-based simulated dataset from HIBACHI, we demonstrate the improved performance of our epistasis enriched MRS towards characterizing more granular disease etiology.
 
 
 ## Methods
