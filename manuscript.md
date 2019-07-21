@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/cc73ed9181969e347a081637ecf01a3814b0a4d1/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/f28371e93835df4f7beef04fc6f60dfc5bfe118f/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@cc73ed9](https://github.com/lelaboratoire/rethink-prs-ms/tree/cc73ed9181969e347a081637ecf01a3814b0a4d1)
+from [lelaboratoire/rethink-prs-ms@f28371e](https://github.com/lelaboratoire/rethink-prs-ms/tree/f28371e93835df4f7beef04fc6f60dfc5bfe118f)
 on July 21, 2019.
 </em></small>
 
@@ -196,7 +196,7 @@ We assess the performance of the MRS by comparing the area under the Receiving O
 ### Manuscript drafting
 This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown [@YuJbg3zO].
 Manubot uses continuous integration to monitor changes and automatically update the manuscript.
-As a result, the latest version of this manuscript is always available at [https://lelaboratoire.github.io/rethink-prs-ms/](https://lelaboratoire.github.io/rethink-prs-ms/).
+As a result, the latest version of this manuscript is always available at [https://lelaboratoire.github.io/rethink-prs/](https://lelaboratoire.github.io/rethink-prs/).
 
 
 ### Availability
