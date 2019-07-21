@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/43e47d9c3f0df003a26a80031f572a3d0a0cb80e/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/cc73ed9181969e347a081637ecf01a3814b0a4d1/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@43e47d9](https://github.com/lelaboratoire/rethink-prs-ms/tree/43e47d9c3f0df003a26a80031f572a3d0a0cb80e)
+from [lelaboratoire/rethink-prs-ms@cc73ed9](https://github.com/lelaboratoire/rethink-prs-ms/tree/cc73ed9181969e347a081637ecf01a3814b0a4d1)
 on July 21, 2019.
 </em></small>
 
@@ -152,7 +152,7 @@ $$ \begin{array}{l|ccc}
 SNP_2 = 0 & O        & O        & O \\
 SNP_2 = 1 & O        & H        & L \\
 SNP_2 = 2 & O        & L        & H
-\end{array}.
+\end{array}
 $$
 We discuss in the following subsection how these values were utilized in the formulation of the Multilocus Risk Score (MRS).
 
@@ -174,18 +174,7 @@ The final MRS score is the sum of all $MRS_d$ for all $d$ up to $\bar{d}$:
 $$MRS(i) = \sum_{d = 1}^{\bar{d}} MRS_d(i)$$
 In this study, we consider 1-way and 2-way interactions, i.e. $\bar{d} = 2$, and hence, the combined risk is simply the total of the first two: $MRS = MRS_1 + MRS_2$.
 
-
-### Simulated data
-[Patryk...]
-
-[objective: simulate a diverse collection of datasets]
-
-For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and calculated risk score for each individual in the holdout set.
-We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method.
-
 ### Mutual information and information gain
-$I(G_1,y)$ can be calculated   and can be used as a measure of the main effect of the genotype $G_j$ on the phenotypic class $y$.
-
 We apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
 A dataset's main effect (i.e. marginal effect $ME$) can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $y$ based on Shannon's entropy $H$ [@yzGboP1g]:
 $$ME = \sum_{j}^k I(SNP_j; y) = \sum_{j}^k H(y) - H(y|SNP_j).$$
@@ -195,6 +184,14 @@ Specifically, if we let $X_j$ denote the $j^{th}$ genotype combination $(SNP_{j_
 $$SE = \sum_{j}^kIG(X_j; y) = \sum_{j}^k I(SNP_{j_1}, SNP_{j_2}; y) - I(SNP_{j_1}; y) - I(SNP_{j_2}; y),$$
 where $IG$ measures how much of the phenotypic class $y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
+
+### Simulated data
+[Patryk...]
+
+[objective: simulate a diverse collection of datasets]
+
+For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and calculated risk score for each individual in the holdout set.
+We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method.
 
 ### Manuscript drafting
 This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown [@YuJbg3zO].
