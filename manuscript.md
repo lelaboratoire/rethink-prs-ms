@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/f28371e93835df4f7beef04fc6f60dfc5bfe118f/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/76e826f5cc70a97440a205349a679e7e4a8680f3/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@f28371e](https://github.com/lelaboratoire/rethink-prs-ms/tree/f28371e93835df4f7beef04fc6f60dfc5bfe118f)
+from [lelaboratoire/rethink-prs-ms@76e826f](https://github.com/lelaboratoire/rethink-prs-ms/tree/76e826f5cc70a97440a205349a679e7e4a8680f3)
 on July 21, 2019.
 </em></small>
 
@@ -159,7 +159,7 @@ We discuss in the following subsection how these values were utilized in the for
 [More on significance of SNP combination vs. significance of H/L/O here...]
 
 ### Multilocus Risk Score (MRS)
-We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n = 1000$ individuals, $p = 10$ SNPs to obtain the significance level of each combination of SNPs.
+We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n$ individuals, $p$ SNPs to obtain the significance level of each combination of SNPs.
 We let $k_d$ denote the number of significant combinations.
 In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$.
 
