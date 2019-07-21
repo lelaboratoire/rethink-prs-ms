@@ -271,6 +271,37 @@
     "id": "yzGboP1g"
   },
   {
+    "publisher": "Springer New York",
+    "DOI": "10.1007/978-1-4939-2155-3_13",
+    "type": "chapter",
+    "page": "257-268",
+    "source": "Crossref",
+    "title": "Epistasis Analysis Using Information Theory",
+    "author": [
+      {
+        "given": "Jason H.",
+        "family": "Moore"
+      },
+      {
+        "given": "Ting",
+        "family": "Hu"
+      }
+    ],
+    "container-title": "Methods in Molecular Biology",
+    "issued": {
+      "date-parts": [
+        [
+          2014,
+          11,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gf484q",
+    "PMID": "25403536",
+    "id": "1FFMLUZxb"
+  },
+  {
     "publisher": "Elsevier BV",
     "issue": "3",
     "DOI": "10.1016/j.ajhg.2015.01.001",
@@ -1358,5 +1389,67 @@
     "PMCID": "PMC3531285",
     "PMID": "23300413",
     "id": "iFUfVw9V"
+  },
+  {
+    "publisher": "Public Library of Science (PLoS)",
+    "issue": "6",
+    "DOI": "10.1371/journal.pcbi.1007128",
+    "type": "article-journal",
+    "page": "e1007128",
+    "source": "Crossref",
+    "title": "Open collaborative writing with Manubot",
+    "volume": "15",
+    "author": [
+      {
+        "given": "Daniel S.",
+        "family": "Himmelstein"
+      },
+      {
+        "given": "Vincent",
+        "family": "Rubinetti"
+      },
+      {
+        "given": "David R.",
+        "family": "Slochower"
+      },
+      {
+        "given": "Dongbo",
+        "family": "Hu"
+      },
+      {
+        "given": "Venkat S.",
+        "family": "Malladi"
+      },
+      {
+        "given": "Casey S.",
+        "family": "Greene"
+      },
+      {
+        "given": "Anthony",
+        "family": "Gitter"
+      }
+    ],
+    "container-title": "PLOS Computational Biology",
+    "language": "en",
+    "editor": [
+      {
+        "given": "Dina",
+        "family": "Schneidman-Duhovny"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          6,
+          24
+        ]
+      ]
+    },
+    "URL": "https://doi.org/c7np",
+    "container-title-short": "PLoS Comput Biol",
+    "PMCID": "PMC6611653",
+    "PMID": "31233491",
+    "id": "YuJbg3zO"
   }
 ]

@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/6c73a5986b504c235479db3e4be46a865541c2e8/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/43e47d9c3f0df003a26a80031f572a3d0a0cb80e/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@6c73a59](https://github.com/lelaboratoire/rethink-prs-ms/tree/6c73a5986b504c235479db3e4be46a865541c2e8)
+from [lelaboratoire/rethink-prs-ms@43e47d9](https://github.com/lelaboratoire/rethink-prs-ms/tree/43e47d9c3f0df003a26a80031f572a3d0a0cb80e)
 on July 21, 2019.
 </em></small>
 
@@ -139,12 +139,12 @@ In observing prediction accuracy results on an evidence-based simulated dataset 
 ## Methods
 
 ### Multifactor Dimensionality Reduction (MDR) and model-based MDR (MB-MDR)
-
 MDR is a nonparametric method that detects multiple genetic loci associated with a clinical outcome by reducing the dimension of a genotype dataset by pooling multilocus genotypes into high-risk and low-risk groups [@E26QhGxD].
 Extended from the original MDR algorithm, MB-MDR addresses existing limitations of MDR by increasing detectability of important interactions and decreasing bias by allowing O labels for individuals with no evidence for abberant risk.
 Several improvements have been made to MB-MDR since it was first introduced in 2009, and its current implementation efficiently and effectively detects multiple sets of significant gene-gene interactions in relation to a trait of interest while efficiently controlling type I error rates.
+
 Besides the P values associated with each genotype combination, another important output of MB-MDR is the HLO matrices generated from the affected- and unaffected-subjects matrices (in the case of binary outcome).
-Briefly, for each genotype combination, an HLO matrix is a 3$\times$3 matrix with each cell containing H (high), L (low) or O (no evidence), indicating risk of an individual whose genotype pairs fall into that cell [@S6nj6BFK].
+Briefly, for each genotype combination, an HLO matrix is a 3 x 3 matrix with each cell containing H (high), L (low) or O (no evidence), indicating risk of an individual whose genotype pairs fall into that cell [@S6nj6BFK].
 For an example binary outcome problem, a genotype combination $SNP_1$ and $SNP_2$ will have a $\chi^2$ value, an associated P value and an HLO matrix that looks like
 $$ \begin{array}{l|ccc}
 & SNP_1 = 0 & SNP_1 = 1 & SNP_1 = 2   \\
@@ -156,15 +156,18 @@ SNP_2 = 2 & O        & L        & H
 $$
 We discuss in the following subsection how these values were utilized in the formulation of the Multilocus Risk Score (MRS).
 
+[More on significance of SNP combination vs. significance of H/L/O here...]
+
 ### Multilocus Risk Score (MRS)
-We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n$ individuals, $p$ SNPs to obtain the significance level of each combination of SNPs and let $k_d$ denote the number of significant combinations.
-In this study, no significance threshold is imposed and thus $k_d$ reaches its maximum value of $C^d_p$.
+We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n = 1000$ individuals, $p = 10$ SNPs to obtain the significance level of each combination of SNPs.
+We let $k_d$ denote the number of significant combinations.
+In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$.
 
 For each subject $i$ ($i = 1,2,\cdot, n$), the $d$-way interaction risk score is calculated as
 $$MRS_d(i) = \sum_{j = 1}^{k_d} \chi_j^2 \times \textrm{HLO}_j(X_{ij})$$
 where $\chi_j^2$ is the test statistic of each genotype combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $X_{ij}$ is the $j^{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
-As an example, consider a pair $X_{*1} = (SNP_1, SNP_2)$ with $\chi_j^2=8.3$ and corresponding HLO matrix of all O's except an L, or -1, in the first cell.
-Then, all subjects' current risks would remain the same except the ones with $SNP_1 = SNP_1 = 0$ where their risks are subtracted by 8.3.
+As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\chi_j^2=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
+Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
 
  
 The final MRS score is the sum of all $MRS_d$ for all $d$ up to $\bar{d}$:
@@ -181,17 +184,26 @@ For each simulated and real-world dataset, after randomly splitting the entire d
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method.
 
 ### Mutual information and information gain
-$I(G_1,y)$ can be calculated based on Shannon's entropy [@yzGboP1g] and can be used as a measure of the main effect of the genotype $G_j$ on the phenotypic class $y$.
+$I(G_1,y)$ can be calculated   and can be used as a measure of the main effect of the genotype $G_j$ on the phenotypic class $y$.
 
- entropy-based methods to measure how much information about the endpoint is due to the synergistic effects of the variants after subtracting the marginal effects
- 
+We apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
+A dataset's main effect (i.e. marginal effect $ME$) can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $y$ based on Shannon's entropy $H$ [@yzGboP1g]:
+$$ME = \sum_{j}^k I(SNP_j; y) = \sum_{j}^k H(y) - H(y|SNP_j).$$
+
 We measure the 2-way interaction information (i.e. degree of synergistic effects of genotypes on the phenotype) of each dataset by summing the pairwise information gain between all pairs of genetic attributes.
-Specifically, given a dataset with phenotypic class $y$, its total 2-way interaction gain is calculated as ...
-$$II = \sum_{j}^kIG(X_j, C) $$
-where $IG$ mesures how much of the phenotypic class can be explained by the epistatic interaction between two genotypes) represents the mutual information between two attributes.
+Specifically, if we let $X_j$ denote the $j^{th}$ genotype combination $(SNP_{j_1}, SNP_{j_2})$, the total 2-way interaction gain (i.e. synergistic effects $SE$) is calculated as 
+$$SE = \sum_{j}^kIG(X_j; y) = \sum_{j}^k I(SNP_{j_1}, SNP_{j_2}; y) - I(SNP_{j_1}; y) - I(SNP_{j_2}; y),$$
+where $IG$ measures how much of the phenotypic class $y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
+We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
-two-way epistatic interactions
+### Manuscript drafting
+This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown [@YuJbg3zO].
+Manubot uses continuous integration to monitor changes and automatically update the manuscript.
+As a result, the latest version of this manuscript is always available at [https://lelaboratoire.github.io/rethink-prs-ms/](https://lelaboratoire.github.io/rethink-prs-ms/).
 
+
+### Availability
+Detailed simulation and analysis code needed to reproduce the results in this study is available at [https://github.com/lelaboratoire/rethink-prs-ms/](https://github.com/lelaboratoire/rethink-prs-ms/).
 
 
 
