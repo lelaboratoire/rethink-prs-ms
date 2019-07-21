@@ -90,13 +90,13 @@
     "repo_slug": "lelaboratoire/rethink-prs-ms",
     "repo_owner": "lelaboratoire",
     "repo_name": "rethink-prs-ms",
-    "commit": "7d31e0273420d87a2e172e9fd6392d6d8d249ac4"
+    "commit": "b144285d4fec241ee0cbd98d7e8e54a0e08bf19e"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 23,
       "total": 23
     },
-    "word_count": 2513
+    "word_count": 2514
   }
 }

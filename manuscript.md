@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/7d31e0273420d87a2e172e9fd6392d6d8d249ac4/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/b144285d4fec241ee0cbd98d7e8e54a0e08bf19e/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@7d31e02](https://github.com/lelaboratoire/rethink-prs-ms/tree/7d31e0273420d87a2e172e9fd6392d6d8d249ac4)
+from [lelaboratoire/rethink-prs-ms@b144285](https://github.com/lelaboratoire/rethink-prs-ms/tree/b144285d4fec241ee0cbd98d7e8e54a0e08bf19e)
 on July 21, 2019.
 </em></small>
 
@@ -213,7 +213,7 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 
 ### MRS outperforms standard PRS in the majority of simulated datasets
 
-![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs}
+![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs width="80%"}
 
 In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
