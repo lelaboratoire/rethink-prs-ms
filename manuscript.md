@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-21'
+date-meta: '2019-07-23'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/b144285d4fec241ee0cbd98d7e8e54a0e08bf19e/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/df671c0b7f86ee82c76446bd4e1095d42254b5c0/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@b144285](https://github.com/lelaboratoire/rethink-prs-ms/tree/b144285d4fec241ee0cbd98d7e8e54a0e08bf19e)
-on July 21, 2019.
+from [lelaboratoire/rethink-prs-ms@df671c0](https://github.com/lelaboratoire/rethink-prs-ms/tree/df671c0b7f86ee82c76446bd4e1095d42254b5c0)
+on July 23, 2019.
 </em></small>
 
 ## Authors
@@ -143,7 +143,7 @@ MDR is a nonparametric method that detects multiple genetic loci associated with
 Extended from the original MDR algorithm, MB-MDR addresses existing limitations of MDR by increasing detectability of important interactions and decreasing bias by allowing O labels for individuals with no evidence for abberant risk.
 Several improvements have been made to MB-MDR since it was first introduced in 2009, and its current implementation efficiently and effectively detects multiple sets of significant gene-gene interactions in relation to a trait of interest while efficiently controlling type I error rates.
 
-Besides the P values associated with each genotype combination, another important output of MB-MDR is the HLO matrices generated from the affected- and unaffected-subjects matrices (in the case of binary outcome).
+In addition to the test statistic and P values associated with each genotype combination, another important output of MB-MDR is the HLO matrices generated from the affected- and unaffected-subjects matrices (in the case of binary outcome).
 Briefly, for each genotype combination, an HLO matrix is a 3 x 3 matrix with each cell containing H (high), L (low) or O (no evidence), indicating risk of an individual whose genotype pairs fall into that cell [@S6nj6BFK].
 For an example binary outcome problem, a genotype combination $SNP_1$ and $SNP_2$ will have a $\chi^2$ value, an associated P value and an HLO matrix that looks like
 $$ \begin{array}{l|ccc}
@@ -160,22 +160,21 @@ We discuss in the following subsection how these values were utilized in the for
 
 ### Multilocus Risk Score (MRS)
 We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n$ individuals, $p$ SNPs to obtain the significance level of each combination of SNPs.
-We let $k_d$ denote the number of significant combinations.
-In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$.
+We let $k_d$ denote the number of significant combinations for a specific model dimension $d$ (e.g. $d = 2$ results in pairs of SNPs).
+In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$ ($p$ choose $d$).
 
-For each subject $i$ ($i = 1,2,\cdot, n$), the $d$-way interaction risk score is calculated as
+For each subject $i$ ($i = 1,2, \dotsm, n$), the $d$-way interaction risk score is calculated as
 $$MRS_d(i) = \sum_{j = 1}^{k_d} \chi_j^2 \times \textrm{HLO}_j(X_{ij})$$
 where $\chi_j^2$ is the test statistic of each genotype combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $X_{ij}$ is the $j^{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
+In this study, we selected the default multiple testing correction algorithm for an MB-MDR model where the $\chi_j^2$ for each genotype combination is derived from the gammaMAXT algorithm for two tests: H versus LO and L versus HO.
 As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\chi_j^2=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
 Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
 
- 
-The final MRS score is the sum of all $MRS_d$ for all $d$ up to $\bar{d}$:
-$$MRS(i) = \sum_{d = 1}^{\bar{d}} MRS_d(i)$$
-In this study, we consider 1-way and 2-way interactions, i.e. $\bar{d} = 2$, and hence, the combined risk is simply the total of the first two: $MRS = MRS_1 + MRS_2$.
+In this study, we consider 1-way and 2-way interactions and thus the combined risk is simply the total of the first two: $MRS = MRS_1 + MRS_2$.
+We will examine the combined risk MRS and also its components, MRS1 and MRS2, separately.
 
 ### Mutual information and information gain
-We apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
+For a given simulated data set, we apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
 A dataset's main effect (i.e. marginal effect $ME$) can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $y$ based on Shannon's entropy $H$ [@yzGboP1g]:
 $$ME = \sum_{j}^k I(SNP_j; y) = \sum_{j}^k H(y) - H(y|SNP_j).$$
 
@@ -190,8 +189,8 @@ We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of 
 
 [objective: simulate a diverse collection of datasets]
 
-For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and calculated risk score for each individual in the holdout set.
-We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard GRS method.
+For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
+We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method.
 
 ### Manuscript drafting
 This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown [@YuJbg3zO].
@@ -213,19 +212,19 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 
 ### MRS outperforms standard PRS in the majority of simulated datasets
 
-![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between two methods (right).](images/ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs width="80%"}
+![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between the auROCs from the two methods (right).](images/1_ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs width="80%"}
 
 In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
-When MRS yields smaller auROC, the difference is small (3.3% $\pm$ 2.8%, purple lines/areas).
+When MRS yields smaller auROC, the difference is small (3.3% ± 2.8%, purple lines/areas).
 To assess whether this improvement in performance correlates with the amount of interaction effects [contained] in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
 
 ### Assess improvement in performance
 
-As the amount of main effects increases (Fig. {@fig:improvements} left), MRS1 increasingly performs better than PRS, which is likely because encodings are inferred (top left).
-Meanwhile, MRS2's accuracy remain similar to that of PRS (middle left).
-On the other hand, when the amount of interaction effects increases (right), MRS1 performs mostly on par to PRS while MRS2
-Combinging the gain from both MR1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
+As the amount of main effects increases (Fig. {@fig:improvements} left column), MRS1 increasingly performs better than PRS, which is likely because encodings are inferred (top left).
+Meanwhile, MRS2's accuracy remain mostly similar to that of PRS (middle left).
+On the other hand, when the amount of interaction effects increases (Fig. {@fig:improvements} right column), MRS1 performs mostly on par to PRS while MRS2 increasingly performs better than PRS.
+Combining the gain from both MR1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
 
 ![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
