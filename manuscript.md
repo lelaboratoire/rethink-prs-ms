@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/df671c0b7f86ee82c76446bd4e1095d42254b5c0/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/a581b0e6063ee2b0ca0b8093df5b0cb05cd1c7c6/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@df671c0](https://github.com/lelaboratoire/rethink-prs-ms/tree/df671c0b7f86ee82c76446bd4e1095d42254b5c0)
+from [lelaboratoire/rethink-prs-ms@a581b0e](https://github.com/lelaboratoire/rethink-prs-ms/tree/a581b0e6063ee2b0ca0b8093df5b0cb05cd1c7c6)
 on July 23, 2019.
 </em></small>
 
@@ -229,6 +229,10 @@ Combining the gain from both MR1 and MRS2, MRS's performance progressively incre
 ![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
 
+
+## Acknowledgement
+
+We thank Dr. Kristel Van Steen and Aldo Camargo for their helpful responses to our inquires about the MB-MDR software.
 
 ## References {.page_break_before}
 
