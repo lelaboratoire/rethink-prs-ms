@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-23'
+date-meta: '2019-07-24'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/a581b0e6063ee2b0ca0b8093df5b0cb05cd1c7c6/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/16b7d5e81e934dbdf8f63333a16ffaea26933ccb/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@a581b0e](https://github.com/lelaboratoire/rethink-prs-ms/tree/a581b0e6063ee2b0ca0b8093df5b0cb05cd1c7c6)
-on July 23, 2019.
+from [lelaboratoire/rethink-prs-ms@16b7d5e](https://github.com/lelaboratoire/rethink-prs-ms/tree/16b7d5e81e934dbdf8f63333a16ffaea26933ccb)
+on July 24, 2019.
 </em></small>
 
 ## Authors
@@ -156,7 +156,7 @@ SNP_2 = 2 & O        & L        & H
 $$
 We discuss in the following subsection how these values were utilized in the formulation of the Multilocus Risk Score (MRS).
 
-[More on significance of SNP combination vs. significance of H/L/O here...]
+[More on the significance of SNP combination vs. significance of H/L/O here...]
 
 ### Multilocus Risk Score (MRS)
 We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n$ individuals, $p$ SNPs to obtain the significance level of each combination of SNPs.
@@ -166,7 +166,7 @@ In this study, no significance threshold is imposed at the SNP combination level
 For each subject $i$ ($i = 1,2, \dotsm, n$), the $d$-way interaction risk score is calculated as
 $$MRS_d(i) = \sum_{j = 1}^{k_d} \chi_j^2 \times \textrm{HLO}_j(X_{ij})$$
 where $\chi_j^2$ is the test statistic of each genotype combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $X_{ij}$ is the $j^{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
-In this study, we selected the default multiple testing correction algorithm for an MB-MDR model where the $\chi_j^2$ for each genotype combination is derived from the gammaMAXT algorithm for two tests: H versus LO and L versus HO.
+In this study, we selected the default multiple testing correction algorithms for an MB-MDR model where the $\chi_j^2$ for each genotype combination is derived from the gammaMAXT algorithm for two tests: H versus LO and L versus HO.
 As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\chi_j^2=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
 Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
 
@@ -185,9 +185,28 @@ where $IG$ measures how much of the phenotypic class $y$ can be explained by the
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
 ### Simulated data
-[Patryk...]
+The major objective of data generation was providing a comprehensive set of reproducible and diverse enough datasets for the study. 
+For generation of synthetic datasets we have used a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa]
+HIBACHI uses Genetic Programming (GP) and modifies the endpoint of the dataset in order to maximize the objective function called fitness. During the course of HIBACHI the difference between the accuracy of a given machine learning ("up" method) and accuracy of the other ("down" method) was maximized, so that one of the machine learning methods performed as good as possible, and the other the opposite. 
+For better objectiveness, each experiment in which the performance of one of the methods was maximized and of the other was minimized was repeated 5 times.
 
-[objective: simulate a diverse collection of datasets]
+The machine learning methods that were picked for the study along with their parameters are presented in Table 1 
+
+| Algorithm      |                             Parameters                                         |
+|:--------------:|:------------------------------------------------------------------------------:|
+| GaussianNB     |'priors': {None,2}, 'var_smoothing': {1e-9, 1e-7, 1e-5, 1e-3, 1e-1, 1e+1}       |
+| BernoulliNB    |'alpha': {1e-3, 1e-2, 1e-1, 1., 10., 100.},'fit_prior': {True, False}           |
+| DecisionTree   |'criterion': {"gini", "entropy"}, 'max_depth': [1, 11], 'min_samples_split': [2, 21], 'min_samples_leaf': [1, 21]|
+|ExtraTrees      |'n_estimators': {50,100}, 'criterion': {"gini", "entropy"},'max_features': [0.1, 1], 'min_samples_split': range(2, 21,2),'min_samples_leaf': range(1, 21,2), 'bootstrap': {True, False}|
+|RandomForest    |'n_estimators': {50,100}, 'criterion': {"gini", "entropy"},'max_features': [0.1, 1], 'min_samples_split': range(2, 21,4), 'min_samples_leaf':  range(1, 21,5), 'bootstrap': {True, False}                 |
+|GradientBoosting|  'n_estimators': {50,100},'learning_rate': {1e-3, 1e-2, 1e-1, 0.5, 1}, 'max_depth': {2,4,8}, 'min_samples_split': [2, 21], 'min_samples_leaf': [1, 21], 'subsample': [0.1, 1], 'max_features': [0.1, 1]|
+|KNeighbors      |'n_neighbors': [1, 100], 'weights': {"uniform", "distance"} , 'p': {1, 2}   |
+|LinearSVC | 'penalty': {'l1','l2'}, 'C': {1e-4, 1e-3, 1e-2, 1, 1e2}, 'dual'=False |
+|LogisticRegression| 'C': {1e-3, 1e-2, 1e-1, 1., 10.}, 'solver' : {'newton-cg', 'lbfgs', 'liblinear', 'sag'}|
+|XGBoost     | 'n_estimators'=100, 'max_depth': [2, 10], 'learning_rate': {1e-3, 1e-2, 1e-1, 0.5, 1.}, 'subsample': [0.05, 1], 'min_child_weight': [1, 20],
+|SVC | 'kernel'='rbf', 'C' : {1e-4, 1e-2, 1, 1e2}, 'gamma': {0.01, 0.1, 1, 10, 100}, | 
+|MLPClassifier |: 'hidden_layer_sizes': {(10),(11),(12),(13),(14),(15),(10,5)},  'activation': {'logistic','tanh','relu'}, 'solver': ['lbfgs'], 'learning_rate': {'constant','invscaling'}, 'max_iter'=1000, 'alpha':np.logspace(-4,1,4)|
+
 
 For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method.

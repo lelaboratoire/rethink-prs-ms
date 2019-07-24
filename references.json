@@ -1116,6 +1116,44 @@
     "id": "gkABDVTx"
   },
   {
+    "publisher": "WORLD SCIENTIFIC",
+    "DOI": "10.1142/9789813235533_0024",
+    "type": "paper-conference",
+    "source": "Crossref",
+    "title": "A heuristic method for simulating open-data of arbitrary complexity that can be used to compare and evaluate machine learning methods",
+    "author": [
+      {
+        "given": "Jason H.",
+        "family": "Moore"
+      },
+      {
+        "given": "Maksim",
+        "family": "Shestov"
+      },
+      {
+        "given": "Peter",
+        "family": "Schmitt"
+      },
+      {
+        "given": "Randal S.",
+        "family": "Olson"
+      }
+    ],
+    "event": "Pacific Symposium on Biocomputing 2018",
+    "container-title": "Biocomputing 2018",
+    "issued": {
+      "date-parts": [
+        [
+          2017,
+          11,
+          17
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gf5b6s",
+    "id": "pDXdtMFa"
+  },
+  {
     "publisher": "Ovid Technologies (Wolters Kluwer Health)",
     "issue": "22",
     "DOI": "10.1161/circulationaha.116.024436",
