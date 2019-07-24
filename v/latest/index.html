@@ -9,7 +9,7 @@
   <meta name="author" content="Patryk Orzechowski" />
   <meta name="author" content="Elisabetta Manduchi" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2019-07-23" />
+  <meta name="dcterms.date" content="2019-07-24" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Expanding polygenic risk scores to include gene-gene interactions</title>
   <style>
@@ -26,7 +26,7 @@
 <header id="title-block-header">
 <h1 class="title">Expanding polygenic risk scores to include gene-gene interactions</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/a581b0e6063ee2b0ca0b8093df5b0cb05cd1c7c6/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/a581b0e6063ee2b0ca0b8093df5b0cb05cd1c7c6">lelaboratoire/rethink-prs-ms@a581b0e</a> on July 23, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/16b7d5e81e934dbdf8f63333a16ffaea26933ccb/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/16b7d5e81e934dbdf8f63333a16ffaea26933ccb">lelaboratoire/rethink-prs-ms@16b7d5e</a> on July 24, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -59,20 +59,82 @@ SNP_2 = 1 &amp; O        &amp; H        &amp; L \\
 SNP_2 = 2 &amp; O        &amp; L        &amp; H
 \end{array}
 \]</span> We discuss in the following subsection how these values were utilized in the formulation of the Multilocus Risk Score (MRS).</p>
-<p>[More on significance of SNP combination vs. significance of H/L/O here…]</p>
+<p>[More on the significance of SNP combination vs. significance of H/L/O here…]</p>
 <h3 id="multilocus-risk-score-mrs">Multilocus Risk Score (MRS)</h3>
 <p>We apply the MB-MDR software <span class="citation" data-cites="S6nj6BFK">[<a href="#ref-S6nj6BFK">20</a>]</span> v.4.4.1 to simulated datasets of <span class="math inline">\(n\)</span> individuals, <span class="math inline">\(p\)</span> SNPs to obtain the significance level of each combination of SNPs. We let <span class="math inline">\(k_d\)</span> denote the number of significant combinations for a specific model dimension <span class="math inline">\(d\)</span> (e.g. <span class="math inline">\(d = 2\)</span> results in pairs of SNPs). In this study, no significance threshold is imposed at the SNP combination level and, thus, <span class="math inline">\(k_d\)</span> reaches its maximum value of <span class="math inline">\(C^d_p\)</span> (<span class="math inline">\(p\)</span> choose <span class="math inline">\(d\)</span>).</p>
-<p>For each subject <span class="math inline">\(i\)</span> (<span class="math inline">\(i = 1,2, \dotsm, n\)</span>), the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[MRS_d(i) = \sum_{j = 1}^{k_d} \chi_j^2 \times \textrm{HLO}_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each genotype combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(X_{ij}\)</span> is the <span class="math inline">\(j^{th}\)</span> genotype combinations of subject <span class="math inline">\(i\)</span> and <span class="math inline">\(\textrm{HLO}_j\)</span> represents the <span class="math inline">\(j^{th}\)</span> recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence). In this study, we selected the default multiple testing correction algorithm for an MB-MDR model where the <span class="math inline">\(\chi_j^2\)</span> for each genotype combination is derived from the gammaMAXT algorithm for two tests: H versus LO and L versus HO. As an example, consider a pair <span class="math inline">\(X_{*j} = (SNP_{j_1}, SNP_{j_2})\)</span> with <span class="math inline">\(\chi_j^2=8.3\)</span> and corresponding HLO matrix of all O’s except an L in the first cell. Then, all subjects’ current risks would remain the same except the ones with <span class="math inline">\(SNP_{j_1} = SNP_{j_2} = 0\)</span> where their risks are subtracted by 8.3.</p>
+<p>For each subject <span class="math inline">\(i\)</span> (<span class="math inline">\(i = 1,2, \dotsm, n\)</span>), the <span class="math inline">\(d\)</span>-way interaction risk score is calculated as <span class="math display">\[MRS_d(i) = \sum_{j = 1}^{k_d} \chi_j^2 \times \textrm{HLO}_j(X_{ij})\]</span> where <span class="math inline">\(\chi_j^2\)</span> is the test statistic of each genotype combination <span class="math inline">\(j\)</span> from a <span class="math inline">\(\chi_j^2\)</span> test with one degree of freedom for the simulated binary trait, <span class="math inline">\(X_{ij}\)</span> is the <span class="math inline">\(j^{th}\)</span> genotype combinations of subject <span class="math inline">\(i\)</span> and <span class="math inline">\(\textrm{HLO}_j\)</span> represents the <span class="math inline">\(j^{th}\)</span> recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence). In this study, we selected the default multiple testing correction algorithms for an MB-MDR model where the <span class="math inline">\(\chi_j^2\)</span> for each genotype combination is derived from the gammaMAXT algorithm for two tests: H versus LO and L versus HO. As an example, consider a pair <span class="math inline">\(X_{*j} = (SNP_{j_1}, SNP_{j_2})\)</span> with <span class="math inline">\(\chi_j^2=8.3\)</span> and corresponding HLO matrix of all O’s except an L in the first cell. Then, all subjects’ current risks would remain the same except the ones with <span class="math inline">\(SNP_{j_1} = SNP_{j_2} = 0\)</span> where their risks are subtracted by 8.3.</p>
 <p>In this study, we consider 1-way and 2-way interactions and thus the combined risk is simply the total of the first two: <span class="math inline">\(MRS = MRS_1 + MRS_2\)</span>. We will examine the combined risk MRS and also its components, MRS1 and MRS2, separately.</p>
 <h3 id="mutual-information-and-information-gain">Mutual information and information gain</h3>
 <p>For a given simulated data set, we apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects. A dataset’s main effect (i.e. marginal effect <span class="math inline">\(ME\)</span>) can be measured as the total of mutual information between each genotype <span class="math inline">\(SNP_j\)</span> and the phenotypic class <span class="math inline">\(y\)</span> based on Shannon’s entropy <span class="math inline">\(H\)</span> <span class="citation" data-cites="yzGboP1g">[<a href="#ref-yzGboP1g">21</a>]</span>: <span class="math display">\[ME = \sum_{j}^k I(SNP_j; y) = \sum_{j}^k H(y) - H(y|SNP_j).\]</span></p>
 <p>We measure the 2-way interaction information (i.e. degree of synergistic effects of genotypes on the phenotype) of each dataset by summing the pairwise information gain between all pairs of genetic attributes. Specifically, if we let <span class="math inline">\(X_j\)</span> denote the <span class="math inline">\(j^{th}\)</span> genotype combination <span class="math inline">\((SNP_{j_1}, SNP_{j_2})\)</span>, the total 2-way interaction gain (i.e. synergistic effects <span class="math inline">\(SE\)</span>) is calculated as <span class="math display">\[SE = \sum_{j}^kIG(X_j; y) = \sum_{j}^k I(SNP_{j_1}, SNP_{j_2}; y) - I(SNP_{j_1}; y) - I(SNP_{j_2}; y),\]</span> where <span class="math inline">\(IG\)</span> measures how much of the phenotypic class <span class="math inline">\(y\)</span> can be explained by the 2-way epistatic interaction within the genotype combination <span class="math inline">\(X_j\)</span>. We refer the reader to Ref. <span class="citation" data-cites="1FFMLUZxb">[<a href="#ref-1FFMLUZxb">22</a>]</span> for more details on the calculation of the entropy-based terms.</p>
 <h3 id="simulated-data">Simulated data</h3>
-<p>[Patryk…]</p>
-<p>[objective: simulate a diverse collection of datasets]</p>
+<p>The major objective of data generation was providing a comprehensive set of reproducible and diverse enough datasets for the study. For generation of synthetic datasets we have used a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) <span class="citation" data-cites="pDXdtMFa">[<a href="#ref-pDXdtMFa">23</a>]</span> HIBACHI uses Genetic Programming (GP) and modifies the endpoint of the dataset in order to maximize the objective function called fitness. During the course of HIBACHI the difference between the accuracy of a given machine learning (“up” method) and accuracy of the other (“down” method) was maximized, so that one of the machine learning methods performed as good as possible, and the other the opposite. For better objectiveness, each experiment in which the performance of one of the methods was maximized and of the other was minimized was repeated 5 times.</p>
+<p>The machine learning methods that were picked for the study along with their parameters are presented in Table 1</p>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 83%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Algorithm</th>
+<th style="text-align: center;">Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">GaussianNB</td>
+<td style="text-align: center;">‘priors’: {None,2}, ‘var_smoothing’: {1e-9, 1e-7, 1e-5, 1e-3, 1e-1, 1e+1}</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">BernoulliNB</td>
+<td style="text-align: center;">‘alpha’: {1e-3, 1e-2, 1e-1, 1., 10., 100.},‘fit_prior’: {True, False}</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">DecisionTree</td>
+<td style="text-align: center;">‘criterion’: {“gini”, “entropy”}, ‘max_depth’: [1, 11], ‘min_samples_split’: [2, 21], ‘min_samples_leaf’: [1, 21]</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">ExtraTrees</td>
+<td style="text-align: center;">‘n_estimators’: {50,100}, ‘criterion’: {“gini”, “entropy”},‘max_features’: [0.1, 1], ‘min_samples_split’: range(2, 21,2),‘min_samples_leaf’: range(1, 21,2), ‘bootstrap’: {True, False}</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">RandomForest</td>
+<td style="text-align: center;">‘n_estimators’: {50,100}, ‘criterion’: {“gini”, “entropy”},‘max_features’: [0.1, 1], ‘min_samples_split’: range(2, 21,4), ‘min_samples_leaf’: range(1, 21,5), ‘bootstrap’: {True, False}</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">GradientBoosting</td>
+<td style="text-align: center;">‘n_estimators’: {50,100},‘learning_rate’: {1e-3, 1e-2, 1e-1, 0.5, 1}, ‘max_depth’: {2,4,8}, ‘min_samples_split’: [2, 21], ‘min_samples_leaf’: [1, 21], ‘subsample’: [0.1, 1], ‘max_features’: [0.1, 1]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">KNeighbors</td>
+<td style="text-align: center;">‘n_neighbors’: [1, 100], ‘weights’: {“uniform”, “distance”} , ‘p’: {1, 2}</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">LinearSVC</td>
+<td style="text-align: center;">‘penalty’: {‘l1’,‘l2’}, ‘C’: {1e-4, 1e-3, 1e-2, 1, 1e2}, ‘dual’=False</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">LogisticRegression</td>
+<td style="text-align: center;">‘C’: {1e-3, 1e-2, 1e-1, 1., 10.}, ‘solver’ : {‘newton-cg’, ‘lbfgs’, ‘liblinear’, ‘sag’}</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">XGBoost</td>
+<td style="text-align: center;">‘n_estimators’=100, ‘max_depth’: [2, 10], ‘learning_rate’: {1e-3, 1e-2, 1e-1, 0.5, 1.}, ‘subsample’: [0.05, 1], ‘min_child_weight’: [1, 20],</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">SVC</td>
+<td style="text-align: center;">‘kernel’=‘rbf’, ‘C’ : {1e-4, 1e-2, 1, 1e2}, ‘gamma’: {0.01, 0.1, 1, 10, 100},</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MLPClassifier</td>
+<td style="text-align: center;">: ‘hidden_layer_sizes’: {(10),(11),(12),(13),(14),(15),(10,5)}, ‘activation’: {‘logistic’,‘tanh’,‘relu’}, ‘solver’: [‘lbfgs’], ‘learning_rate’: {‘constant’,‘invscaling’}, ‘max_iter’=1000, ‘alpha’:np.logspace(-4,1,4)</td>
+</tr>
+</tbody>
+</table>
 <p>For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the <span class="math inline">\(\chi^2\)</span> coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set. We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method.</p>
 <h3 id="manuscript-drafting">Manuscript drafting</h3>
-<p>This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO">23</a>]</span>. Manubot uses continuous integration to monitor changes and automatically update the manuscript. As a result, the latest version of this manuscript is always available at <a href="https://lelaboratoire.github.io/rethink-prs/">https://lelaboratoire.github.io/rethink-prs/</a>.</p>
+<p>This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO">24</a>]</span>. Manubot uses continuous integration to monitor changes and automatically update the manuscript. As a result, the latest version of this manuscript is always available at <a href="https://lelaboratoire.github.io/rethink-prs/">https://lelaboratoire.github.io/rethink-prs/</a>.</p>
 <h3 id="availability">Availability</h3>
 <p>Detailed simulation and analysis code needed to reproduce the results in this study is available at <a href="https://github.com/lelaboratoire/rethink-prs-ms/">https://github.com/lelaboratoire/rethink-prs-ms/</a>.</p>
 <h2 id="results">Results</h2>
@@ -220,8 +282,14 @@ Jason H. Moore, Ting Hu<br />
 <em>Methods in Molecular Biology</em> (2014-11-03) <a href="https://doi.org/gf484q">https://doi.org/gf484q</a><br />
 DOI: <a href="https://doi.org/10.1007/978-1-4939-2155-3_13">10.1007/978-1-4939-2155-3_13</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/25403536">25403536</a></p>
 </div>
+<div id="ref-pDXdtMFa">
+<p>23. <strong>A heuristic method for simulating open-data of arbitrary complexity that can be used to compare and evaluate machine learning methods</strong><br />
+Jason H. Moore, Maksim Shestov, Peter Schmitt, Randal S. Olson<br />
+<em>Biocomputing 2018</em> (2017-11-17) <a href="https://doi.org/gf5b6s">https://doi.org/gf5b6s</a><br />
+DOI: <a href="https://doi.org/10.1142/9789813235533_0024">10.1142/9789813235533_0024</a></p>
+</div>
 <div id="ref-YuJbg3zO">
-<p>23. <strong>Open collaborative writing with Manubot</strong><br />
+<p>24. <strong>Open collaborative writing with Manubot</strong><br />
 Daniel S. Himmelstein, Vincent Rubinetti, David R. Slochower, Dongbo Hu, Venkat S. Malladi, Casey S. Greene, Anthony Gitter<br />
 <em>PLOS Computational Biology</em> (2019-06-24) <a href="https://doi.org/c7np">https://doi.org/c7np</a><br />
 DOI: <a href="https://doi.org/10.1371/journal.pcbi.1007128">10.1371/journal.pcbi.1007128</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/31233491">31233491</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6611653">PMC6611653</a></p>
