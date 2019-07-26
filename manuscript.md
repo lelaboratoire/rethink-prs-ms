@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-24'
+date-meta: '2019-07-26'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/16b7d5e81e934dbdf8f63333a16ffaea26933ccb/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/1bb3bcb39caada5c438d9152127fb75cdd97ef78/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@16b7d5e](https://github.com/lelaboratoire/rethink-prs-ms/tree/16b7d5e81e934dbdf8f63333a16ffaea26933ccb)
-on July 24, 2019.
+from [lelaboratoire/rethink-prs-ms@1bb3bcb](https://github.com/lelaboratoire/rethink-prs-ms/tree/1bb3bcb39caada5c438d9152127fb75cdd97ef78)
+on July 26, 2019.
 </em></small>
 
 ## Authors
@@ -185,11 +185,17 @@ where $IG$ measures how much of the phenotypic class $y$ can be explained by the
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
 ### Simulated data
-The major objective of data generation was providing a comprehensive set of reproducible and diverse enough datasets for the study. 
-For generation of synthetic datasets we have used a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa]
-HIBACHI uses Genetic Programming (GP) and modifies the endpoint of the dataset in order to maximize the objective function called fitness. During the course of HIBACHI the difference between the accuracy of a given machine learning ("up" method) and accuracy of the other ("down" method) was maximized, so that one of the machine learning methods performed as good as possible, and the other the opposite. 
-For better objectiveness, each experiment in which the performance of one of the methods was maximized and of the other was minimized was repeated 5 times.
-
+The major objective of data generation was providing a comprehensive set of reproducible and diverse enough datasets for the study.
+The data was generated in the following manner. 
+The size of each dataset was arbitrary set to 1000 rows, which corresponded to samples in real dataset, and 10 columns (corresponding to SNPs). 
+The values in the matrix were drawn using an uniform distribution among 4 potential options: with 1/2 probability of drawing '1' (representing heterozygous minor alleles aa), 1/4 probability of drawing '2' (representing a major homozygous allele AA) and 1/4 of drawing '0' (representing homozygous major allele AA). 
+The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa].
+This method uses Genetic Programming (GP) to build different mathematical and logical models resulting in a binary endpoint, such that the objective function called fitness is maximized. 
+We set the fitness function of HIBACHI as a difference of the accuracies between two classifiers. 
+The first classifier (called "up")  was supposed to perform as good as possible on the data, whilst the other (called "down") as bad as possible. 
+At each iteration 5 randomly chosen settings of each machine learning methods were chosen among all potential options and served as hyperparameters for the method. 
+Each data model was analyzed using 5-fold cross-validation and the best performing setting of the method was considered. 
+Each experiment in which two machine learning method was supposed to outperform the other was repeated 5 times.
 The machine learning methods that were picked for the study along with their parameters are presented in Table 1 
 
 | Algorithm      |                             Parameters                                         |
