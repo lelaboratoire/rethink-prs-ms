@@ -91,4 +91,23 @@ if [ "$BUILD_DOCX" = "true" ]; then
     $INPUT_PATH
 fi
 
+# Create TEX output (if BUILD_DOCX environment variable equals "true")
+if [ "$BUILD_LATEX" = "true" ];
+then
+  echo "Exporting LATEX manuscript"
+  pandoc \
+    --from=markdown \
+    --to=latex \
+    --filter=pandoc-fignos \
+    --filter=pandoc-eqnos \
+    --filter=pandoc-tablenos \
+    --bibliography=$BIBLIOGRAPHY_PATH \
+    --csl=$CSL_PATH \
+    --metadata link-citations=true \
+    --number-sections \
+    --resource-path=.:content \
+    -s --output=output/manuscript.tex \
+    $INPUT_PATH
+
+fi
 echo "Build complete"
