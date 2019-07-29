@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/418446797c4d9890153afb1b95f92d438edeb70d/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/e1ed878a88bac27584696af10642877e9a143da3/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@4184467](https://github.com/lelaboratoire/rethink-prs-ms/tree/418446797c4d9890153afb1b95f92d438edeb70d)
+from [lelaboratoire/rethink-prs-ms@e1ed878](https://github.com/lelaboratoire/rethink-prs-ms/tree/e1ed878a88bac27584696af10642877e9a143da3)
 on July 29, 2019.
 </em></small>
 
@@ -263,6 +263,24 @@ Combining the gain from both MR1 and MRS2, MRS's performance progressively incre
 
 ![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
+## Discussion
+While PRS holds much promise for identifying individuals who may benefit from prioritized  preventions, one of its current limitation is the model simplicity [@1GK3F1BxE].
+To address one of the simplicity problems, in this study, we developed a new model that enables automatic genotype encodings and takes into account gene-gene interactions, thereby improved the generalizability of the risk scores.
+To the best of our knowledge, MRS is the first risk score model that considers epistatic interactions [...]
+
+We developed a method for 
+We showed that the MRS method outperformed standard PRS in many of the simulated datasets, indicating that ...
+We further examined the association between this improvement and the amount of two-way epistatic effect induced in the binary phenotypic outcome. 
+
+
+
+We acknowledge a few limitations of the current study.
+First, without real data...
+Although we compensated the lack of real data with a diverse, unbiased set of simulated datasets, a future study analyzing will prove beneficial to quantify the new model's utility in practice.
+Second, the computation expense...
+small number of variants...
+However, we hope this study will inspire others...
+Finally, the risk score framework has received criticism, evaluation of PRS: not just in terms of sensitivity and specificity but also with respect to potential clinical efficacy.
 
 
 ## Acknowledgement
