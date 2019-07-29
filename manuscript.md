@@ -11,7 +11,8 @@ keywords:
 - publishing
 - manubot
 lang: en-US
-title: Expanding polygenic risk scores to include gene-gene interactions
+title: Expanding polygenic risk scores to include automatic genotype encodings and
+  gene-gene interactions
 ...
 
 
@@ -21,9 +22,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/bdcf4d1df9f7b1d77b1a757cd70aee3198d3f045/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/418446797c4d9890153afb1b95f92d438edeb70d/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@bdcf4d1](https://github.com/lelaboratoire/rethink-prs-ms/tree/bdcf4d1df9f7b1d77b1a757cd70aee3198d3f045)
+from [lelaboratoire/rethink-prs-ms@4184467](https://github.com/lelaboratoire/rethink-prs-ms/tree/418446797c4d9890153afb1b95f92d438edeb70d)
 on July 29, 2019.
 </em></small>
 
