@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-26'
+date-meta: '2019-07-29'
 keywords:
 - markdown
 - publishing
@@ -21,10 +21,10 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/1bb3bcb39caada5c438d9152127fb75cdd97ef78/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/2a66e7ae1dbfc69f5ec4ee9880bfda7fad9d3b72/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@1bb3bcb](https://github.com/lelaboratoire/rethink-prs-ms/tree/1bb3bcb39caada5c438d9152127fb75cdd97ef78)
-on July 26, 2019.
+from [lelaboratoire/rethink-prs-ms@2a66e7a](https://github.com/lelaboratoire/rethink-prs-ms/tree/2a66e7ae1dbfc69f5ec4ee9880bfda7fad9d3b72)
+on July 29, 2019.
 </em></small>
 
 ## Authors
@@ -86,9 +86,12 @@ on July 26, 2019.
 
 
 ## Abstract
-
-This study expands the PRS to account for gene-gene interaction effects.
-
+Polygenic Risk Scores (PRSs) are aggregation of genetic risk factors of specific diseases and have been successfully used to identify subgroups of individuals who are more susceptible to those diseases.
+While severall studies have focused on identifying the correct genetic variants to include in PRS, most existing statistical models focus on the marginal effect of the variants on the phenotypic outcome but do not account for the effect of gene-gene interactions.
+Here, we propose a novel calculation of the risk score that expands beyond marginal effect of individual variants on the phenotypic outcome.
+The Multilocus Risk Score (MRS) method effectively selects alternative genotype encodings and captures epistatic gene-gene interactions by utilizing an efficient implementation of the model-based Multifactor Dimensionality Reduction technique.
+On a diverse, unbiased collection of datasets, MRS outperforms the standard PRS in the majority of the cases, especially when at least two-way interactions between genes are present.
+Our findings suggest that more precise models that take epistatic interactions into account are necessary and in will yield greater utility for polygenic risk profiling.
 
 ## Introduction
 
@@ -170,7 +173,7 @@ In this study, we selected the default multiple testing correction algorithms fo
 As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\chi_j^2=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
 Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
 
-In this study, we consider 1-way and 2-way interactions and thus the combined risk is simply the total of the first two: $MRS = MRS_1 + MRS_2$.
+In this study, we consider 1-way and 2-way interactions and thus the combined risk is simply the total of the first two dimensions: $MRS = MRS_1 + MRS_2$.
 We will examine the combined risk MRS and also its components, MRS1 and MRS2, separately.
 
 ### Mutual information and information gain

@@ -1,5 +1,5 @@
 {
-  "date": "July 26, 2019",
+  "date": "July 29, 2019",
   "authors": [
     {
       "github": "trang1618",
@@ -90,13 +90,13 @@
     "repo_slug": "lelaboratoire/rethink-prs-ms",
     "repo_owner": "lelaboratoire",
     "repo_name": "rethink-prs-ms",
-    "commit": "1bb3bcb39caada5c438d9152127fb75cdd97ef78"
+    "commit": "2a66e7ae1dbfc69f5ec4ee9880bfda7fad9d3b72"
   },
   "manuscript_stats": {
     "reference_counts": {
       "doi": 24,
       "total": 24
     },
-    "word_count": 3066
+    "word_count": 3230
   }
 }
