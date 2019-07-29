@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/lelaboratoire/rethink-prs-ms/tree/gh-pages) branch hosts the contents of this directory at https://lelaboratoire.github.io/rethink-prs-ms/.
-The permalink for this webpage version is https://lelaboratoire.github.io/rethink-prs-ms/v/bdcf4d1df9f7b1d77b1a757cd70aee3198d3f045/.
+The permalink for this webpage version is https://lelaboratoire.github.io/rethink-prs-ms/v/418446797c4d9890153afb1b95f92d438edeb70d/.
 To redirect to the permalink for the latest manuscript version at anytime, use the link https://lelaboratoire.github.io/rethink-prs-ms/v/freeze/.
 
 ## Files
@@ -36,4 +36,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`bdcf4d1df9f7b1d77b1a757cd70aee3198d3f045`](https://github.com/lelaboratoire/rethink-prs-ms/commit/bdcf4d1df9f7b1d77b1a757cd70aee3198d3f045).
+[`418446797c4d9890153afb1b95f92d438edeb70d`](https://github.com/lelaboratoire/rethink-prs-ms/commit/418446797c4d9890153afb1b95f92d438edeb70d).
