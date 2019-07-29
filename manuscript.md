@@ -21,9 +21,9 @@ title: Expanding polygenic risk scores to include gene-gene interactions
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/2a66e7ae1dbfc69f5ec4ee9880bfda7fad9d3b72/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/9c0af84596dc71e702439559d127af2e49e60c09/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@2a66e7a](https://github.com/lelaboratoire/rethink-prs-ms/tree/2a66e7ae1dbfc69f5ec4ee9880bfda7fad9d3b72)
+from [lelaboratoire/rethink-prs-ms@9c0af84](https://github.com/lelaboratoire/rethink-prs-ms/tree/9c0af84596dc71e702439559d127af2e49e60c09)
 on July 29, 2019.
 </em></small>
 
@@ -91,7 +91,7 @@ While severall studies have focused on identifying the correct genetic variants 
 Here, we propose a novel calculation of the risk score that expands beyond marginal effect of individual variants on the phenotypic outcome.
 The Multilocus Risk Score (MRS) method effectively selects alternative genotype encodings and captures epistatic gene-gene interactions by utilizing an efficient implementation of the model-based Multifactor Dimensionality Reduction technique.
 On a diverse, unbiased collection of datasets, MRS outperforms the standard PRS in the majority of the cases, especially when at least two-way interactions between genes are present.
-Our findings suggest that more precise models that take epistatic interactions into account are necessary and in will yield greater utility for polygenic risk profiling.
+Our findings suggest that more precise models that take epistatic interactions into account are necessary and will yield greater utility for polygenic risk profiling.
 
 ## Introduction
 
@@ -188,18 +188,20 @@ where $IG$ measures how much of the phenotypic class $y$ can be explained by the
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
 ### Simulated data
-The major objective of data generation was providing a comprehensive set of reproducible and diverse enough datasets for the study.
-The data was generated in the following manner. 
-The size of each dataset was arbitrary set to 1000 rows, which corresponded to samples in real dataset, and 10 columns (corresponding to SNPs). 
-The values in the matrix were drawn using an uniform distribution among 4 potential options: with 1/2 probability of drawing '1' (representing heterozygous minor alleles aa), 1/4 probability of drawing '2' (representing a major homozygous allele AA) and 1/4 of drawing '0' (representing homozygous major allele AA). 
+The primary objective of this data simulation process was to provide a comprehensive set of reproducible and diverse datasets for the current study.
+Each dataset, containing 1000 samples (rows) and 10 SNPs (columns), was generated in the following manner.
+
+The values in the matrix were drawn using an uniform distribution among four potential options: with 1/2 probability of drawing '1' (representing heterozygous minor alleles aa), 1/4 probability of drawing '2' (representing a major homozygous allele AA) and 1/4 of drawing '0' (representing homozygous major allele AA).
+*[There is a mistake in the sentence above.]*
 The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa].
 This method uses Genetic Programming (GP) to build different mathematical and logical models resulting in a binary endpoint, such that the objective function called fitness is maximized. 
-We set the fitness function of HIBACHI as a difference of the accuracies between two classifiers. 
-The first classifier (called "up")  was supposed to perform as good as possible on the data, whilst the other (called "down") as bad as possible. 
-At each iteration 5 randomly chosen settings of each machine learning methods were chosen among all potential options and served as hyperparameters for the method. 
-Each data model was analyzed using 5-fold cross-validation and the best performing setting of the method was considered. 
-Each experiment in which two machine learning method was supposed to outperform the other was repeated 5 times.
-The machine learning methods that were picked for the study along with their parameters are presented in Table 1 
+In this study, to arrive at a diverse collection of datasets, we aim to maximize the difference in predictive performance of all pairs of twelve pre-selected classifiers from the extensive library of scikit-learn [@1iuWTU7i] (Table 1).
+*[but there are only 450 datasets? Shouldn't there be only 10 classifiers? We should also cite Max's PSB paper here]*
+Therefore, we define the fitness function of HIBACHI as the accuracy difference between two classifiers.
+*[Don't we have three objectives in total? We would also need to rephrase the sentence below.]*
+In other words, the first classifier was supposed to perform as well as possible on the data while the second as bad as possible.
+
+Table 1. Selected machine learning methods and their parameters.
 
 | Algorithm      |                             Parameters                                         |
 |:--------------:|:------------------------------------------------------------------------------:|
@@ -216,9 +218,13 @@ The machine learning methods that were picked for the study along with their par
 |SVC | 'kernel'='rbf', 'C' : {1e-4, 1e-2, 1, 1e2}, 'gamma': {0.01, 0.1, 1, 10, 100}, | 
 |MLPClassifier |: 'hidden_layer_sizes': {(10),(11),(12),(13),(14),(15),(10,5)},  'activation': {'logistic','tanh','relu'}, 'solver': ['lbfgs'], 'learning_rate': {'constant','invscaling'}, 'max_iter'=1000, 'alpha':np.logspace(-4,1,4)|
 
+At each iteration, five randomly chosen settings of each machine learning method (Table 1) were chosen among all potential options and served as hyperparameters for that method.
+Each data model was analyzed using 5-fold cross-validation and the best hyperparameter set of the method pair was considered. 
+Each experiment in which one machine learning method was to outperform the other was repeated five times.
+*[more here? Do we select the best out of five times?]*
 
-For each simulated and real-world dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
-We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method.
+For each simulated dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
+We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method on the holdout set.
 
 ### Manuscript drafting
 This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown [@YuJbg3zO].

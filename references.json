@@ -1489,5 +1489,98 @@
     "PMCID": "PMC6611653",
     "PMID": "31233491",
     "id": "YuJbg3zO"
+  },
+  {
+    "id": "1iuWTU7i",
+    "type": "article-journal",
+    "title": "Scikit-learn: Machine Learning in Python",
+    "container-title": "Journal of Machine Learning Research",
+    "source": "HAL Archives Ouvertes",
+    "abstract": "Scikit-learn is a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems. This package focuses on bringing machine learning to non-specialists using a general-purpose high-level language. Emphasis is put on ease of use, performance, documentation, and API consistency. It has minimal dependencies and is distributed under the simplified BSD license, encouraging its use in both academic and commercial settings. Source code, binaries, and documentation can be downloaded from http://scikit-learn.sourceforge.net.",
+    "URL": "https://hal.inria.fr/hal-00650905",
+    "shortTitle": "Scikit-learn",
+    "author": [
+      {
+        "family": "Pedregosa",
+        "given": "Fabian"
+      },
+      {
+        "family": "Varoquaux",
+        "given": "Gaël"
+      },
+      {
+        "family": "Gramfort",
+        "given": "Alexandre"
+      },
+      {
+        "family": "Michel",
+        "given": "Vincent"
+      },
+      {
+        "family": "Thirion",
+        "given": "Bertrand"
+      },
+      {
+        "family": "Grisel",
+        "given": "Olivier"
+      },
+      {
+        "family": "Blondel",
+        "given": "Mathieu"
+      },
+      {
+        "family": "Prettenhofer",
+        "given": "Peter"
+      },
+      {
+        "family": "Weiss",
+        "given": "Ron"
+      },
+      {
+        "family": "Dubourg",
+        "given": "Vincent"
+      },
+      {
+        "family": "Vanderplas",
+        "given": "Jake"
+      },
+      {
+        "family": "Passos",
+        "given": "Alexandre"
+      },
+      {
+        "family": "Cournapeau",
+        "given": "David"
+      },
+      {
+        "family": "Brucher",
+        "given": "Matthieu"
+      },
+      {
+        "family": "Perrot",
+        "given": "Matthieu"
+      },
+      {
+        "family": "Duchesnay",
+        "given": "Édouard"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2011",
+          10
+        ]
+      ]
+    },
+    "accessed": {
+      "date-parts": [
+        [
+          "2019",
+          7,
+          29
+        ]
+      ]
+    }
   }
 ]
