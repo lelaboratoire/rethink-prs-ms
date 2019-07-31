@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-07-29'
+date-meta: '2019-07-31'
 keywords:
 - markdown
 - publishing
@@ -22,10 +22,10 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/e1ed878a88bac27584696af10642877e9a143da3/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/312bd191585988745ebe994aff72ffd9328a3468/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@e1ed878](https://github.com/lelaboratoire/rethink-prs-ms/tree/e1ed878a88bac27584696af10642877e9a143da3)
-on July 29, 2019.
+from [lelaboratoire/rethink-prs-ms@312bd19](https://github.com/lelaboratoire/rethink-prs-ms/tree/312bd191585988745ebe994aff72ffd9328a3468)
+on July 31, 2019.
 </em></small>
 
 ## Authors
@@ -252,14 +252,15 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
 When MRS yields smaller auROC, the difference is small (3.3% ± 2.8%, purple lines/areas).
+Across all datasets, the improvement of MRS over PRS is significant (P < $10^{-15}$) according a Wilcoxon signed rank test.
 To assess whether this improvement in performance correlates with the amount of interaction effects [contained] in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
 
 ### Assess improvement in performance
-
+Individually, MRS1 and MRS2 both significantly outperformed the standard PRS method (both P values < $10^{-15}$) according a Wilcoxon signed rank test.
 As the amount of main effects increases (Fig. {@fig:improvements} left column), MRS1 increasingly performs better than PRS, which is likely because encodings are inferred (top left).
 Meanwhile, MRS2's accuracy remain mostly similar to that of PRS (middle left).
 On the other hand, when the amount of interaction effects increases (Fig. {@fig:improvements} right column), MRS1 performs mostly on par to PRS while MRS2 increasingly performs better than PRS.
-Combining the gain from both MR1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
+Combining the gain from both MRS1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
 
 ![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
