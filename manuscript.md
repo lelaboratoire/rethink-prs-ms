@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/cf1f55015755e521a237679bb521fb46da3a014b/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/f714c16e7467f04830c4cb756076a1a7931dae78/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@cf1f550](https://github.com/lelaboratoire/rethink-prs-ms/tree/cf1f55015755e521a237679bb521fb46da3a014b)
+from [lelaboratoire/rethink-prs-ms@f714c16](https://github.com/lelaboratoire/rethink-prs-ms/tree/f714c16e7467f04830c4cb756076a1a7931dae78)
 on August 1, 2019.
 </em></small>
 
@@ -262,20 +262,22 @@ Combining the gain from both MRS1 and MRS2, MRS's performance progressively incr
 ![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
 ## Discussion
-PRS holds much promise for development of new precision medicine approaches by identifying high risk individuals who may benefit from prioritized interventions.
-Nevetheless, one of its current limitation is the model simplicity [@1GK3F1BxE].
-As a first step towards addressing this issue and increasing comprehensiveness of risk profiling models, in this study, we developed a new model that enables automatic genotype encodings and takes into account gene-gene interactions.
+
+We introduce a Multilocus Risk Score (MRS) method to improve the performance of the standard PRS in disease risk stratification of patient populations. 
+While PRS holds much promise for development of new precision medicine approaches by identifying high risk individuals who may benefit from prioritized interventions, one of its current limitations is the model simplicity [@1GK3F1BxE].
+As a first step towards addressing this issue and increasing comprehensiveness of risk profiling models, in this study, we developed a new applied MRS method from the MB-MDR framework that enables automatic genotype encodings and takes into account multiple models for detecting gene-gene (GxG) interactions. 
 Utilizing the efficient implementation of MB-MDR, MRS automatically infers the genotype encodings and simultaneously computes the risk matrices of pairs of variants.
+Through comparing method performance on unbiased collections of simulated data, we demonstrate the robust polygenic risk profiling ability of MRS and suggest the importance of flexible, precise methods in better capturing epistasis behind individual patient risk.
 
 We showed that the MRS method outperformed standard PRS in many of the simulated datasets, highlighting the importance of genotype encodings and consideration of epistasis.
 We further examined the association between this improvement and the amount of two-way epistatic effect induced in the binary phenotypic outcome.
 Appropriate phenotype encodings are important for improving the accuracy when there is a large amount of main effects of the variants on the phenotypic outcome.
 Meanwhile, inclusion of epistatic terms significantly increases the accuracy from PRS, especially when two-way interactions are present in the data.
-Although we only considered up to two-way interactions, it is straightforward to incorporate higher order interactions (e.g. three-way, four-way) into MRS.
-However, preliminary analyses on the simulated datasets did not show much improvement from the current MRS (results not shown).
+Although we only considered up to two-way GxG interactions, it is straightforward to incorporate higher order interactions (e.g. three-way, four-way) into MRS.
+However, preliminary analyses on the simulated datasets for such higher order interactions did not show significant improvement from the current MRS (results not shown).
 We also recommend estimating the computational expense prior to implementing high order interactions, especially for larger datasets encountered in practice.
 
-We acknowledge a few limitations of the current study.
+Although MRS captures the improvements of MB-MDR in reporting polygenic risk profiles, there are three primary limitations.
 First, MRS has not been applied to real-world data.
 Although we compensated the lack of real data with a diverse, unbiased set of simulated datasets, a future study analyzing will prove beneficial to quantify the new MRS model's utility in practice.
 Second, accounting for epistasis, in principle, is largely more computationally expensive compared to investigating solely main effects.
@@ -287,6 +289,7 @@ Future works focusing on gene-environment interactions with time-dependent risk 
 
 In conclusion, MRS enhances the predictive capacity of current risk profiling model for complex diseases with polygenic architectures.
 While there is much work left to do to improve the personal and clinical utility of general risk profiling framework, we highlight that more comprehensive models that infer proper genotype encodings and account for epistatic effects greatly improve the prediction efficiency and affords new opportunities for more accurate clinical prevention.
+
 
 ## Acknowledgement
 
