@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/24f7157315e672c628b317502ff0aa705b1cfdd3/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/946d7d12869cd9196889107eb5d1bccce5c5dd38/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@24f7157](https://github.com/lelaboratoire/rethink-prs-ms/tree/24f7157315e672c628b317502ff0aa705b1cfdd3)
+from [lelaboratoire/rethink-prs-ms@946d7d1](https://github.com/lelaboratoire/rethink-prs-ms/tree/946d7d12869cd9196889107eb5d1bccce5c5dd38)
 on August 1, 2019.
 </em></small>
 
@@ -88,11 +88,11 @@ on August 1, 2019.
 
 ## Abstract
 Polygenic Risk Scores (PRSs) are aggregation of genetic risk factors of specific diseases and have been successfully used to identify subgroups of individuals who are more susceptible to those diseases.
-While severall studies have focused on identifying the correct genetic variants to include in PRS, most existing statistical models focus on the marginal effect of the variants on the phenotypic outcome but do not account for the effect of gene-gene interactions.
+While several studies have focused on identifying the correct genetic variants to include in PRS, most existing statistical models focus on the marginal effect of the variants on the phenotypic outcome but do not account for the effect of gene-gene interactions.
 Here, we propose a novel calculation of the risk score that expands beyond marginal effect of individual variants on the phenotypic outcome.
 The Multilocus Risk Score (MRS) method effectively selects alternative genotype encodings and captures epistatic gene-gene interactions by utilizing an efficient implementation of the model-based Multifactor Dimensionality Reduction technique.
 On a diverse, unbiased collection of datasets, MRS outperforms the standard PRS in the majority of the cases, especially when at least two-way interactions between genes are present.
-Our findings suggest that more precise models that take epistatic interactions into account are necessary and will yield greater utility for polygenic risk profiling.
+Our findings suggest that more precise models that incorporate epistatic interactions are necessary and will yield greater utility for polygenic risk profiling.
 
 ## Introduction
 
