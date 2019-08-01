@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/1415713a928ad4169df7cb5598a6cd5c04a6b416/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/cf1f55015755e521a237679bb521fb46da3a014b/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@1415713](https://github.com/lelaboratoire/rethink-prs-ms/tree/1415713a928ad4169df7cb5598a6cd5c04a6b416)
+from [lelaboratoire/rethink-prs-ms@cf1f550](https://github.com/lelaboratoire/rethink-prs-ms/tree/cf1f55015755e521a237679bb521fb46da3a014b)
 on August 1, 2019.
 </em></small>
 
@@ -99,29 +99,28 @@ Our findings suggest that more precise models that take epistatic interactions i
 As the field of traditional genomics rapidly expands its sequencing technologies and translational abilities, novel applications of genomic data are starting to arise in addressing disease burden. 
 Beginning with the completion of the Human Genome Project in 2003, increased interest in cataloguing genomic data spurred the innovation of massively parallel, chip-based genotyping arrays. 
 Leveraging these technologies, early researchers were able to characterize and categorize gene variants across millions of individuals internationally.
-In particular, the advent of projects such as the International HapMap Project [@UKO9Qhy3] and the 1000 Genomes Project sought to document haplotype [@MSp5fjte] structure (i.e. gene variants) involved in specific diseases of the human genome.
+In particular, the advent of projects such as the International HapMap Project and the 1000 Genomes Project sought to document genetic variants involved in specific diseases of the human genome through genotyping and whole-genome sequencing techniques, respectively [@UKO9Qhy3; @MSp5fjte].
 As such, the gross information of nucleotide polymorphisms within publicly available databases has rapidly increased in the beginning of the 21st century with the rise in omics sequencing capabilities.
-This genomic information, coupled with additional high resolution marks for other individual biological variants (e.g. transcripts, epigenetic marks, metabolites) has been touted to further drive precision medicine approaches using genetics.
+This genomic information, coupled with functional genomics data on the transcriptome, epigenome and metabolome, has been touted to further drive precision medicine approaches using genetics.
 
-Complementing the rapid growth in our understanding of gene variants in the human genome was the emergence of using statistical techniques, formalized as genome-wide association studies (GWAS), to identify gene variants associated with common human diseases.
-From a population perspective, GWA studies have sought to discern genetic connections to various phenotypes by studying genotypic variation at biallelic markers across the human genome [@iFUfVw9V; @5cdeEdUS; @12kQ0EOWQ].
-Such non-candidate driven GWA studies consider gene variations (i.e. SNPs, deletions, intertions, CNVs) to resulting phenotype values to ultimately report allele frequency differences among a case and control group in the form of an odds ratio.
-This technical revolution in the field of genomic medicine fueled our progressing capabilities to map associations of gene variants with disease on an increasingly granular level to single nucleotide polymorphisms (SNPs). 
+Complementing the rapid growth in our understanding of human genetic variation was the emergence of genome-wide association studies (GWAS) in the early 2000s to identify gene variants associated with common human diseases. 
+Non-candidate-driven in design, these observational studies carry out chip array genotyping across population subsamples to subsequently assay for phenotype signal association via statistical approaches in silico. 
+GWAS have primarly sought to discern genetic association with various phenotypes of interest by studying single nucleotide polymorphisms (SNPs) and other DNA variants across the human genome [@iFUfVw9V; @5cdeEdUS; @12kQ0EOWQ].
 
 In tandem with the movement towards precision medicine, the post-GWAS era strives to bring significant population-derived gene variants into individual level metrics actionable in health delivery settings.
-While GWA studies indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires additional granularity on aggregating contributions of many gene variants in the form of polygenic risk scores (PRS).
-Importantly, PRS provides an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS studies [@1Dlv3tAGh; @1GK3F1BxE]. 
+While GWAS indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires aggregating contributions of many gene variants in the form of polygenic risk scores (PRS).
+Importantly, PRS provide an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS studies [@1Dlv3tAGh; @1GK3F1BxE]. 
 In quantifying the effect of particular combinations of genetic SNP variants towards risk prediction, PRS offers a probabilisitic susceptibility value of an individual to disease. 
 Such genetic risk estimation scores are central to clinical decision-making, serving to reinforce individual health management in heritable disease detection and early prevention of various adult-onset conditions. 
 The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@mwTa2RUK; @JjyayEbB; @Z12fynub; @gkABDVTx]
 
-For each SNP $i$ of an individual's genome of $n$ possible SNPs for analysis, the PRS score is calculated via a summation across all significant SNPs as
-$$PRS=\sum_{i=1}^{n} \beta_i \cdot SNP_i$$
-where $/beta$ is the weighted risk contribution of the loci gene variant derived from risk score model parameters. 
-Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the $\beta$ weight according to the specific type of statistical model used to combine risk of individual variations, the $n$ with respect to the specification of genetic variants considered, and the ability of the PRS to generalize to the entire population [@1Dlv3tAGh].
+For each SNP $j$ of an individual's genome of $n$ possible SNPs for analysis, the PRS score is calculated via a summation across $k$ selected SNPs as
+$$PRS=\sum_{j=1}^{k} \beta_j \cdot SNP_j$$
+where $\beta_j$ is the weighted risk contribution of the loci gene variant derived from risk score model parameters and $SNP_j$ represents the number of variant alleles (0, 1, or 2) at the $j^{th}$ SNP.
+Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the specific statistical model used to produce the weights $beta_j$ for individual genetic variations, the $k$ with respect to the specification of genetic variants considered, and the ability of the PRS to generalize to the entire population [@1Dlv3tAGh].
+Historically, PRS models have previously characterized genomic architecture in a dichotimous division of Mendelian monogenic and polygenic inheritance, in which either one or many gene perturbations give rise to disease phenotypes in an individual, respectively [@KQA5cNEZ; @1GK3F1BxE].
 
-Historically, PRS models have previously characterized genomic architechture in a dichotimous division of Mendelian monogenic and polygenic inheritance, in which either one or many gene perturbations give rise to disease phenotypes in an individual, respectively [@KQA5cNEZ; @1GK3F1BxE].
-Yet while such classification models arose from former sequencing technology and study design, a more realistic genetic archtechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumultatively drive overall risk of an individual [@LpJAX4ST].
+However, while such former PRS models arose from older sequencing technology and study design, a more realistic genetic archtechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumultatively drive overall risk of an individual [@LpJAX4ST].
 When only considering rare (minor allele frequency, MAF < 0.5%), high-risk gene variants, such genomic variation only contributes approximately 1-10% towards adult-onset disease incidence [@1GK3F1BxE; @wBOguD8h].
 Often, more relevant and complete sources of genetic risk is captured from complex smaller interactions of both common (MAF > 5%) and low-frequency (MAF > 0.5% and < 5%) genetic variants each contributing individual, appreciable effects [@132N8vjSs; @mOp2SAPs].
 Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible gene interaction combinations with both linear and nonlinear effects. 
@@ -129,15 +128,16 @@ In this context, more robust and efficient methods towards a polygeneic risk cal
 
 With respect to better understanding the epistasis across an individual's genome, various statistical models have been designed with the intent of capturing high dimensional gene-gene (GxG) interactions. 
 The Multifactor Dimensionality Reduction (MDR) method is one such nonparametric, model-free framework that addresses these challenges and has been extensively applied to detect nonlinear complex GxG interactions associated with individual disease [@E26QhGxD]. 
-By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes into two groups of risk based on some threshold value. 
-While created with the primary intention towards GxG interaction detection, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores [@93PfLXPZ].
+By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes, whether in the 1D or 2D, into two groups of risk based on some threshold value. 
+While created with the primary intention towards GxG interaction detection by reducing dimensionality interatively in inferring genotype encodings, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores [@93PfLXPZ].
 
-Modifications built on top of the MDR framework have been proposed in order to better capture multiple significant epistasis models and potential missed interactions owning to limiations of the original model in the higher dimensions.
+Modifications built on top of the MDR framework have been proposed in order to better capture multiple significant epistasis models and potential missed interactions owning to limitations of the original model in the higher dimensions.
 Model-Based Multifactor Dimensionality Reduction (MB-MDR) was formulated as a flexible GxG detection framework for dichotomous traits and unrelated individuals [@kN4MaLuT]. 
 Rather than a direct comparison against a threshold level in the original MDR method, MB-MDR merges multi-locus genotypes exhibiting significant High or Low risk levels through association testing and adds an additional 'No evidence of risk' categorization. 
+In comparison to the standard MDR framework which reveals at most one optimal epistasis model, the MB-MDR method flexibly weighs multiple models by producing a model list ranked with respect to statistical parameters.
 
 In the present work, we aim to reformulate the PRS using the MB-MDR approach to better capture epistatic gene interactions of individual disease risk in a novel Multilocus Risk Score (MRS).
-In observing prediction accuracy results on an evidence-based simulated dataset from HIBACHI, we demonstrate the improved performance of our epistasis enriched MRS towards characterizing more granular disease etiology.
+In observing prediction accuracy results on an evidence-based simulated dataset from HIBACHI, we demonstrate the improved performance of our multi-model weighted epistasis framework over existing PRS towards characterizing more granular disease etiology.
 
 
 ## Methods
