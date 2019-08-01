@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/f714c16e7467f04830c4cb756076a1a7931dae78/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/24f7157315e672c628b317502ff0aa705b1cfdd3/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@f714c16](https://github.com/lelaboratoire/rethink-prs-ms/tree/f714c16e7467f04830c4cb756076a1a7931dae78)
+from [lelaboratoire/rethink-prs-ms@24f7157](https://github.com/lelaboratoire/rethink-prs-ms/tree/24f7157315e672c628b317502ff0aa705b1cfdd3)
 on August 1, 2019.
 </em></small>
 
@@ -201,6 +201,7 @@ In this study, to arrive at a diverse collection of datasets, we aim to maximize
 Therefore, we define the fitness function of HIBACHI as the difference in accuracy between two classifiers. In other words, the first classifier was supposed to perform as well as possible on the data while the second as bad as possible.
 
 Table 1. Selected machine learning methods and their parameters.
+
 | Algorithm      |                             Parameters                                         |
 |:--------------:|:------------------------------------------------------------------------------:|
 | GaussianNB     |'priors': {None,2}, 'var_smoothing': {1e-9, 1e-7, 1e-5, 1e-3, 1e-1, 1e+1}       |
