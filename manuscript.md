@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-08-01'
+date-meta: '2019-08-02'
 keywords:
 - markdown
 - publishing
@@ -22,10 +22,10 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/946d7d12869cd9196889107eb5d1bccce5c5dd38/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/8f2153e8838b595552a5b857973d9db658031df3/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@946d7d1](https://github.com/lelaboratoire/rethink-prs-ms/tree/946d7d12869cd9196889107eb5d1bccce5c5dd38)
-on August 1, 2019.
+from [lelaboratoire/rethink-prs-ms@8f2153e](https://github.com/lelaboratoire/rethink-prs-ms/tree/8f2153e8838b595552a5b857973d9db658031df3)
+on August 2, 2019.
 </em></small>
 
 ## Authors
@@ -87,11 +87,11 @@ on August 1, 2019.
 
 
 ## Abstract
-Polygenic Risk Scores (PRSs) are aggregation of genetic risk factors of specific diseases and have been successfully used to identify subgroups of individuals who are more susceptible to those diseases.
+Polygenic Risk Scores (PRS) are aggregation of genetic risk factors of specific diseases and have been successfully used to identify subgroups of individuals who are more susceptible to those diseases.
 While several studies have focused on identifying the correct genetic variants to include in PRS, most existing statistical models focus on the marginal effect of the variants on the phenotypic outcome but do not account for the effect of gene-gene interactions.
 Here, we propose a novel calculation of the risk score that expands beyond marginal effect of individual variants on the phenotypic outcome.
 The Multilocus Risk Score (MRS) method effectively selects alternative genotype encodings and captures epistatic gene-gene interactions by utilizing an efficient implementation of the model-based Multifactor Dimensionality Reduction technique.
-On a diverse, unbiased collection of datasets, MRS outperforms the standard PRS in the majority of the cases, especially when at least two-way interactions between genes are present.
+On a diverse collection of datasets, MRS outperforms the standard PRS in the majority of the cases, especially when at least two-way interactions between genes are present.
 Our findings suggest that more precise models that incorporate epistatic interactions are necessary and will yield greater utility for polygenic risk profiling.
 
 ## Introduction
@@ -107,20 +107,20 @@ Complementing the rapid growth in our understanding of human genetic variation w
 Non-candidate-driven in design, these observational studies carry out chip array genotyping across population subsamples to subsequently assay for phenotype signal association via statistical approaches in silico. 
 GWAS have primarly sought to discern genetic association with various phenotypes of interest by studying single nucleotide polymorphisms (SNPs) and other DNA variants across the human genome [@iFUfVw9V; @5cdeEdUS; @12kQ0EOWQ].
 
-In tandem with the movement towards precision medicine, the post-GWAS era strives to bring significant population-derived gene variants into individual level metrics actionable in health delivery settings.
+In tandem with the movement towards precision medicine, the post-GWAS era strives to bring relevant population-derived gene variants into individual level metrics actionable in health delivery settings.
 While GWAS indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires aggregating contributions of many gene variants in the form of polygenic risk scores (PRS).
-Importantly, PRS provide an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS studies [@1Dlv3tAGh; @1GK3F1BxE]. 
+Importantly, PRS provide an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS [@1Dlv3tAGh; @1GK3F1BxE]. 
 In quantifying the effect of particular combinations of genetic SNP variants towards risk prediction, PRS offers a probabilisitic susceptibility value of an individual to disease. 
 Such genetic risk estimation scores are central to clinical decision-making, serving to reinforce individual health management in heritable disease detection and early prevention of various adult-onset conditions. 
 The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@mwTa2RUK; @JjyayEbB; @Z12fynub; @gkABDVTx]
 
 For each SNP $j$ of an individual's genome of $n$ possible SNPs for analysis, the PRS score is calculated via a summation across $k$ selected SNPs as
 $$PRS=\sum_{j=1}^{k} \beta_j \cdot SNP_j$$
-where $\beta_j$ is the weighted risk contribution of the loci gene variant derived from risk score model parameters and $SNP_j$ represents the number of variant alleles (0, 1, or 2) at the $j^{th}$ SNP.
-Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the specific statistical model used to produce the weights $beta_j$ for individual genetic variations, the $k$ with respect to the specification of genetic variants considered, and the ability of the PRS to generalize to the entire population [@1Dlv3tAGh].
+where $\beta_j$ is the weighted risk contribution of the $j^\textrm{th}$ SNP derived from the association test parameters and $SNP_j$ represents the number of minor alleles (0, 1, or 2) at the $j^\textrm{th}$ locus.
+Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the specific statistical model used to produce the weights $\beta_j$ for individual genetic variations, the $k$ with respect to the specification of genetic variants considered, and the ability of the PRS to generalize to the entire population [@1Dlv3tAGh].
 Historically, PRS models have previously characterized genomic architecture in a dichotimous division of Mendelian monogenic and polygenic inheritance, in which either one or many gene perturbations give rise to disease phenotypes in an individual, respectively [@KQA5cNEZ; @1GK3F1BxE].
 
-However, while such former PRS models arose from older sequencing technology and study design, a more realistic genetic archtechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumultatively drive overall risk of an individual [@LpJAX4ST].
+However, while such former PRS models arose from older sequencing technology and study design, a more realistic genetic architechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumulatively drive overall risk of an individual [@LpJAX4ST].
 When only considering rare (minor allele frequency, MAF < 0.5%), high-risk gene variants, such genomic variation only contributes approximately 1-10% towards adult-onset disease incidence [@1GK3F1BxE; @wBOguD8h].
 Often, more relevant and complete sources of genetic risk is captured from complex smaller interactions of both common (MAF > 5%) and low-frequency (MAF > 0.5% and < 5%) genetic variants each contributing individual, appreciable effects [@132N8vjSs; @mOp2SAPs].
 Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible gene interaction combinations with both linear and nonlinear effects. 
@@ -129,27 +129,25 @@ In this context, more robust and efficient methods towards a polygeneic risk cal
 With respect to better understanding the epistasis across an individual's genome, various statistical models have been designed with the intent of capturing high dimensional gene-gene (GxG) interactions. 
 The Multifactor Dimensionality Reduction (MDR) method is one such nonparametric, model-free framework that addresses these challenges and has been extensively applied to detect nonlinear complex GxG interactions associated with individual disease [@E26QhGxD]. 
 By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes, whether in the 1D or 2D, into two groups of risk based on some threshold value. 
-While created with the primary intention towards GxG interaction detection by reducing dimensionality interatively in inferring genotype encodings, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores [@93PfLXPZ].
+While created with the primary intention towards GxG interaction detection by reducing dimensionality interactively in inferring genotype encodings, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores [@93PfLXPZ].
 
 Modifications built on top of the MDR framework have been proposed in order to better capture multiple significant epistasis models and potential missed interactions owning to limitations of the original model in the higher dimensions.
 Model-Based Multifactor Dimensionality Reduction (MB-MDR) was formulated as a flexible GxG detection framework for dichotomous traits and unrelated individuals [@kN4MaLuT]. 
 Rather than a direct comparison against a threshold level in the original MDR method, MB-MDR merges multi-locus genotypes exhibiting significant High or Low risk levels through association testing and adds an additional 'No evidence of risk' categorization. 
 In comparison to the standard MDR framework which reveals at most one optimal epistasis model, the MB-MDR method flexibly weighs multiple models by producing a model list ranked with respect to statistical parameters.
 
-In the present work, we aim to reformulate the PRS using the MB-MDR approach to better capture epistatic gene interactions of individual disease risk in a novel Multilocus Risk Score (MRS).
-In observing prediction accuracy results on an evidence-based simulated dataset from HIBACHI, we demonstrate the improved performance of our multi-model weighted epistasis framework over existing PRS towards characterizing more granular disease etiology.
-
+In the present work, we aim to reformulate the PRS leveraging the MB-MDR approach to better capture capture alternative encodings and epistatic interactions of individual disease risk in a novel Multilocus Risk Score (MRS).
+In observing prediction accuracy results on an evidence-based simulated dataset from HIBACHI, we demonstrate the improved performance of our multi-model weighted epistasis framework with inferred genotype encodings over existing PRS methods, showing great potential for more accurate identification of high risk individuals for a specific complex disease.
 
 ## Methods
 
 ### Multifactor Dimensionality Reduction (MDR) and model-based MDR (MB-MDR)
-MDR is a nonparametric method that detects multiple genetic loci associated with a clinical outcome by reducing the dimension of a genotype dataset by pooling multilocus genotypes into high-risk and low-risk groups [@E26QhGxD].
-Extended from the original MDR algorithm, MB-MDR addresses existing limitations of MDR by increasing detectability of important interactions and decreasing bias by allowing O labels for individuals with no evidence for abberant risk.
-Several improvements have been made to MB-MDR since it was first introduced in 2009, and its current implementation efficiently and effectively detects multiple sets of significant gene-gene interactions in relation to a trait of interest while efficiently controlling type I error rates.
+MDR is a nonparametric method that detects multiple genetic loci associated with a clinical outcome by reducing the dimension of a genotype dataset through pooling multilocus genotypes into high-risk and low-risk groups [@E26QhGxD].
+Extended from the original MDR algorithm, MB-MDR was first introduced in 2009, and its current implementation efficiently and effectively detects multiple sets of significant gene-gene interactions in relation to a trait of interest while efficiently controlling type I error rates.
 
-In addition to the test statistic and P values associated with each genotype combination, another important output of MB-MDR is the HLO matrices generated from the affected- and unaffected-subjects matrices (in the case of binary outcome).
-Briefly, for each genotype combination, an HLO matrix is a 3 x 3 matrix with each cell containing H (high), L (low) or O (no evidence), indicating risk of an individual whose genotype pairs fall into that cell [@S6nj6BFK].
-For an example binary outcome problem, a genotype combination $SNP_1$ and $SNP_2$ will have a $\chi^2$ value, an associated P value and an HLO matrix that looks like
+In addition to the test statistic and P values associated with each genotype combination, another important output of MB-MDR is the HLO matrices.
+Briefly, in the case of a binary trait, for each genotype combination, an HLO matrix is a 3 x 3 matrix with each cell containing H (high), L (low) or O (no evidence), indicating risk of an individual whose genotype pairs fall into that cell [@S6nj6BFK].
+For an example binary outcome problem, a genotype combination $SNP_1$ and $SNP_2$ will have an HLO matrix that looks like
 $$ \begin{array}{l|ccc}
 & SNP_1 = 0 & SNP_1 = 1 & SNP_1 = 2   \\
 \hline
@@ -163,41 +161,39 @@ We discuss in the following subsection how these values were utilized in the for
 [More on the significance of SNP combination vs. significance of H/L/O here...]
 
 ### Multilocus Risk Score (MRS)
-We apply the MB-MDR software [@S6nj6BFK] v.4.4.1 to simulated datasets of $n$ individuals, $p$ SNPs to obtain the significance level of each combination of SNPs.
+We apply the MB-MDR software [@S6nj6BFK; @16AnEAMje] v.4.4.1 to simulated datasets of $n$ individuals, $q$ SNPs to obtain the significance level of each combination of SNPs.
 We let $k_d$ denote the number of significant combinations for a specific model dimension $d$ (e.g. $d = 2$ results in pairs of SNPs).
-In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$ ($p$ choose $d$).
+In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$ ($q$ choose $d$).
 
-For each subject $i$ ($i = 1,2, \dotsm, n$), the $d$-way interaction risk score is calculated as
-$$MRS_d(i) = \sum_{j = 1}^{k_d} \chi_j^2 \times \textrm{HLO}_j(X_{ij})$$
-where $\chi_j^2$ is the test statistic of each genotype combination $j$ from a $\chi_j^2$ test with one degree of freedom for the simulated binary trait, $X_{ij}$ is the $j^{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
-In this study, we selected the default multiple testing correction algorithms for an MB-MDR model where the $\chi_j^2$ for each genotype combination is derived from the gammaMAXT algorithm for two tests: H versus LO and L versus HO.
-As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\chi_j^2=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
+For each subject $i$ ($i = 1,2, \dotsm, n$), the $d$-way multilocus risk score is calculated as
+$$MRS_d(i) = \sum_{j = 1}^{k_d} \gamma_j \times \textrm{HLO}_j(X_{ij})$$
+where $\gamma_j$ is the test statistic of the $j^\textrm{th}$ genotype combination, $X_{ij}$ is the $j^\textrm{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^\textrm{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
+As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\gamma_j=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
 Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
 
-In this study, we consider 1-way and 2-way interactions and thus the combined risk is simply the total of the first two dimensions: $MRS = MRS_1 + MRS_2$.
-We will examine the combined risk MRS and also its components, MRS1 and MRS2, separately.
+In this study, we consider 1-way and 2-way interactions.
+We denote by MRS the combined risk score MRS1 + MRS2.
+We will compare the performance of the standard PRS method to the combined risk MRS and also its components, MRS1 and MRS2, separately.
 
 ### Mutual information and information gain
 For a given simulated data set, we apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
-A dataset's main effect (i.e. marginal effect $ME$) can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $y$ based on Shannon's entropy $H$ [@yzGboP1g]:
+A dataset's amount of main effect $ME$ can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $y$ based on Shannon's entropy $H$ [@yzGboP1g]:
 $$ME = \sum_{j}^k I(SNP_j; y) = \sum_{j}^k H(y) - H(y|SNP_j).$$
 
 We measure the 2-way interaction information (i.e. degree of synergistic effects of genotypes on the phenotype) of each dataset by summing the pairwise information gain between all pairs of genetic attributes.
-Specifically, if we let $X_j$ denote the $j^{th}$ genotype combination $(SNP_{j_1}, SNP_{j_2})$, the total 2-way interaction gain (i.e. synergistic effects $SE$) is calculated as 
-$$SE = \sum_{j}^kIG(X_j; y) = \sum_{j}^k I(SNP_{j_1}, SNP_{j_2}; y) - I(SNP_{j_1}; y) - I(SNP_{j_2}; y),$$
+Specifically, if we let $X_j$ denote the $j^\textrm{th}$ genotype combination $(SNP_{j_1}, SNP_{j_2})$, the total 2-way interaction gain (i.e. synergistic effects $SE$) is calculated as 
+$$SE = \sum_{j}^kIG(X_j; y) = \sum_{j}^k \left(I(SNP_{j_1}, SNP_{j_2}; y) - I(SNP_{j_1}; y) - I(SNP_{j_2}; y)\right),$$
 where $IG$ measures how much of the phenotypic class $y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
 ### Simulated data
 The primary objective of this data simulation process was to provide a comprehensive set of reproducible and diverse datasets for the current study.
-Each dataset, containing 1000 samples (rows) and 10 SNPs (columns), was generated in the following manner.
-The values in the matrix were randomly assigned from potential options: with 1/2 probability of drawing '1' (representing heterozygous minor alleles Aa), 1/4 probability of drawing '2' (representing a major homozygous allele AA) and 1/4 of drawing '0' (representing homozygous major allele AA). 
+Containing 1000 individuals and 10 SNPs, each dataset was generated in the following manner.
+For an individual, each genotype was randomly assigned with 1/2 probability of being heterozygous (*Aa*, coded as `1`), 1/4 probability of being homozygous major (*AA*, coded as `0`) and 1/4 probability of being homozygous minor (*aa*, coded as `2`).
 The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa].
 This method uses Genetic Programming (GP) to build different mathematical and logical models resulting in a binary endpoint, such that the objective function called fitness is maximized. 
 The unique feature of HIBACHI is explainability, as each generated model represents a formula for generating the endpoint. 
-This formula is later approximated using classifiers.
 In this study, to arrive at a diverse collection of datasets, we aim to maximize the difference in predictive performance of all pairs of ten pre-selected classifiers from the extensive library of scikit-learn [@1iuWTU7i] (Table 1).
-*[Great point! I did comparison for 12 datasets, but later excluded SVC and LinearSVC. Corrected.]*
 Therefore, we define the fitness function of HIBACHI as the difference in accuracy between two classifiers. In other words, the first classifier was supposed to perform as well as possible on the data while the second as bad as possible.
 
 Table 1. Selected machine learning methods and their parameters.
@@ -222,7 +218,7 @@ The best settings out of 5 for each classifiers were compared and the settings t
 Each experiment in which one machine learning method was expected to outperform the other was repeated five times.
 The results of each pair of classifiers were later averaged.
 
-For each simulated dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\chi^2$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
+For each simulated dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\gamma$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method on the holdout set.
 
 ### Manuscript drafting
@@ -250,11 +246,11 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
 When MRS yields smaller auROC, the difference is small (3.3% ± 2.8%, purple lines/areas).
-Across all datasets, the improvement of MRS over PRS is significant (P < $10^{-15}$) according a Wilcoxon signed rank test.
+Across all datasets, the improvement of MRS over PRS is significant (P < $10^{-15}$) according to a Wilcoxon signed rank test.
 To assess whether this improvement in performance correlates with the amount of interaction effects [contained] in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
 
 ### Assess improvement in performance
-Individually, MRS1 and MRS2 both significantly outperformed the standard PRS method (both P values < $10^{-15}$) according a Wilcoxon signed rank test.
+Individually, MRS1 and MRS2 both significantly outperformed the standard PRS method (both P values < $10^{-15}$) according to a Wilcoxon signed rank test.
 As the amount of main effects increases (Fig. {@fig:improvements} left column), MRS1 increasingly performs better than PRS, which is likely because encodings are inferred (top left).
 Meanwhile, MRS2's accuracy remain mostly similar to that of PRS (middle left).
 On the other hand, when the amount of interaction effects increases (Fig. {@fig:improvements} right column), MRS1 performs mostly on par to PRS while MRS2 increasingly performs better than PRS.
@@ -267,7 +263,7 @@ Combining the gain from both MRS1 and MRS2, MRS's performance progressively incr
 We introduce a Multilocus Risk Score (MRS) method to improve the performance of the standard PRS in disease risk stratification of patient populations. 
 While PRS holds much promise for development of new precision medicine approaches by identifying high risk individuals who may benefit from prioritized interventions, one of its current limitations is the model simplicity [@1GK3F1BxE].
 As a first step towards addressing this issue and increasing comprehensiveness of risk profiling models, in this study, we developed a new applied MRS method from the MB-MDR framework that enables automatic genotype encodings and takes into account multiple models for detecting gene-gene (GxG) interactions. 
-Utilizing the efficient implementation of MB-MDR, MRS automatically infers the genotype encodings and simultaneously computes the risk matrices of pairs of variants.
+Utilizing the efficient implementation of MB-MDR, MRS automatically infers the genotype encodings and simultaneously computes the risk of variant combinations.
 Through comparing method performance on unbiased collections of simulated data, we demonstrate the robust polygenic risk profiling ability of MRS and suggest the importance of flexible, precise methods in better capturing epistasis behind individual patient risk.
 
 We showed that the MRS method outperformed standard PRS in many of the simulated datasets, highlighting the importance of genotype encodings and consideration of epistasis.
@@ -280,9 +276,9 @@ We also recommend estimating the computational expense prior to implementing hig
 
 Although MRS captures the improvements of MB-MDR in reporting polygenic risk profiles, there are three primary limitations.
 First, MRS has not been applied to real-world data.
-Although we compensated the lack of real data with a diverse, unbiased set of simulated datasets, a future study analyzing will prove beneficial to quantify the new MRS model's utility in practice.
+Although we compensated the lack of real data with a diverse, unbiased set of simulated datasets, a future study analyzing real-world data will prove beneficial to quantify the new MRS model's utility in practice.
 Second, accounting for epistasis, in principle, is largely more computationally expensive compared to investigating solely main effects.
-Therefore, even with fast and efficient softwares, pre-selecting the variants (e.g. based on specific pathways or prior knowledge) will prove beneficial for accurate MRS computing when analyzing datasets containing a larger number of variants.
+Therefore, even with fast and efficient software, pre-selecting the variants (e.g. based on specific pathways or prior knowledge) will prove beneficial for accurate MRS computing when analyzing datasets containing a larger number of variants.
 However, we hope the promising preliminary results will open the doors to future approaches that encompass main and interaction effects and improve scalability.
 
 Finally, we caution that a risk score model should be evaluated based on not only sensitivity and specificity but also with respect to potential clinical efficacy, and any genetic risk should be interpreted in aggregate with other risk factors.

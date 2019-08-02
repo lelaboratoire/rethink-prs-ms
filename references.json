@@ -841,6 +841,65 @@
     "id": "E26QhGxD"
   },
   {
+    "publisher": "Wiley",
+    "issue": "1",
+    "DOI": "10.1111/j.1469-1809.2010.00604.x",
+    "type": "article-journal",
+    "page": "78-89",
+    "source": "Crossref",
+    "title": "Model-Based Multifactor Dimensionality Reduction for detecting epistasis in case-control data in the presence of noise",
+    "volume": "75",
+    "author": [
+      {
+        "given": "Tom",
+        "family": "Cattaert"
+      },
+      {
+        "given": "M. Luz",
+        "family": "Calle"
+      },
+      {
+        "given": "Scott M.",
+        "family": "Dudek"
+      },
+      {
+        "given": "Jestinah M.",
+        "family": "Mahachie John"
+      },
+      {
+        "given": "François",
+        "family": "Van Lishout"
+      },
+      {
+        "given": "Victor",
+        "family": "Urrea"
+      },
+      {
+        "given": "Marylyn D.",
+        "family": "Ritchie"
+      },
+      {
+        "given": "Kristel",
+        "family": "Van Steen"
+      }
+    ],
+    "container-title": "Annals of Human Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2010,
+          9,
+          8
+        ]
+      ]
+    },
+    "URL": "https://doi.org/bgg3n2",
+    "PMCID": "PMC3059142",
+    "PMID": "21158747",
+    "id": "16AnEAMje"
+  },
+  {
     "publisher": "BMJ",
     "DOI": "10.1136/bmj.j5757",
     "type": "article-journal",
@@ -1578,7 +1637,7 @@
         [
           "2019",
           8,
-          1
+          2
         ]
       ]
     }
