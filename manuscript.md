@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/76100775f1d55d7efad51a80d6eb46447a386658/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/554d07912d1819155a1abf1ba42958b461bb8932/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@7610077](https://github.com/lelaboratoire/rethink-prs-ms/tree/76100775f1d55d7efad51a80d6eb46447a386658)
+from [lelaboratoire/rethink-prs-ms@554d079](https://github.com/lelaboratoire/rethink-prs-ms/tree/554d07912d1819155a1abf1ba42958b461bb8932)
 on August 2, 2019.
 </em></small>
 
@@ -123,10 +123,11 @@ Historically, PRS models have previously characterized genomic architecture in a
 However, while such former PRS models arose from older sequencing technology and study design, a more realistic genetic architechture of common adult-onset disease acknowledges dynamic interactions among a continuum of common low-risk to rare high-risk gene variants to cumulatively drive overall risk of an individual [@LpJAX4ST].
 When only considering rare (minor allele frequency, MAF < 0.5%), high-risk gene variants, such genomic variation only contributes approximately 1-10% towards adult-onset disease incidence [@1GK3F1BxE; @wBOguD8h].
 Often, more relevant and complete sources of genetic risk is captured from complex smaller interactions of both common (MAF > 5%) and low-frequency (MAF > 0.5% and < 5%) genetic variants each contributing individual, appreciable effects [@132N8vjSs; @mOp2SAPs].
-Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible gene interaction combinations with both linear and nonlinear effects. 
+Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible genetic interaction combinations with both linear and nonlinear effects.
 In this context, more robust and efficient methods towards a polygeneic risk calculation are necessary in capturing the overlap between context-dependent effects of both rare and common alleles on human genetic disorder.
+Herein, we use the terminology gene-gene (GxG) interactions to indicate any genetic interaction including SNP-SNP interactions.
 
-With respect to better understanding the epistasis across an individual's genome, various statistical models have been designed with the intent of capturing high dimensional gene-gene (GxG) interactions. 
+With respect to better understanding the epistasis across an individual's genome, various statistical models have been designed with the intent of capturing high dimensional GxG interactions.
 The Multifactor Dimensionality Reduction (MDR) method is one such nonparametric, model-free framework that addresses these challenges and has been extensively applied to detect nonlinear complex GxG interactions associated with individual disease [@E26QhGxD]. 
 By isolating a specific pool of genetic factors from all polymorphism and cross-valiating prediction scores averaged across identified high risk multi-locus genotypes, the original MDR approach is able to categorize multi-loci genotypes, whether in the 1D or 2D, into two groups of risk based on some threshold value. 
 While created with the primary intention towards GxG interaction detection by reducing dimensionality interactively in inferring genotype encodings, the MDR model has additionally demonstrated applicability as a risk score calculation model in constructing PRS scores [@93PfLXPZ].
@@ -157,8 +158,6 @@ SNP_2 = 2 & O        & L        & H
 \end{array}
 $$
 We discuss in the following subsection how these values were utilized in the formulation of the Multilocus Risk Score (MRS).
-
-[More on the significance of SNP combination vs. significance of H/L/O here...]
 
 ### Multilocus Risk Score (MRS)
 We apply the MB-MDR software [@S6nj6BFK; @16AnEAMje] v.4.4.1 to simulated datasets of $n$ individuals, $m$ SNPs to obtain the significance level of each combination of SNPs.
@@ -191,32 +190,7 @@ The primary objective of this data simulation process was to provide a comprehen
 Containing 1000 individuals and 10 SNPs, each dataset was generated in the following manner.
 For an individual, each genotype was randomly assigned with 1/2 probability of being heterozygous (*Aa*, coded as `1`), 1/4 probability of being homozygous major (*AA*, coded as `0`) and 1/4 probability of being homozygous minor (*aa*, coded as `2`).
 The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa].
-This method uses Genetic Programming (GP) to build different mathematical and logical models resulting in a binary endpoint, such that the objective function called fitness is maximized. 
-The unique feature of HIBACHI is explainability, as each generated model represents a formula for generating the endpoint. 
-In this study, to arrive at a diverse collection of datasets, we aim to maximize the difference in predictive performance of all pairs of ten pre-selected classifiers from the extensive library of scikit-learn [@1iuWTU7i] (Table 1).
-Therefore, we define the fitness function of HIBACHI as the difference in accuracy between two classifiers. In other words, the first classifier was supposed to perform as well as possible on the data while the second as bad as possible.
-
-Table 1. Selected machine learning methods and their parameters.
-
-| Algorithm      |                             Parameters                                         |
-|:--------------:|:------------------------------------------------------------------------------:|
-| GaussianNB     |'priors': {None,2}, 'var_smoothing': {1e-9, 1e-7, 1e-5, 1e-3, 1e-1, 1e+1}       |
-| BernoulliNB    |'alpha': {1e-3, 1e-2, 1e-1, 1., 10., 100.},'fit_prior': {True, False}           |
-| DecisionTree   |'criterion': {"gini", "entropy"}, 'max_depth': [1, 11], 'min_samples_split': [2, 21], 'min_samples_leaf': [1, 21]|
-|ExtraTrees      |'n_estimators': {50,100}, 'criterion': {"gini", "entropy"},'max_features': [0.1, 1], 'min_samples_split': range(2, 21,2),'min_samples_leaf': range(1, 21,2), 'bootstrap': {True, False}|
-|RandomForest    |'n_estimators': {50,100}, 'criterion': {"gini", "entropy"},'max_features': [0.1, 1], 'min_samples_split': range(2, 21,4), 'min_samples_leaf':  range(1, 21,5), 'bootstrap': {True, False}                 |
-|GradientBoosting|  'n_estimators': {50,100},'learning_rate': {1e-3, 1e-2, 1e-1, 0.5, 1}, 'max_depth': {2,4,8}, 'min_samples_split': [2, 21], 'min_samples_leaf': [1, 21], 'subsample': [0.1, 1], 'max_features': [0.1, 1]|
-|KNeighbors      |'n_neighbors': [1, 100], 'weights': {"uniform", "distance"} , 'p': {1, 2}   |
-|LogisticRegression| 'C': {1e-3, 1e-2, 1e-1, 1., 10.}, 'solver' : {'newton-cg', 'lbfgs', 'liblinear', 'sag'}|
-|XGBoost     | 'n_estimators'=100, 'max_depth': [2, 10], 'learning_rate': {1e-3, 1e-2, 1e-1, 0.5, 1.}, 'subsample': [0.05, 1], 'min_child_weight': [1, 20],
-|MLPClassifier |: 'hidden_layer_sizes': {(10),(11),(12),(13),(14),(15),(10,5)},  'activation': {'logistic','tanh','relu'}, 'solver': ['lbfgs'], 'learning_rate': {'constant','invscaling'}, 'max_iter'=1000, 'alpha':np.logspace(-4,1,4)|
-
-HIBACHI was run for 50 iterations with population of 500 individuals representing pairs of classifiers.
-At each iteration, five randomly chosen settings for each of the classifiers (Table 1) were chosen among all potential options and served as hyperparameters for that method.
-Each of the settings was analyzed using 5-fold cross-validation and the best set of hyperparameters for each classifier was considered for comparison. 
-The best settings out of 5 for each classifiers were compared and the settings that maximized the difference in the fitness were promoted.
-Each experiment in which one machine learning method was expected to outperform the other was repeated five times.
-The results of each pair of classifiers were later averaged.
+Details on data simulation are provided in the study's analysis repository [https://github.com/lelaboratoire/rethink-prs/](https://github.com/lelaboratoire/rethink-prs/).
 
 For each simulated dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\gamma$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method on the holdout set.
