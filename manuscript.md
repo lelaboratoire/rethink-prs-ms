@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/8f2153e8838b595552a5b857973d9db658031df3/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/fefccba71c341841ab5fbbf0ce8aeafcbeaa3481/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@8f2153e](https://github.com/lelaboratoire/rethink-prs-ms/tree/8f2153e8838b595552a5b857973d9db658031df3)
+from [lelaboratoire/rethink-prs-ms@fefccba](https://github.com/lelaboratoire/rethink-prs-ms/tree/fefccba71c341841ab5fbbf0ce8aeafcbeaa3481)
 on August 2, 2019.
 </em></small>
 
@@ -247,7 +247,7 @@ In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS 
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
 When MRS yields smaller auROC, the difference is small (3.3% ± 2.8%, purple lines/areas).
 Across all datasets, the improvement of MRS over PRS is significant (P < $10^{-15}$) according to a Wilcoxon signed rank test.
-To assess whether this improvement in performance correlates with the amount of interaction effects [contained] in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
+To assess whether this improvement in performance correlates with the amount of interaction effects contained in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
 
 ### Assess improvement in performance
 Individually, MRS1 and MRS2 both significantly outperformed the standard PRS method (both P values < $10^{-15}$) according to a Wilcoxon signed rank test.
@@ -264,7 +264,7 @@ We introduce a Multilocus Risk Score (MRS) method to improve the performance of 
 While PRS holds much promise for development of new precision medicine approaches by identifying high risk individuals who may benefit from prioritized interventions, one of its current limitations is the model simplicity [@1GK3F1BxE].
 As a first step towards addressing this issue and increasing comprehensiveness of risk profiling models, in this study, we developed a new applied MRS method from the MB-MDR framework that enables automatic genotype encodings and takes into account multiple models for detecting gene-gene (GxG) interactions. 
 Utilizing the efficient implementation of MB-MDR, MRS automatically infers the genotype encodings and simultaneously computes the risk of variant combinations.
-Through comparing method performance on unbiased collections of simulated data, we demonstrate the robust polygenic risk profiling ability of MRS and suggest the importance of flexible, precise methods in better capturing epistasis behind individual patient risk.
+Through comparing method performance on a diverse collection of simulated data, we demonstrate the robust polygenic risk profiling ability of MRS and suggest the importance of flexible, precise methods in better capturing epistasis behind individual patient risk.
 
 We showed that the MRS method outperformed standard PRS in many of the simulated datasets, highlighting the importance of genotype encodings and consideration of epistasis.
 We further examined the association between this improvement and the amount of two-way epistatic effect induced in the binary phenotypic outcome.
@@ -276,7 +276,7 @@ We also recommend estimating the computational expense prior to implementing hig
 
 Although MRS captures the improvements of MB-MDR in reporting polygenic risk profiles, there are three primary limitations.
 First, MRS has not been applied to real-world data.
-Although we compensated the lack of real data with a diverse, unbiased set of simulated datasets, a future study analyzing real-world data will prove beneficial to quantify the new MRS model's utility in practice.
+Although we compensated the lack of real data with a diverse set of simulated datasets, a future study analyzing real-world data will prove beneficial to quantify the new MRS model's utility in practice.
 Second, accounting for epistasis, in principle, is largely more computationally expensive compared to investigating solely main effects.
 Therefore, even with fast and efficient software, pre-selecting the variants (e.g. based on specific pathways or prior knowledge) will prove beneficial for accurate MRS computing when analyzing datasets containing a larger number of variants.
 However, we hope the promising preliminary results will open the doors to future approaches that encompass main and interaction effects and improve scalability.
