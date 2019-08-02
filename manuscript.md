@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/fefccba71c341841ab5fbbf0ce8aeafcbeaa3481/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/76100775f1d55d7efad51a80d6eb46447a386658/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@fefccba](https://github.com/lelaboratoire/rethink-prs-ms/tree/fefccba71c341841ab5fbbf0ce8aeafcbeaa3481)
+from [lelaboratoire/rethink-prs-ms@7610077](https://github.com/lelaboratoire/rethink-prs-ms/tree/76100775f1d55d7efad51a80d6eb46447a386658)
 on August 2, 2019.
 </em></small>
 
@@ -136,7 +136,7 @@ Model-Based Multifactor Dimensionality Reduction (MB-MDR) was formulated as a fl
 Rather than a direct comparison against a threshold level in the original MDR method, MB-MDR merges multi-locus genotypes exhibiting significant High or Low risk levels through association testing and adds an additional 'No evidence of risk' categorization. 
 In comparison to the standard MDR framework which reveals at most one optimal epistasis model, the MB-MDR method flexibly weighs multiple models by producing a model list ranked with respect to statistical parameters.
 
-In the present work, we aim to reformulate the PRS leveraging the MB-MDR approach to better capture capture alternative encodings and epistatic interactions of individual disease risk in a novel Multilocus Risk Score (MRS).
+In the present work, we aim to reformulate the PRS leveraging the MB-MDR approach to better capture alternative encodings and epistatic interactions of individual disease risk in a novel Multilocus Risk Score (MRS).
 In observing prediction accuracy results on an evidence-based simulated dataset from HIBACHI, we demonstrate the improved performance of our multi-model weighted epistasis framework with inferred genotype encodings over existing PRS methods, showing great potential for more accurate identification of high risk individuals for a specific complex disease.
 
 ## Methods
@@ -161,13 +161,13 @@ We discuss in the following subsection how these values were utilized in the for
 [More on the significance of SNP combination vs. significance of H/L/O here...]
 
 ### Multilocus Risk Score (MRS)
-We apply the MB-MDR software [@S6nj6BFK; @16AnEAMje] v.4.4.1 to simulated datasets of $n$ individuals, $q$ SNPs to obtain the significance level of each combination of SNPs.
+We apply the MB-MDR software [@S6nj6BFK; @16AnEAMje] v.4.4.1 to simulated datasets of $n$ individuals, $m$ SNPs to obtain the significance level of each combination of SNPs.
 We let $k_d$ denote the number of significant combinations for a specific model dimension $d$ (e.g. $d = 2$ results in pairs of SNPs).
-In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_p$ ($q$ choose $d$).
+In this study, no significance threshold is imposed at the SNP combination level and, thus, $k_d$ reaches its maximum value of $C^d_m$ ($m$ choose $d$).
 
 For each subject $i$ ($i = 1,2, \dotsm, n$), the $d$-way multilocus risk score is calculated as
 $$MRS_d(i) = \sum_{j = 1}^{k_d} \gamma_j \times \textrm{HLO}_j(X_{ij})$$
-where $\gamma_j$ is the test statistic of the $j^\textrm{th}$ genotype combination, $X_{ij}$ is the $j^\textrm{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^\textrm{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
+where $\gamma_j$ is the test statistic of the $j^\textrm{th}$ genotype combination output from MB-MDR, $X_{ij}$ is the $j^\textrm{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^\textrm{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
 As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\gamma_j=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
 Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
 
@@ -177,13 +177,13 @@ We will compare the performance of the standard PRS method to the combined risk 
 
 ### Mutual information and information gain
 For a given simulated data set, we apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
-A dataset's amount of main effect $ME$ can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $y$ based on Shannon's entropy $H$ [@yzGboP1g]:
-$$ME = \sum_{j}^k I(SNP_j; y) = \sum_{j}^k H(y) - H(y|SNP_j).$$
+A dataset's amount of main effect $ME$ can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $Y$ based on Shannon's entropy $H$ [@yzGboP1g]:
+$$ME = \sum_{j}^k I(SNP_j; Y) = \sum_{j}^k H(Y) - H(Y|SNP_j).$$
 
 We measure the 2-way interaction information (i.e. degree of synergistic effects of genotypes on the phenotype) of each dataset by summing the pairwise information gain between all pairs of genetic attributes.
 Specifically, if we let $X_j$ denote the $j^\textrm{th}$ genotype combination $(SNP_{j_1}, SNP_{j_2})$, the total 2-way interaction gain (i.e. synergistic effects $SE$) is calculated as 
-$$SE = \sum_{j}^kIG(X_j; y) = \sum_{j}^k \left(I(SNP_{j_1}, SNP_{j_2}; y) - I(SNP_{j_1}; y) - I(SNP_{j_2}; y)\right),$$
-where $IG$ measures how much of the phenotypic class $y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
+$$SE = \sum_{j}^kIG(X_j; Y) = \sum_{j}^k \left(I(SNP_{j_1}, SNP_{j_2}; Y) - I(SNP_{j_1}; Y) - I(SNP_{j_2}; Y)\right),$$
+where $IG$ measures how much of the phenotypic class $Y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
 ### Simulated data
