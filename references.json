@@ -373,33 +373,6 @@
     "id": "kN4MaLuT"
   },
   {
-    "publisher": "Springer Nature",
-    "issue": "6968",
-    "DOI": "10.1038/nature02168",
-    "type": "article-journal",
-    "page": "789-796",
-    "source": "Crossref",
-    "title": "The International HapMap Project",
-    "volume": "426",
-    "author": [
-      {}
-    ],
-    "container-title": "Nature",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2003,
-          12
-        ]
-      ]
-    },
-    "URL": "https://doi.org/dgd",
-    "container-title-short": "Nature",
-    "PMID": "14685227",
-    "id": "UKO9Qhy3"
-  },
-  {
     "publisher": "Springer Science and Business Media LLC",
     "issue": "7256",
     "DOI": "10.1038/nature08185",
@@ -427,35 +400,6 @@
     "PMCID": "PMC3912837",
     "PMID": "19571811",
     "id": "mwTa2RUK"
-  },
-  {
-    "publisher": "Springer Science and Business Media LLC",
-    "issue": "7422",
-    "DOI": "10.1038/nature11632",
-    "type": "article-journal",
-    "page": "56-65",
-    "source": "Crossref",
-    "title": "An integrated map of genetic variation from 1,092 human genomes",
-    "volume": "491",
-    "author": [
-      {}
-    ],
-    "container-title": "Nature",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2012,
-          10,
-          31
-        ]
-      ]
-    },
-    "URL": "https://doi.org/f4k2v2",
-    "container-title-short": "Nature",
-    "PMCID": "PMC3498066",
-    "PMID": "23128226",
-    "id": "MSp5fjte"
   },
   {
     "publisher": "Springer Nature",
