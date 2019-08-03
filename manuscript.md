@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/5732bd2dca5e8ecf4d9adf3d132b12704f070c13/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/3cde4f16891f0026a945048fa0ccb4a9dded1f60/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@5732bd2](https://github.com/lelaboratoire/rethink-prs-ms/tree/5732bd2dca5e8ecf4d9adf3d132b12704f070c13)
+from [lelaboratoire/rethink-prs-ms@3cde4f1](https://github.com/lelaboratoire/rethink-prs-ms/tree/3cde4f16891f0026a945048fa0ccb4a9dded1f60)
 on August 3, 2019.
 </em></small>
 
@@ -151,7 +151,7 @@ In this subsection, we quickly review the standard PRS formula then present our 
 For both methods, we consider a dataset of $n$ individuals with genomes of $m$ possible SNPs.
 
 In PRS, for each SNP $j$ of an individual $i$, the PRS score is calculated via a summation across $k$ selected SNPs as
-$$PR(i)S=\sum_{j=1}^{k} \beta_j \cdot SNP_{ij}$$
+$$PRS(i)=\sum_{j=1}^{k} \beta_j \times SNP_{ij}$$
 where $\beta_j$ is the weighted risk contribution of the $j^\textrm{th}$ SNP derived from the association test parameters and $SNP_{ij}$ represents the number of minor alleles (0, 1, or 2) at the $j^\textrm{th}$ locus of individual $i$.
 Various approaches towards predicting risk of the same disease exist across PRS studies based on the above equation; models may vary according to the specific statistical model used to produce the weights $\beta_j$ for individual genetic variations, the number of genetic variants considered $k$, and the ability of the PRS to generalize to the entire population [@1Dlv3tAGh].
 
@@ -205,13 +205,13 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 
 ### MRS outperforms standard PRS in the majority of simulated datasets
 
-![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between the auROCs from the two methods (right).](images/1_ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs width="80%"}
-
 In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
 When MRS yields smaller auROC, the difference is small (3.3% ± 2.8%, purple lines/areas).
 Across all datasets, the improvement of MRS over PRS is significant (P < $10^{-15}$) according to a Wilcoxon signed rank test.
 To assess whether this improvement in performance correlates with the amount of interaction effects contained in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
+
+![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between the auROCs from the two methods (right).](images/1_ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs width="80%"}
 
 ### Assess improvement in performance
 Individually, MRS1 and MRS2 both significantly outperformed the standard PRS method (both P values < $10^{-15}$) according to a Wilcoxon signed rank test.
@@ -243,7 +243,7 @@ First, MRS has not been applied to real-world data.
 Although we compensated the lack of real data with a diverse set of simulated datasets, a future study analyzing real-world data will prove beneficial to quantify the new MRS model's utility in practice.
 Second, accounting for epistasis, in principle, is largely more computationally expensive compared to investigating solely main effects.
 Therefore, even with fast and efficient software, pre-selecting the variants (e.g. based on specific pathways or prior knowledge) will prove beneficial for accurate MRS computing when analyzing datasets containing a larger number of variants.
-However, we hope the promising preliminary results will open the doors to future approaches that encompass main and interaction effects and improve scalability.
+Nevertheless, we hope the promising preliminary results from this study will open the door to future approaches that encompass both main and interaction effects while improving scalability.
 
 Finally, we caution that a risk score model should be evaluated based on not only sensitivity and specificity but also with respect to potential clinical efficacy, and any genetic risk should be interpreted in aggregate with other risk factors.
 Future works focusing on gene-environment interactions with time-dependent risk factors will be crucial in order to communicate risk properly for preventive interventions.
