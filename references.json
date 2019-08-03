@@ -302,138 +302,35 @@
     "id": "1FFMLUZxb"
   },
   {
-    "publisher": "Elsevier BV",
-    "issue": "3",
-    "DOI": "10.1016/j.ajhg.2015.01.001",
-    "type": "article-journal",
-    "page": "377-385",
+    "publisher": "Springer New York",
+    "DOI": "10.1007/978-1-4939-2155-3_16",
+    "type": "chapter",
+    "page": "301-314",
     "source": "Crossref",
-    "title": "Dominance Genetic Variation Contributes Little to the Missing Heritability for Human Complex Traits",
-    "volume": "96",
+    "title": "Epistasis Analysis Using Multifactor Dimensionality Reduction",
     "author": [
       {
-        "given": "Zhihong",
-        "family": "Zhu"
+        "given": "Jason H.",
+        "family": "Moore"
       },
       {
-        "given": "Andrew",
-        "family": "Bakshi"
-      },
-      {
-        "given": "Anna A.E.",
-        "family": "Vinkhuyzen"
-      },
-      {
-        "given": "Gibran",
-        "family": "Hemani"
-      },
-      {
-        "given": "Sang Hong",
-        "family": "Lee"
-      },
-      {
-        "given": "Ilja M.",
-        "family": "Nolte"
-      },
-      {
-        "given": "Jana V.",
-        "family": "van Vliet-Ostaptchouk"
-      },
-      {
-        "given": "Harold",
-        "family": "Snieder"
-      },
-      {
-        "given": "Tonu",
-        "family": "Esko"
-      },
-      {
-        "given": "Lili",
-        "family": "Milani"
-      },
-      {
-        "given": "Reedik",
-        "family": "Mägi"
-      },
-      {
-        "given": "Andres",
-        "family": "Metspalu"
-      },
-      {
-        "given": "William G.",
-        "family": "Hill"
-      },
-      {
-        "given": "Bruce S.",
-        "family": "Weir"
-      },
-      {
-        "given": "Michael E.",
-        "family": "Goddard"
-      },
-      {
-        "given": "Peter M.",
-        "family": "Visscher"
-      },
-      {
-        "given": "Jian",
-        "family": "Yang"
+        "given": "Peter C.",
+        "family": "Andrews"
       }
     ],
-    "container-title": "The American Journal of Human Genetics",
-    "language": "en",
+    "container-title": "Methods in Molecular Biology",
     "issued": {
       "date-parts": [
         [
-          2015,
-          3
+          2014,
+          11,
+          4
         ]
       ]
     },
-    "URL": "https://doi.org/f64772",
-    "container-title-short": "The American Journal of Human Genetics",
-    "PMCID": "PMC4375616",
-    "PMID": "25683123",
-    "id": "wBOguD8h"
-  },
-  {
-    "publisher": "Elsevier BV",
-    "issue": "1",
-    "DOI": "10.1016/j.ajhg.2016.05.013",
-    "type": "article-journal",
-    "page": "139-153",
-    "source": "Crossref",
-    "title": "Contrasting the Genetic Architecture of 30 Complex Traits from Summary Association Data",
-    "volume": "99",
-    "author": [
-      {
-        "given": "Huwenbo",
-        "family": "Shi"
-      },
-      {
-        "given": "Gleb",
-        "family": "Kichaev"
-      },
-      {
-        "given": "Bogdan",
-        "family": "Pasaniuc"
-      }
-    ],
-    "container-title": "The American Journal of Human Genetics",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2016,
-          7
-        ]
-      ]
-    },
-    "URL": "https://doi.org/f8xxkd",
-    "container-title-short": "The American Journal of Human Genetics",
-    "PMCID": "PMC5005444",
-    "PMID": "27346688",
-    "id": "132N8vjSs"
+    "URL": "https://doi.org/gf5ptc",
+    "PMID": "25403539",
+    "id": "1BqLrlGsj"
   },
   {
     "publisher": "Springer Nature",
@@ -561,82 +458,6 @@
     "id": "MSp5fjte"
   },
   {
-    "publisher": "Springer Science and Business Media LLC",
-    "issue": "7",
-    "DOI": "10.1038/ng.608",
-    "type": "article-journal",
-    "page": "565-569",
-    "source": "Crossref",
-    "title": "Common SNPs explain a large proportion of the heritability for human height",
-    "volume": "42",
-    "author": [
-      {
-        "given": "Jian",
-        "family": "Yang"
-      },
-      {
-        "given": "Beben",
-        "family": "Benyamin"
-      },
-      {
-        "given": "Brian P",
-        "family": "McEvoy"
-      },
-      {
-        "given": "Scott",
-        "family": "Gordon"
-      },
-      {
-        "given": "Anjali K",
-        "family": "Henders"
-      },
-      {
-        "given": "Dale R",
-        "family": "Nyholt"
-      },
-      {
-        "given": "Pamela A",
-        "family": "Madden"
-      },
-      {
-        "given": "Andrew C",
-        "family": "Heath"
-      },
-      {
-        "given": "Nicholas G",
-        "family": "Martin"
-      },
-      {
-        "given": "Grant W",
-        "family": "Montgomery"
-      },
-      {
-        "given": "Michael E",
-        "family": "Goddard"
-      },
-      {
-        "given": "Peter M",
-        "family": "Visscher"
-      }
-    ],
-    "container-title": "Nature Genetics",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2010,
-          6,
-          20
-        ]
-      ]
-    },
-    "URL": "https://doi.org/fjjm4v",
-    "container-title-short": "Nat Genet",
-    "PMCID": "PMC3232052",
-    "PMID": "20562875",
-    "id": "mOp2SAPs"
-  },
-  {
     "publisher": "Springer Nature",
     "issue": "2",
     "DOI": "10.1038/nrg1521",
@@ -711,40 +532,6 @@
     "container-title-short": "Nat Rev Genet",
     "PMID": "15716907",
     "id": "12kQ0EOWQ"
-  },
-  {
-    "publisher": "Springer Nature",
-    "issue": "10",
-    "DOI": "10.1038/nrg910",
-    "type": "article-journal",
-    "page": "779-789",
-    "source": "Crossref",
-    "title": "Beyond Mendel: an evolving view of human genetic disease transmission",
-    "volume": "3",
-    "author": [
-      {
-        "given": "Jose L.",
-        "family": "Badano"
-      },
-      {
-        "given": "Nicholas",
-        "family": "Katsanis"
-      }
-    ],
-    "container-title": "Nature Reviews Genetics",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2002,
-          10
-        ]
-      ]
-    },
-    "URL": "https://doi.org/cjfzf2",
-    "container-title-short": "Nat Rev Genet",
-    "PMID": "12360236",
-    "id": "KQA5cNEZ"
   },
   {
     "publisher": "Springer Science and Business Media LLC",
@@ -1409,37 +1196,6 @@
     "PMCID": "PMC3560267",
     "PMID": "23294634",
     "id": "93PfLXPZ"
-  },
-  {
-    "publisher": "Springer Nature",
-    "issue": "1",
-    "DOI": "10.1186/s13059-016-1107-9",
-    "type": "article-journal",
-    "source": "Crossref",
-    "title": "The continuum of causality in human genetic disorders",
-    "volume": "17",
-    "author": [
-      {
-        "given": "Nicholas",
-        "family": "Katsanis"
-      }
-    ],
-    "container-title": "Genome Biology",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2016,
-          11,
-          17
-        ]
-      ]
-    },
-    "URL": "https://doi.org/f9fzd3",
-    "container-title-short": "Genome Biol",
-    "PMCID": "PMC5114767",
-    "PMID": "27855690",
-    "id": "LpJAX4ST"
   },
   {
     "publisher": "Public Library of Science (PLoS)",
