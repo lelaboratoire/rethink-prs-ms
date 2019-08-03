@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/c7f58d144f93eed8ceee9a19281768e34a0bc9ac/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/0aa40ac25abe25fe7e2911e7591a2d646528a438/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@c7f58d1](https://github.com/lelaboratoire/rethink-prs-ms/tree/c7f58d144f93eed8ceee9a19281768e34a0bc9ac)
+from [lelaboratoire/rethink-prs-ms@0aa40ac](https://github.com/lelaboratoire/rethink-prs-ms/tree/0aa40ac25abe25fe7e2911e7591a2d646528a438)
 on August 3, 2019.
 </em></small>
 
@@ -186,11 +186,12 @@ We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of 
 
 ### Simulated data
 The primary objective of this data simulation process was to provide a comprehensive set of reproducible and diverse datasets for the current study.
-Containing 1000 individuals and 10 SNPs, each dataset was generated in the following manner.
+Each dataset was generated in the following manner.
 For an individual, each genotype was randomly assigned with 1/2 probability of being heterozygous (*Aa*, coded as `1`), 1/4 probability of being homozygous major (*AA*, coded as `0`) and 1/4 probability of being homozygous minor (*aa*, coded as `2`).
 The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa].
-Details on data simulation are provided in the study's analysis repository [https://github.com/lelaboratoire/rethink-prs/](https://github.com/lelaboratoire/rethink-prs/).
+Details on data simulation are provided in the README of the study's analysis repository [https://github.com/lelaboratoire/rethink-prs/](https://github.com/lelaboratoire/rethink-prs/).
 
+The final collection has 450 datasets containing 1000 individuals and 10 SNPs with various amount of epistatic effect on the binary phenotypic outcome.
 For each simulated dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the $\gamma$ coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set.
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method on the holdout set.
 
@@ -206,11 +207,6 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 
 
 ## Results
-
-### Datasets
-[Patryk Orzechowski]
-
-[simulated datasets of $n = 1000$ individuals, $p = 10$ SNPs]
 
 ### MRS outperforms standard PRS in the majority of simulated datasets
 
@@ -235,7 +231,7 @@ Combining the gain from both MRS1 and MRS2, MRS's performance progressively incr
 
 We introduce a Multilocus Risk Score (MRS) method to improve the performance of the standard PRS in disease risk stratification of patient populations. 
 While PRS holds much promise for development of new precision medicine approaches by identifying high risk individuals who may benefit from prioritized interventions, one of its current limitations is the model simplicity [@1GK3F1BxE].
-As a first step towards addressing this issue and increasing comprehensiveness of risk profiling models, in this study, we developed a new applied MRS method from the MB-MDR framework that enables automatic genotype encodings and takes into account multiple models for detecting gene-gene (GxG) interactions. 
+As a first step towards addressing this issue and increasing comprehensiveness of risk profiling models, in this study, we developed a new applied MRS method from the MB-MDR framework that enables automatic genotype encodings and takes into account multiple models for detecting GxG interactions. 
 Utilizing the efficient implementation of MB-MDR, MRS automatically infers the genotype encodings and simultaneously computes the risk of variant combinations.
 Through comparing method performance on a diverse collection of simulated data, we demonstrate the robust polygenic risk profiling ability of MRS and suggest the importance of flexible, precise methods in better capturing epistasis behind individual patient risk.
 
