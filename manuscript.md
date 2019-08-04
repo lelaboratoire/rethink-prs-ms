@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-08-03'
+date-meta: '2019-08-04'
 keywords:
 - markdown
 - publishing
@@ -22,10 +22,10 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/3cde4f16891f0026a945048fa0ccb4a9dded1f60/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/c54eb621f971a04889964fd142639555d67d8bd7/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@3cde4f1](https://github.com/lelaboratoire/rethink-prs-ms/tree/3cde4f16891f0026a945048fa0ccb4a9dded1f60)
-on August 3, 2019.
+from [lelaboratoire/rethink-prs-ms@c54eb62](https://github.com/lelaboratoire/rethink-prs-ms/tree/c54eb621f971a04889964fd142639555d67d8bd7)
+on August 4, 2019.
 </em></small>
 
 ## Authors
@@ -191,9 +191,9 @@ For each simulated dataset, after randomly splitting the entire data in two smal
 We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method on the holdout set.
 
 ### Manuscript drafting
-This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown [@YuJbg3zO].
-Manubot uses continuous integration to monitor changes and automatically update the manuscript.
-As a result, the latest version of this manuscript is always available at [https://lelaboratoire.github.io/rethink-prs-ms/](https://lelaboratoire.github.io/rethink-prs-ms/).
+This manuscript is collaboratively written using Manubot, a software for writing scholarly documents via GitHub [@YuJbg3zO].
+With continuous integration, Manubot automatically updates the manuscript when its authors approve the changes.
+As a result, the latest version of this manuscript is always available for review at [https://lelaboratoire.github.io/rethink-prs-ms/](https://lelaboratoire.github.io/rethink-prs-ms/).
 
 
 ### Availability
