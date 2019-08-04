@@ -9,7 +9,7 @@
   <meta name="author" content="Patryk Orzechowski" />
   <meta name="author" content="Elisabetta Manduchi" />
   <meta name="author" content="Jason H. Moore" />
-  <meta name="dcterms.date" content="2019-08-03" />
+  <meta name="dcterms.date" content="2019-08-04" />
   <meta name="keywords" content="markdown, publishing, manubot" />
   <title>Expanding polygenic risk scores to include automatic genotype encodings and gene-gene interactions</title>
   <style>
@@ -26,7 +26,7 @@
 <header id="title-block-header">
 <h1 class="title">Expanding polygenic risk scores to include automatic genotype encodings and gene-gene interactions</h1>
 </header>
-<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/3cde4f16891f0026a945048fa0ccb4a9dded1f60/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/3cde4f16891f0026a945048fa0ccb4a9dded1f60">lelaboratoire/rethink-prs-ms@3cde4f1</a> on August 3, 2019. </em></small></p>
+<p><small><em> This manuscript (<a href="https://lelaboratoire.github.io/rethink-prs-ms/v/c54eb621f971a04889964fd142639555d67d8bd7/">permalink</a>) was automatically generated from <a href="https://github.com/lelaboratoire/rethink-prs-ms/tree/c54eb621f971a04889964fd142639555d67d8bd7">lelaboratoire/rethink-prs-ms@c54eb62</a> on August 4, 2019. </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
 <li><p><strong>Trang T. Le</strong><sup>☯</sup><br> <img src="images/orcid.svg" alt="ORCID icon" width="13" height="13" /> <a href="https://orcid.org/0000-0003-3737-6565">0000-0003-3737-6565</a> · <img src="images/github.svg" alt="GitHub icon" class="inline_icon" /> <a href="https://github.com/trang1618">trang1618</a> · <img src="images/twitter.svg" alt="Twitter icon" class="inline_icon" /> <a href="https://twitter.com/trang1618">trang1618</a><br> <small> Department of Biostatistics, Epidemiology and Informatics, Institute for Biomedical Informatics, University of Pennsylvania, Philadelphia, PA 19104 </small></p></li>
@@ -69,7 +69,7 @@ SNP_2 = 2 &amp; O        &amp; L        &amp; H
 <p>The primary objective of this data simulation process was to provide a comprehensive set of reproducible and diverse datasets for the current study. Each dataset was generated in the following manner. For an individual, each genotype was randomly assigned with 1/2 probability of being heterozygous (<em>Aa</em>, coded as <code>1</code>), 1/4 probability of being homozygous major (<em>AA</em>, coded as <code>0</code>) and 1/4 probability of being homozygous minor (<em>aa</em>, coded as <code>2</code>). The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) <span class="citation" data-cites="pDXdtMFa">[<a href="#ref-pDXdtMFa">18</a>]</span>. Details on data simulation are provided in the README of the study’s analysis repository <a href="https://github.com/lelaboratoire/rethink-prs/">https://github.com/lelaboratoire/rethink-prs/</a>.</p>
 <p>The final collection has 450 datasets containing 1000 individuals and 10 SNPs with various amount of epistatic effect on the binary phenotypic outcome. For each simulated dataset, after randomly splitting the entire data in two smaller sets (80% training and 20% holdout), we built the MRS model on training data to obtain the <span class="math inline">\(\gamma\)</span> coefficients and the HLO matrix, and then we calculated risk score for each individual in the holdout set. We assess the performance of the MRS by comparing the area under the Receiving Operator Characteristic curve (auROC) with that of the standard PRS method on the holdout set.</p>
 <h3 id="manuscript-drafting">Manuscript drafting</h3>
-<p>This manuscript is collaboratively written using the Manubot software which supports open paper writing via GitHub with Markdown <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO">19</a>]</span>. Manubot uses continuous integration to monitor changes and automatically update the manuscript. As a result, the latest version of this manuscript is always available at <a href="https://lelaboratoire.github.io/rethink-prs-ms/">https://lelaboratoire.github.io/rethink-prs-ms/</a>.</p>
+<p>This manuscript is collaboratively written using Manubot, a software for writing scholarly documents via GitHub <span class="citation" data-cites="YuJbg3zO">[<a href="#ref-YuJbg3zO">19</a>]</span>. With continuous integration, Manubot automatically updates the manuscript when its authors approve the changes. As a result, the latest version of this manuscript is always available for review at <a href="https://lelaboratoire.github.io/rethink-prs-ms/">https://lelaboratoire.github.io/rethink-prs-ms/</a>.</p>
 <h3 id="availability">Availability</h3>
 <p>Detailed simulation and analysis code needed to reproduce the results in this study is available at <a href="https://github.com/lelaboratoire/rethink-prs/">https://github.com/lelaboratoire/rethink-prs/</a>.</p>
 <h2 id="results">Results</h2>
