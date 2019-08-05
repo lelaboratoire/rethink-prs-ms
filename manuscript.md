@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-08-04'
+date-meta: '2019-08-05'
 keywords:
 - markdown
 - publishing
@@ -22,10 +22,10 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/c54eb621f971a04889964fd142639555d67d8bd7/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/9d37da5ceec6d1652b14bfbe452ec7deae447fbc/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@c54eb62](https://github.com/lelaboratoire/rethink-prs-ms/tree/c54eb621f971a04889964fd142639555d67d8bd7)
-on August 4, 2019.
+from [lelaboratoire/rethink-prs-ms@9d37da5](https://github.com/lelaboratoire/rethink-prs-ms/tree/9d37da5ceec6d1652b14bfbe452ec7deae447fbc)
+on August 5, 2019.
 </em></small>
 
 ## Authors
@@ -103,10 +103,10 @@ Measuring averaged allelic effects across all genomics backgrounds and environme
 
 In tandem with the movement towards precision medicine, the post-GWAS era strives to bring relevant population-derived gene variants into individual level metrics actionable in health delivery settings.
 While GWAS indeed capture gene variants associated with a phenotype of interest on a population level, translating such results to personalized individual metrics of risk requires aggregating contributions of many gene variants in the form of polygenic risk scores (PRS).
-PRS provide an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS [@1Dlv3tAGh; @1GK3F1BxE]. 
+PRS provide an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS [@auyRflEe; @1GK3F1BxE]. 
 In quantifying the effect of particular combinations of genetic SNP variants towards risk prediction, PRS offers a probabilisitic susceptibility value of an individual to disease.
 Such genetic risk estimation scores are central to clinical decision-making, serving to reinforce individual health management in heritable disease detection and early prevention of various adult-onset conditions. 
-The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@mwTa2RUK; @JjyayEbB; @Z12fynub; @gkABDVTx].
+The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@mwTa2RUK; @oBD9eYkN; @Gh0gKn77; @Z12fynub; @gkABDVTx].
 
 Because common PRS method assumes a simplified genetic architecture consisting of independent weights, understanding interactive relationships among genes and SNPs that associate with disease outcome remain a challenge.
 Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible genetic interaction combinations with both linear and nonlinear effects.

@@ -333,6 +333,109 @@
     "id": "1BqLrlGsj"
   },
   {
+    "publisher": "Elsevier BV",
+    "issue": "3",
+    "DOI": "10.1016/j.cell.2019.03.028",
+    "type": "article-journal",
+    "page": "587-596.e9",
+    "source": "Crossref",
+    "title": "Polygenic Prediction of Weight and Obesity Trajectories from Birth to Adulthood",
+    "volume": "177",
+    "author": [
+      {
+        "given": "Amit V.",
+        "family": "Khera"
+      },
+      {
+        "given": "Mark",
+        "family": "Chaffin"
+      },
+      {
+        "given": "Kaitlin H.",
+        "family": "Wade"
+      },
+      {
+        "given": "Sohail",
+        "family": "Zahid"
+      },
+      {
+        "given": "Joseph",
+        "family": "Brancale"
+      },
+      {
+        "given": "Rui",
+        "family": "Xia"
+      },
+      {
+        "given": "Marina",
+        "family": "Distefano"
+      },
+      {
+        "given": "Ozlem",
+        "family": "Senol-Cosar"
+      },
+      {
+        "given": "Mary E.",
+        "family": "Haas"
+      },
+      {
+        "given": "Alexander",
+        "family": "Bick"
+      },
+      {
+        "given": "Krishna G.",
+        "family": "Aragam"
+      },
+      {
+        "given": "Eric S.",
+        "family": "Lander"
+      },
+      {
+        "given": "George Davey",
+        "family": "Smith"
+      },
+      {
+        "given": "Heather",
+        "family": "Mason-Suares"
+      },
+      {
+        "given": "Myriam",
+        "family": "Fornage"
+      },
+      {
+        "given": "Matthew",
+        "family": "Lebo"
+      },
+      {
+        "given": "Nicholas J.",
+        "family": "Timpson"
+      },
+      {
+        "given": "Lee M.",
+        "family": "Kaplan"
+      },
+      {
+        "given": "Sekar",
+        "family": "Kathiresan"
+      }
+    ],
+    "container-title": "Cell",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2019,
+          4
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gfzm2w",
+    "container-title-short": "Cell",
+    "PMCID": "PMC6661115",
+    "PMID": "31002795",
+    "id": "oBD9eYkN"
+  },
+  {
     "publisher": "Springer Nature",
     "issue": "6",
     "DOI": "10.1038/ejhg.2011.17",
@@ -400,6 +503,46 @@
     "PMCID": "PMC3912837",
     "PMID": "19571811",
     "id": "mwTa2RUK"
+  },
+  {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "7",
+    "DOI": "10.1038/nrg.2016.27",
+    "type": "article-journal",
+    "page": "392-406",
+    "source": "Crossref",
+    "title": "Developing and evaluating polygenic risk prediction models for stratified disease prevention",
+    "volume": "17",
+    "author": [
+      {
+        "given": "Nilanjan",
+        "family": "Chatterjee"
+      },
+      {
+        "given": "Jianxin",
+        "family": "Shi"
+      },
+      {
+        "given": "Montserrat",
+        "family": "García-Closas"
+      }
+    ],
+    "container-title": "Nature Reviews Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2016,
+          5,
+          3
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gftjdp",
+    "container-title-short": "Nat Rev Genet",
+    "PMCID": "PMC6021129",
+    "PMID": "27140283",
+    "id": "auyRflEe"
   },
   {
     "publisher": "Springer Nature",
@@ -515,6 +658,78 @@
     "container-title-short": "Nat Rev Genet",
     "PMID": "29789686",
     "id": "1GK3F1BxE"
+  },
+  {
+    "publisher": "Springer Nature",
+    "issue": "9",
+    "DOI": "10.1038/s41588-018-0183-z",
+    "type": "article-journal",
+    "page": "1219-1224",
+    "source": "Crossref",
+    "title": "Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations",
+    "volume": "50",
+    "author": [
+      {
+        "given": "Amit V.",
+        "family": "Khera"
+      },
+      {
+        "given": "Mark",
+        "family": "Chaffin"
+      },
+      {
+        "given": "Krishna G.",
+        "family": "Aragam"
+      },
+      {
+        "given": "Mary E.",
+        "family": "Haas"
+      },
+      {
+        "given": "Carolina",
+        "family": "Roselli"
+      },
+      {
+        "given": "Seung Hoan",
+        "family": "Choi"
+      },
+      {
+        "given": "Pradeep",
+        "family": "Natarajan"
+      },
+      {
+        "given": "Eric S.",
+        "family": "Lander"
+      },
+      {
+        "given": "Steven A.",
+        "family": "Lubitz"
+      },
+      {
+        "given": "Patrick T.",
+        "family": "Ellinor"
+      },
+      {
+        "given": "Sekar",
+        "family": "Kathiresan"
+      }
+    ],
+    "container-title": "Nature Genetics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2018,
+          8,
+          13
+        ]
+      ]
+    },
+    "URL": "https://doi.org/gdz64f",
+    "container-title-short": "Nat Genet",
+    "PMCID": "PMC6128408",
+    "PMID": "30104762",
+    "id": "Gh0gKn77"
   },
   {
     "publisher": "Elsevier BV",
@@ -942,90 +1157,6 @@
     },
     "URL": "https://doi.org/gf5b6s",
     "id": "pDXdtMFa"
-  },
-  {
-    "publisher": "Ovid Technologies (Wolters Kluwer Health)",
-    "issue": "22",
-    "DOI": "10.1161/circulationaha.116.024436",
-    "type": "article-journal",
-    "page": "2091-2101",
-    "source": "Crossref",
-    "title": "Polygenic Risk Score Identifies Subgroup With Higher Burden of Atherosclerosis and Greater Relative Benefit From Statin Therapy in the Primary Prevention Setting",
-    "volume": "135",
-    "author": [
-      {
-        "given": "Pradeep",
-        "family": "Natarajan"
-      },
-      {
-        "given": "Robin",
-        "family": "Young"
-      },
-      {
-        "given": "Nathan O.",
-        "family": "Stitziel"
-      },
-      {
-        "given": "Sandosh",
-        "family": "Padmanabhan"
-      },
-      {
-        "given": "Usman",
-        "family": "Baber"
-      },
-      {
-        "given": "Roxana",
-        "family": "Mehran"
-      },
-      {
-        "given": "Samantha",
-        "family": "Sartori"
-      },
-      {
-        "given": "Valentin",
-        "family": "Fuster"
-      },
-      {
-        "given": "Dermot F.",
-        "family": "Reilly"
-      },
-      {
-        "given": "Adam",
-        "family": "Butterworth"
-      },
-      {
-        "given": "Daniel J.",
-        "family": "Rader"
-      },
-      {
-        "given": "Ian",
-        "family": "Ford"
-      },
-      {
-        "given": "Naveed",
-        "family": "Sattar"
-      },
-      {
-        "given": "Sekar",
-        "family": "Kathiresan"
-      }
-    ],
-    "container-title": "Circulation",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2017,
-          5,
-          30
-        ]
-      ]
-    },
-    "URL": "https://doi.org/gbgqhb",
-    "container-title-short": "Circulation",
-    "PMCID": "PMC5484076",
-    "PMID": "28223407",
-    "id": "JjyayEbB"
   },
   {
     "publisher": "Springer Nature",
