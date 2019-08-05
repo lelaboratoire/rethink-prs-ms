@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/4609c3fdfc7d8e341ef0f856af7218fc8ba917ef/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/9dd89ba63029af261140e7d324cadec4e43e2bbd/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@4609c3f](https://github.com/lelaboratoire/rethink-prs-ms/tree/4609c3fdfc7d8e341ef0f856af7218fc8ba917ef)
+from [lelaboratoire/rethink-prs-ms@9dd89ba](https://github.com/lelaboratoire/rethink-prs-ms/tree/9dd89ba63029af261140e7d324cadec4e43e2bbd)
 on August 5, 2019.
 </em></small>
 
