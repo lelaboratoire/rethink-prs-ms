@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-08-12'
+date-meta: '2019-08-28'
 keywords:
 - markdown
 - publishing
@@ -22,10 +22,10 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/f7f909bd1ad89264495139560e4a7a289fb29ba9/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/88c380dca7d09542e8c7c4e244682d0a686d846b/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@f7f909b](https://github.com/lelaboratoire/rethink-prs-ms/tree/f7f909bd1ad89264495139560e4a7a289fb29ba9)
-on August 12, 2019.
+from [lelaboratoire/rethink-prs-ms@88c380d](https://github.com/lelaboratoire/rethink-prs-ms/tree/88c380dca7d09542e8c7c4e244682d0a686d846b)
+on August 28, 2019.
 </em></small>
 
 ## Authors
@@ -170,12 +170,12 @@ We will compare the performance of the standard PRS method to the combined risk 
 
 ### Mutual information and information gain
 For a given simulated data set, we apply entropy-based methods to measure how much information about the phenotype is due to either marginal effects or the synergistic effects of the variants after subtracting the marginal effects.
-A dataset's amount of main effect $ME$ can be measured as the total of mutual information between each genotype $SNP_j$ and the phenotypic class $Y$ based on Shannon's entropy $H$ [@yzGboP1g]:
-$$ME = \sum_{j}^k I(SNP_j; Y) = \sum_{j}^k H(Y) - H(Y|SNP_j).$$
+A dataset's amount of main effect $ME$ can be measured as the total of mutual information between each $SNP_j$ and the phenotypic class $Y$ based on Shannon's entropy $H$ [@yzGboP1g]:
+$$ME = \sum_{j} I(SNP_j; Y) = \sum_{j} \left(H(Y) - H(Y|SNP_j)\right).$$
 
 We measure the 2-way interaction information (i.e. degree of synergistic effects of genotypes on the phenotype) of each dataset by summing the pairwise information gain between all pairs of genetic attributes.
-Specifically, if we let $X_j$ denote the $j^\textrm{th}$ genotype combination $(SNP_{j_1}, SNP_{j_2})$, the total 2-way interaction gain (i.e. synergistic effects $SE$) is calculated as 
-$$SE = \sum_{j}^kIG(X_j; Y) = \sum_{j}^k \left(I(SNP_{j_1}, SNP_{j_2}; Y) - I(SNP_{j_1}; Y) - I(SNP_{j_2}; Y)\right),$$
+Specifically, if we let $X_j$ denote the $j^\textrm{th}$ pair $(SNP_{j_1}, SNP_{j_2})$, the total 2-way interaction gain (i.e. synergistic effects $SE$) is calculated as 
+$$SE = \sum_{j} IG(X_j; Y) = \sum_{j} \left(I(SNP_{j_1}, SNP_{j_2}; Y) - I(SNP_{j_1}; Y) - I(SNP_{j_2}; Y)\right),$$
 where $IG$ measures how much of the phenotypic class $Y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
