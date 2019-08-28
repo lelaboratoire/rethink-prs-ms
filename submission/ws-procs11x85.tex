@@ -199,7 +199,7 @@ combination, an HLO matrix is a 3 x 3 matrix with each cell containing H
 (high), L (low) or O (no evidence), indicating risk of an individual
 whose genotype pairs fall into that cell (Lishout \emph{et al.},
 \protect\hyperlink{ref-S6nj6BFK}{2013}). For an example binary outcome
-problem, a genotype combination \(SNP_1\) and \(SNP_2\) will have an HLO
+problem, a SNP pair \(SNP_1\) and \(SNP_2\) will have an HLO
 matrix that looks like \[ \begin{array}{l|ccc}
 & \, SNP_1 = 0 \quad& SNP_1 = 1 \quad& SNP_1 = 2  \quad \\
 \hline
@@ -248,9 +248,12 @@ genotype combination output from MB-MDR, \(X_{ij}\) is the
 \(\textrm{HLO}_j\) represents the \(j^\textrm{th}\) recoded HLO matrix
 (1 = High, -1 = Low, 0 = No evidence). As an example, consider a pair
 \(X_{*j} = (SNP_{j_1}, SNP_{j_2})\) with \(\gamma_j=8.3\) and
-corresponding HLO matrix of all O's except an L in the first cell. Then,
-all subjects' current risks would remain the same except the ones with
-\(SNP_{j_1} = SNP_{j_2} = 0\) where their risks are subtracted by 8.3.
+corresponding HLO matrix of all O's except an L in the first cell.
+%Then,
+%all subjects' current risks would remain the same except the ones with
+%\(SNP_{j_1} = SNP_{j_2} = 0\) where their risks are subtracted by 8.3.
+Then, the contribution of this pair to a subject's risk would be 0 for all subjects except those with genotype 0 at both SNPs.
+For the latter, the contribution would be -8.3.
 
 In this study, we consider 1-way and 2-way interactions. We denote by
 MRS the combined risk score MRS1 + MRS2. The significance level of each
@@ -269,9 +272,9 @@ measure how much information about the phenotype is due to either
 marginal effects or the synergistic effects of the variants after
 subtracting the marginal effects. A dataset's amount of main effect
 \(ME\) can be measured as the total of mutual information between each
-genotype \(SNP_j\) and the phenotypic class \(Y\) based on Shannon's
+\(SNP_j\) and the phenotypic class \(Y\) based on Shannon's
 entropy \(H\) (Shannon, \protect\hyperlink{ref-yzGboP1g}{1948}):
-\[ME = \sum_{j}^k I(SNP_j; Y) = \sum_{j}^k H(Y) - H(Y|SNP_j).\]
+\[ME = \sum_{j} I(SNP_j; Y) = \sum_{j} \left(H(Y) - H(Y|SNP_j)\right).\]
 
 We measure the 2-way interaction information (i.e.~degree of synergistic
 effects of genotypes on the phenotype) of each dataset by summing the
@@ -279,7 +282,7 @@ pairwise information gain between all pairs of genetic attributes.
 Specifically, if we let \(X_j\) denote the \(j^\textrm{th}\) genotype
 combination \((SNP_{j_1}, SNP_{j_2})\), the total 2-way interaction gain
 (i.e.~synergistic effects \(SE\)) is calculated as
-\[SE = \sum_{j}^kIG(X_j; Y) = \sum_{j}^k \left(I(SNP_{j_1}, SNP_{j_2}; Y) - I(SNP_{j_1}; Y) - I(SNP_{j_2}; Y)\right),\]
+\[SE = \sum_{j}IG(X_j; Y) = \sum_{j} \left(I(SNP_{j_1}, SNP_{j_2}; Y) - I(SNP_{j_1}; Y) - I(SNP_{j_2}; Y)\right),\]
 where \(IG\) measures how much of the phenotypic class \(Y\) can be
 explained by the 2-way epistatic interaction within the genotype
 combination \(X_j\). We refer the reader to Ref. (Moore and Hu,
@@ -301,7 +304,7 @@ probability of being homozygous minor (\emph{aa}, coded as \texttt{2}).
 The binary endpoint for the data was determined using a recently
 proposed evolutionary-based method for dataset generation called
 Heuristic Identification of Biological Architectures for simulating
-Complex Hierarchical Interactions (HIBACHI) (Moore \emph{et al.},
+Complex Hierarchical Interactions (Moore \emph{et al.},
 \protect\hyperlink{ref-pDXdtMFa}{2017}). Details on data simulation are
 provided in the README of the study's analysis repository
 \url{https://github.com/lelaboratoire/rethink-prs/}.
@@ -357,7 +360,7 @@ each dataset.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.8\textwidth]{../content/images/1_ori_vs_MRS_auROC_.pdf}
+\includegraphics[width=0.8\textwidth]{images/1_ori_vs_MRS_auROC_.pdf}
 \caption{MRS produces improved auROC in the majority (335 green lines)
 of the 450 simulated datasets (each line represents a dataset). In many
 datasets, the standard PRS method performs poorly (auROC \textless{}
@@ -387,7 +390,7 @@ progressively increases compared to the standard PRS.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{../content/images/improvements_train_ms.pdf}
+\includegraphics[width=0.7\textwidth]{images/improvements_train_ms.pdf}
 \caption{Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows
 increasing outperformance to standard PRS as datasets contain more main
 and interaction effect.\label{fig:improvements}}
@@ -466,12 +469,6 @@ affords new opportunities for more effective clinical prevention.
 
 We thank Dr.~Kristel Van Steen and Aldo Camargo for their helpful
 responses to our inquires about the MB-MDR software.
-
-\hypertarget{funding}{%
-\section{Funding}\label{funding}}
-
-This work was supported by the National Institutes of Health 
-grant numbers LM010098, LM012601 and AI116794.
 
 \hypertarget{references}{%
 \section*{References}\label{references}}

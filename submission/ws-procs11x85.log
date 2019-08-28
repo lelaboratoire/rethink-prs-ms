@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  5 AUG 2019 21:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  21 AUG 2019 10:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -147,14 +147,12 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/cite/chapterbib.sty
 \c@inputfile=\count108
 Package: chapterbib 2010/09/18  v 1.17
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/cite/cite.sty
-LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
-LaTeX Info: Redefining \cite on input line 441.
-))
-(./ws-procs-thm.sty
+) (./cite.sty
+LaTeX Info: Redefining \cite on input line 149.
+LaTeX Info: Redefining \nocite on input line 214.
+Package: cite 2003/11/04  v 4.01
+LaTeX Info: Redefining \cite on input line 282.
+)) (./ws-procs-thm.sty
 Package: ws-procs-thm 2014/01/20 WSPC Theorem Style
 \c@theorem=\count109
 \c@algorithm=\count110
@@ -727,10 +725,10 @@ l.223 I
 s been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.282 \[
-        SE = \sum_{j}^kIG(X_j; Y) = \sum_{j}^k \left(I(SNP_{j_1}, SNP_{j_2};...
+l.285 \[
+        SE = \sum_{j}IG(X_j; Y) = \sum_{j} \left(I(SNP_{j_1}, SNP_{j_2}; Y) ...
 [4]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 298.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 301.
 
  (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -738,65 +736,62 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.338 \section
-              {Results}\label{results} [5]
-<../content/images/1_ori_vs_MRS_auROC_.pdf, id=98, 361.35pt x 216.81pt>
-File: ../content/images/1_ori_vs_MRS_auROC_.pdf Graphic file (type pdf)
-<use ../content/images/1_ori_vs_MRS_auROC_.pdf>
-Package pdftex.def Info: ../content/images/1_ori_vs_MRS_auROC_.pdf  used on inp
-ut line 360.
+l.360 
+       [5]
+<images/1_ori_vs_MRS_auROC_.pdf, id=98, 361.35pt x 216.81pt>
+File: images/1_ori_vs_MRS_auROC_.pdf Graphic file (type pdf)
+<use images/1_ori_vs_MRS_auROC_.pdf>
+Package pdftex.def Info: images/1_ori_vs_MRS_auROC_.pdf  used on input line 363
+.
 (pdftex.def)             Requested size: 381.5874pt x 228.95404pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.387 
-       [6 <../content/images/1_ori_vs_MRS_auROC_.pdf>]
-<../content/images/improvements_train_ms.pdf, id=123, 289.08pt x 325.215pt>
-File: ../content/images/improvements_train_ms.pdf Graphic file (type pdf)
-<use ../content/images/improvements_train_ms.pdf>
-Package pdftex.def Info: ../content/images/improvements_train_ms.pdf  used on i
-nput line 390.
+l.390 
+       [6 <./images/1_ori_vs_MRS_auROC_.pdf>]
+<images/improvements_train_ms.pdf, id=124, 289.08pt x 325.215pt>
+File: images/improvements_train_ms.pdf Graphic file (type pdf)
+<use images/improvements_train_ms.pdf>
+Package pdftex.def Info: images/improvements_train_ms.pdf  used on input line 3
+93.
 (pdftex.def)             Requested size: 333.88625pt x 375.64185pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.415 
-       [7 <../content/images/improvements_train_ms.pdf>]pdfTeX warning (ext4): 
-destination with the same identifier (name{page.}) has been already used, dupli
-cate ignored
+l.418 
+       [7 <./images/improvements_train_ms.pdf>]pdfTeX warning (ext4): destinati
+on with the same identifier (name{page.}) has been already used, duplicate igno
+red
 <to be read again> 
                    \relax 
-l.463 
-       [8]pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.}) has been already used, duplicate ignored
+l.474 \section*{References}\label{references}}
+                                               [8]pdfTeX warning (ext4): destin
+ation with the same identifier (name{page.}) has been already used, duplicate i
+gnored
 <to be read again> 
                    \relax 
-l.549 
+l.565 
        [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 582.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.582 \end{document}
+l.579 \end{document}
                      [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 582.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
  (./ws-procs11x85.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 582.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 582.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 579.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 579.
  ) 
 Here is how much of TeX's memory you used:
- 9834 strings out of 492649
- 147042 string characters out of 6129622
- 271791 words of memory out of 5000000
- 13364 multiletter control sequences out of 15000+600000
- 60650 words of font info for 121 fonts, out of 8000000 for 9000
+ 9808 strings out of 492649
+ 146464 string characters out of 6129622
+ 271244 words of memory out of 5000000
+ 13336 multiletter control sequences out of 15000+600000
+ 60870 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,7n,38p,566b,331s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
@@ -818,10 +813,10 @@ mf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 public/lm/lmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/l
 mtt12.pfb>
-Output written on ws-procs11x85.pdf (10 pages, 476601 bytes).
+Output written on ws-procs11x85.pdf (10 pages, 475920 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 195 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
  10251 words of extra memory for PDF output out of 12000 (max. 10000000)
 
