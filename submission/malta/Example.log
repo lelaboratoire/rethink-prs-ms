@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  13 DEC 2019 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  13 DEC 2019 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -843,96 +843,103 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 192.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 214.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 214.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 210.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 214.
 [2] [3]
-Underfull \hbox (badness 2671) in paragraph at lines 349--356
+Underfull \hbox (badness 2671) in paragraph at lines 353--360
 \OT1/ptm/m/n/10 This manuscript is col-lab-o-ra-tively writ-ten us-ing
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 364.
+Underfull \vbox (badness 2753) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 370.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\uppercase' on input line 368.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 374.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 370.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-<images/1_ori_vs_MRS_auROC_.pdf, id=133, 361.35pt x 216.81pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 374.
+<images/1_ori_vs_MRS_auROC_.pdf, id=136, 361.35pt x 216.81pt>
 File: images/1_ori_vs_MRS_auROC_.pdf Graphic file (type pdf)
 <use images/1_ori_vs_MRS_auROC_.pdf>
-Package pdftex.def Info: images/1_ori_vs_MRS_auROC_.pdf  used on input line 385
+Package pdftex.def Info: images/1_ori_vs_MRS_auROC_.pdf  used on input line 389
 .
 (pdftex.def)             Requested size: 215.80182pt x 129.48158pt.
 
-Overfull \hbox (2.38739pt too wide) in paragraph at lines 385--392
+Overfull \hbox (2.38739pt too wide) in paragraph at lines 389--396
  [][] 
  []
 
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 392.
-[4 <./images/1_ori_vs_MRS_auROC_.pdf>]
-<images/improvements_train_ms.pdf, id=162, 296.10625pt x 325.215pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 396.
+
+Underfull \vbox (badness 1117) has occurred while \output is active []
+
+ [4 <./images/1_ori_vs_MRS_auROC_.pdf>]
+<images/improvements_train_ms.pdf, id=165, 296.10625pt x 325.215pt>
 File: images/improvements_train_ms.pdf Graphic file (type pdf)
 <use images/improvements_train_ms.pdf>
 Package pdftex.def Info: images/improvements_train_ms.pdf  used on input line 4
-17.
+21.
 (pdftex.def)             Requested size: 215.80182pt x 237.02287pt.
 
-Overfull \hbox (2.38739pt too wide) in paragraph at lines 417--420
+Overfull \hbox (2.38739pt too wide) in paragraph at lines 421--424
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 436.
+(hyperref)                removing `\uppercase' on input line 440.
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 438--454
+Underfull \hbox (badness 1688) in paragraph at lines 442--458
 \OT1/ptm/m/n/10 We in-tro-duce the Mul-ti-lo-cus Risk Score (MRS)
  []
 
 
-Underfull \vbox (badness 2970) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5 <./images/improvements_train_ms.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 504.
+(hyperref)                removing `\uppercase' on input line 508.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--587
+Underfull \hbox (badness 10000) in paragraph at lines 586--591
 [][]\OT1/ptm/m/n/10 Ritchie,M.D. \OT1/ptm/m/it/10 et al. \OT1/ptm/m/n/10 (2001)
  Multifactor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--587
+Underfull \hbox (badness 10000) in paragraph at lines 586--591
 \OT1/ptm/m/n/10 Dimensionality Re-duc-tion Re-veals High-Order
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 614.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 614.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 622.
+ [7
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 622.
  (./Example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 614.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 614.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 622.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 622.
 Package rerunfilecheck Info: File `Example.out' has not changed.
 (rerunfilecheck)             Checksum: D0EB36126D1A26E5B831A0C55F6DA2F7;955.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 614.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 622.
  ) 
 Here is how much of TeX's memory you used:
- 8227 strings out of 492649
- 123245 string characters out of 6129622
+ 8229 strings out of 492649
+ 123264 string characters out of 6129622
  217326 words of memory out of 5000000
  11917 multiletter control sequences out of 15000+600000
  63003 words of font info for 136 fonts, out of 8000000 for 9000
@@ -948,10 +955,10 @@ xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on Example.pdf (6 pages, 346144 bytes).
+Output written on Example.pdf (7 pages, 347122 bytes).
 PDF statistics:
- 233 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
+ 242 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
