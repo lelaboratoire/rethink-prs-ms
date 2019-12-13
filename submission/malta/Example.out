@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Methods}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Multifactor Dimensionality Reduction \(MDR\) and model-based MDR \(MB-MDR\)}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{From Polygenic Risk Scores \(PRS\) to Multilocus Risk Scores \(MRS\)}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Mutual information and information gain}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Simulated data}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Manuscript drafting}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Availability}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{Results}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{MRS outperforms standard PRS in the majority of simulated datasets}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Assess MRS's improvement in performance}{section.3}% 11
+\BOOKMARK [1][-]{section.4}{Discussion}{}% 12
+\BOOKMARK [1][-]{section.5}{Acknowledgements}{}% 13
