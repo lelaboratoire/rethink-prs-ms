@@ -30,7 +30,7 @@
 \usepackage{SCITEPRESS}     % Please add other packages that you may need BEFORE the SCITEPRESS.sty package.
 
   
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 %\hypersetup{
 %  pdftitle={Expanding polygenic risk scores to include automatic genotype encodings and gene-gene interactions},
 %  pdfauthor={Trang T. Le},
@@ -70,7 +70,7 @@ individual variants on the outcome. The Multilocus Risk Score
 (MRS) method effectively selects alternative genotype encodings and
 captures epistatic gene-gene interactions by utilizing an efficient
 implementation of the model-based Multifactor Dimensionality Reduction
-technique. On a diverse collection of datasets, MRS outperforms the
+technique. On a diverse collection of simulated datasets, MRS outperforms the
 standard PRS in the majority of the cases, especially when at least
 two-way interactions between the variants are present. Our findings suggest
 that models incorporating epistatic interactions are
@@ -409,6 +409,8 @@ increases (Fig. \ref{fig:improvements} right column), MRS1 performs
 mostly on par to PRS while MRS2 increasingly performs better than PRS.
 Combining the gain from both MRS1 and MRS2, MRS's performance
 progressively increases compared to the standard PRS.
+
+All computation of MRS1 and MRS2 on 450 simulated datasets finished in less than 20 minutes on a desktop with an Intel Xeon W-2104 CPU and 32GB of RAM.
 
 \begin{figure}
 \centering

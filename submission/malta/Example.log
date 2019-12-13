@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  13 DEC 2019 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  13 DEC 2019 14:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -881,23 +881,23 @@ Overfull \hbox (2.38739pt too wide) in paragraph at lines 385--392
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 392.
 [4 <./images/1_ori_vs_MRS_auROC_.pdf>]
-<images/improvements_train_ms.pdf, id=162, 289.08pt x 325.215pt>
+<images/improvements_train_ms.pdf, id=162, 296.10625pt x 325.215pt>
 File: images/improvements_train_ms.pdf Graphic file (type pdf)
 <use images/improvements_train_ms.pdf>
 Package pdftex.def Info: images/improvements_train_ms.pdf  used on input line 4
-15.
-(pdftex.def)             Requested size: 215.80182pt x 242.77426pt.
+17.
+(pdftex.def)             Requested size: 215.80182pt x 237.02287pt.
 
-Overfull \hbox (2.38739pt too wide) in paragraph at lines 415--418
+Overfull \hbox (2.38739pt too wide) in paragraph at lines 417--420
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 434.
+(hyperref)                removing `\uppercase' on input line 436.
 
 
-Underfull \hbox (badness 1688) in paragraph at lines 436--452
+Underfull \hbox (badness 1688) in paragraph at lines 438--454
 \OT1/ptm/m/n/10 We in-tro-duce the Mul-ti-lo-cus Risk Score (MRS)
  []
 
@@ -907,33 +907,33 @@ Underfull \vbox (badness 2970) has occurred while \output is active []
  [5 <./images/improvements_train_ms.pdf>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 502.
+(hyperref)                removing `\uppercase' on input line 504.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 582--587
 [][]\OT1/ptm/m/n/10 Ritchie,M.D. \OT1/ptm/m/it/10 et al. \OT1/ptm/m/n/10 (2001)
  Multifactor-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--585
+Underfull \hbox (badness 10000) in paragraph at lines 582--587
 \OT1/ptm/m/n/10 Dimensionality Re-duc-tion Re-veals High-Order
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 612.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 614.
 [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 612.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 614.
  (./Example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 612.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 612.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 614.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 614.
 Package rerunfilecheck Info: File `Example.out' has not changed.
 (rerunfilecheck)             Checksum: D0EB36126D1A26E5B831A0C55F6DA2F7;955.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 612.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 614.
  ) 
 Here is how much of TeX's memory you used:
  8227 strings out of 492649
  123245 string characters out of 6129622
- 217312 words of memory out of 5000000
+ 217326 words of memory out of 5000000
  11917 multiletter control sequences out of 15000+600000
  63003 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -948,7 +948,7 @@ xmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2018/texmf-dist/fo
 nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/
 utmri8a.pfb>
-Output written on Example.pdf (6 pages, 345790 bytes).
+Output written on Example.pdf (6 pages, 346121 bytes).
 PDF statistics:
  233 PDF objects out of 1000 (max. 8388607)
  207 compressed objects within 3 object streams
