@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/7f65a26f8ef368de0c471b16169b7817540e230e/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/2d671150254451d4891fa007effd553bca1c7c3d/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@7f65a26](https://github.com/lelaboratoire/rethink-prs-ms/tree/7f65a26f8ef368de0c471b16169b7817540e230e)
+from [lelaboratoire/rethink-prs-ms@2d67115](https://github.com/lelaboratoire/rethink-prs-ms/tree/2d671150254451d4891fa007effd553bca1c7c3d)
 on December 13, 2019.
 </em></small>
 
@@ -131,7 +131,9 @@ In observing prediction accuracy results, we demonstrate the improved performanc
 
 ### Multifactor Dimensionality Reduction (MDR) and model-based MDR (MB-MDR)
 MDR is a nonparametric method that detects multiple genetic loci associated with a clinical outcome by reducing the dimension of a genotype dataset through pooling multilocus genotypes into high-risk and low-risk groups [@E26QhGxD].
-Extended from the original MDR algorithm, MB-MDR was first introduced in 2009, and its current implementation efficiently and effectively detects multiple sets of significant gene-gene interactions in relation to a trait of interest while efficiently controlling type I error rates.
+MDR has been applied to a number of real-world datasets and sufficiently identified important variant interactions that associated with various diseases [@MPRmUaRF].
+Extended from the original MDR algorithm, MB-MDR was first introduced in 2009, and its current implementation efficiently and effectively detects multiple sets of significant gene-gene interactions in relation to a trait of interest while efficiently controlling type I error rates via a cross-validation strategy.
+By merging multi-locus genotypes exhibiting significant high or low risk based on association testing rather than comparing to an arbitrary threshold as in MDR, MB-MDR provides a flexible framework to detect and measure epistasis. 
 
 In addition to the test statistic and P values associated with each genotype combination, another important output of MB-MDR is the HLO matrices.
 Briefly, in the case of a binary trait, for each genotype combination, an HLO matrix is a 3 x 3 matrix with each cell containing H (high), L (low) or O (no evidence), indicating risk of an individual whose genotype pairs fall into that cell [@S6nj6BFK].

@@ -1197,6 +1197,41 @@
     "id": "S6nj6BFK"
   },
   {
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "5",
+    "DOI": "10.1186/1479-7364-2-5-318",
+    "type": "article-journal",
+    "source": "Crossref",
+    "title": "Multifactor dimensionality reduction: An analysis strategy for modelling and detecting gene - gene interactions in human genetics and pharmacogenomics studies",
+    "volume": "2",
+    "author": [
+      {
+        "given": "Alison A",
+        "family": "Motsinger"
+      },
+      {
+        "given": "Marylyn D",
+        "family": "Ritchie"
+      }
+    ],
+    "container-title": "Human Genomics",
+    "language": "en",
+    "issued": {
+      "date-parts": [
+        [
+          2006,
+          3,
+          1
+        ]
+      ]
+    },
+    "URL": "https://doi.org/ggfhbc",
+    "container-title-short": "Hum Genomics",
+    "PMCID": "PMC3500181",
+    "PMID": "16595076",
+    "id": "MPRmUaRF"
+  },
+  {
     "publisher": "Springer Nature",
     "issue": "1",
     "DOI": "10.1186/1756-0381-6-1",
