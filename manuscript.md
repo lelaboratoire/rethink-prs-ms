@@ -5,7 +5,7 @@ author-meta:
 - Patryk Orzechowski
 - Elisabetta Manduchi
 - Jason H. Moore
-date-meta: '2019-09-13'
+date-meta: '2019-12-13'
 keywords:
 - markdown
 - publishing
@@ -22,10 +22,10 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/fe749d86108a06ecde45388fdd3ac2ef0719f744/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/017723497b003c3dc9bbb09aff35b9327018a133/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@fe749d8](https://github.com/lelaboratoire/rethink-prs-ms/tree/fe749d86108a06ecde45388fdd3ac2ef0719f744)
-on September 13, 2019.
+from [lelaboratoire/rethink-prs-ms@0177234](https://github.com/lelaboratoire/rethink-prs-ms/tree/017723497b003c3dc9bbb09aff35b9327018a133)
+on December 13, 2019.
 </em></small>
 
 ## Authors
