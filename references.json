@@ -477,35 +477,6 @@
   },
   {
     "publisher": "Springer Science and Business Media LLC",
-    "issue": "7256",
-    "DOI": "10.1038/nature08185",
-    "type": "article-journal",
-    "page": "748-752",
-    "source": "Crossref",
-    "title": "Common polygenic variation contributes to risk of schizophrenia and bipolar disorder",
-    "volume": "460",
-    "author": [
-      {}
-    ],
-    "container-title": "Nature",
-    "language": "en",
-    "issued": {
-      "date-parts": [
-        [
-          2009,
-          7,
-          1
-        ]
-      ]
-    },
-    "URL": "https://doi.org/cb5f2j",
-    "container-title-short": "Nature",
-    "PMCID": "PMC3912837",
-    "PMID": "19571811",
-    "id": "mwTa2RUK"
-  },
-  {
-    "publisher": "Springer Science and Business Media LLC",
     "issue": "7",
     "DOI": "10.1038/nrg.2016.27",
     "type": "article-journal",
@@ -1379,5 +1350,61 @@
     "PMCID": "PMC6611653",
     "PMID": "31233491",
     "id": "YuJbg3zO"
+  },
+  {
+    "title": "Common polygenic variation contributes to risk of schizophrenia and bipolar disorder.",
+    "volume": "460",
+    "issue": "7256",
+    "page": "748-52",
+    "container-title": "Nature",
+    "container-title-short": "Nature",
+    "ISSN": "1476-4687",
+    "issued": {
+      "date-parts": [
+        [
+          2009,
+          7,
+          1
+        ]
+      ]
+    },
+    "author": [
+      {},
+      {
+        "given": "Shaun M",
+        "family": "Purcell"
+      },
+      {
+        "given": "Naomi R",
+        "family": "Wray"
+      },
+      {
+        "given": "Jennifer L",
+        "family": "Stone"
+      },
+      {
+        "given": "Peter M",
+        "family": "Visscher"
+      },
+      {
+        "given": "Michael C",
+        "family": "O'Donovan"
+      },
+      {
+        "given": "Patrick F",
+        "family": "Sullivan"
+      },
+      {
+        "given": "Pamela",
+        "family": "Sklar"
+      }
+    ],
+    "PMID": "19571811",
+    "PMCID": "PMC3912837",
+    "DOI": "10.1038/nature08185",
+    "abstract": "Schizophrenia is a severe mental disorder with a lifetime risk of about 1%, characterized by hallucinations, delusions and cognitive deficits, with heritability estimated at up to 80%. We performed a genome-wide association study of 3,322 European individuals with schizophrenia and 3,587 controls. Here we show, using two analytic approaches, the extent to which common genetic variation underlies the risk of schizophrenia. First, we implicate the major histocompatibility complex. Second, we provide molecular genetic evidence for a substantial polygenic component to the risk of schizophrenia involving thousands of common alleles of very small effect. We show that this component also contributes to the risk of bipolar disorder, but not to several non-psychiatric diseases.",
+    "URL": "https://www.ncbi.nlm.nih.gov/pubmed/19571811",
+    "type": "article-journal",
+    "id": "1HDXPZXLN"
   }
 ]

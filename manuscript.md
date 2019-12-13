@@ -22,9 +22,9 @@ title: Expanding polygenic risk scores to include automatic genotype encodings a
 
 <small><em>
 This manuscript
-([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/3ce8c6ff6b91b932c235265fd941c11a54684605/))
+([permalink](https://lelaboratoire.github.io/rethink-prs-ms/v/7f65a26f8ef368de0c471b16169b7817540e230e/))
 was automatically generated
-from [lelaboratoire/rethink-prs-ms@3ce8c6f](https://github.com/lelaboratoire/rethink-prs-ms/tree/3ce8c6ff6b91b932c235265fd941c11a54684605)
+from [lelaboratoire/rethink-prs-ms@7f65a26](https://github.com/lelaboratoire/rethink-prs-ms/tree/7f65a26f8ef368de0c471b16169b7817540e230e)
 on December 13, 2019.
 </em></small>
 
@@ -106,7 +106,7 @@ While GWAS indeed capture gene variants associated with a phenotype of interest 
 PRS provide an ability to explain inherited risk for disease in an individual by representing a weighted sum aggregate of risk alleles based on measured loci effect contributions derived from GWAS [@auyRflEe; @1GK3F1BxE]. 
 In quantifying the effect of particular combinations of genetic SNP variants towards risk prediction, PRS offers a probabilisitic susceptibility value of an individual to disease.
 Such genetic risk estimation scores are central to clinical decision-making, serving to reinforce individual health management in heritable disease detection and early prevention of various adult-onset conditions. 
-The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@mwTa2RUK; @oBD9eYkN; @Gh0gKn77; @Z12fynub; @gkABDVTx].
+The utility of PRS scores have been demonstrated in previous studies towards disease risk stratification across leading heritable causes of death in the developed world [@1HDXPZXLN; @oBD9eYkN; @Gh0gKn77; @Z12fynub; @gkABDVTx].
 
 Because common PRS method assumes a simplified genetic architecture consisting of independent weights, understanding interactive relationships among genes and SNPs that associate with disease outcome remain a challenge.
 Existing standard multivariate categorical data analysis approaches fall short in handling such enormous possible genetic interaction combinations with both linear and nonlinear effects.
@@ -161,7 +161,8 @@ For each subject $i$ ($i = 1,2, \dotsm, n$), the $d$-way multilocus risk score i
 $$MRS_d(i) = \sum_{j = 1}^{k_d} \gamma_j \times \textrm{HLO}_j(X_{ij})$$
 where $\gamma_j$ is the test statistic of the $j^\textrm{th}$ genotype combination output from MB-MDR, $X_{ij}$ is the $j^\textrm{th}$ genotype combinations of subject $i$ and $\textrm{HLO}_j$ represents the $j^\textrm{th}$ recoded HLO matrix (1 = High, -1 = Low, 0 = No evidence).
 As an example, consider a pair $X_{*j} = (SNP_{j_1}, SNP_{j_2})$ with $\gamma_j=8.3$ and corresponding HLO matrix of all O's except an L in the first cell.
-Then, all subjects' current risks would remain the same except the ones with $SNP_{j_1} = SNP_{j_2} = 0$ where their risks are subtracted by 8.3.
+Then, the contribution of this pair to a subject's risk would be 0 for all subjects except those with genotype 0 at both SNPs.
+For the latter, the contribution would be -8.3.
 
 In this study, we consider 1-way and 2-way interactions.
 We denote by MRS the combined risk score MRS1 + MRS2.
@@ -179,11 +180,17 @@ $$SE = \sum_{j} IG(X_j; Y) = \sum_{j} \left(I(SNP_{j_1}, SNP_{j_2}; Y) - I(SNP_{
 where $IG$ measures how much of the phenotypic class $Y$ can be explained by the 2-way epistatic interaction within the genotype combination $X_j$.
 We refer the reader to Ref. [@1FFMLUZxb] for more details on the calculation of the entropy-based terms.
 
+To prevent potential bias, we compute these values from the training set.
+However, because the training and holdout sets were randomly split, the amount of main or interaction effect in both datasets are expected to be similar.
+
+
 ### Simulated data
 The primary objective of this data simulation process was to provide a comprehensive set of reproducible and diverse datasets for the current study.
 Each dataset was generated in the following manner.
 For an individual, each genotype was randomly assigned with 1/2 probability of being heterozygous (*Aa*, coded as `1`), 1/4 probability of being homozygous major (*AA*, coded as `0`) and 1/4 probability of being homozygous minor (*aa*, coded as `2`).
-The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions (HIBACHI) [@pDXdtMFa].
+The binary endpoint for the data was determined using a recently proposed evolutionary-based method for dataset generation called Heuristic Identification of Biological Architectures for simulating Complex Hierarchical Interactions [@pDXdtMFa].
+This method uses genetic programming to build different mathematical and logical models resulting in a binary endpoint, such that the objective function called fitness is maximized.
+In this study, to arrive at a diverse collection of datasets, we aim to maximize the difference in predictive performance of all pairs of ten pre-selected classifiers.
 Details on data simulation are provided in the README of the study's analysis repository [https://github.com/lelaboratoire/rethink-prs/](https://github.com/lelaboratoire/rethink-prs/).
 
 The final collection has 450 datasets containing 1000 individuals and 10 SNPs with various amount of epistatic effect on the binary phenotypic outcome.
@@ -207,6 +214,7 @@ Detailed simulation and analysis code needed to reproduce the results in this st
 
 In 335 out of 450 simulated datasets, MRS produces higher auROC compared to PRS (green lines, Fig. {@fig:auroc_mrs_prs}).
 In 363 datasets where the standard PRS method performs poorly (auROC < 60%), MRS performs particularly well (auROC > 90%) in 102 datasets.
+This auROC increase of approximately 50\% can be seen at the second peak in the density of the difference between the auROCs from the two methods (Fig. \ref{fig:auroc_mrs_prs} right).
 When MRS yields smaller auROC, the difference is small (3.3% ± 2.8%, purple lines/areas).
 Across all datasets, the improvement of MRS over PRS is significant (P < $10^{-15}$) according to a Wilcoxon signed rank test.
 To assess whether this improvement in performance correlates with the amount of interaction effects contained in each dataset, in the following section, we untangled the two components of MRS and test for the correlation between the difference in auROC and two entropy-based measures, main and interaction effect, of each dataset.
@@ -214,11 +222,14 @@ To assess whether this improvement in performance correlates with the amount of 
 ![MRS produces improved auROC in the majority (335 green lines) of the 450 simulated datasets (each line represents a dataset). In many datasets, the standard PRS method performs poorly (auROC < 60%) while the new method yields auROC over 90%. This improvement in performance can be seen at the second peak (~50% auROC increase) in the density of the difference between the auROCs from the two methods (right).](images/1_ori_vs_MRS_auROC_.svg){#fig:auroc_mrs_prs width="80%"}
 
 ### Assess improvement in performance
+We recall that MRS is combined from the 1-way and 2-way interaction risk scores: MRS = MRS1 + MRS2.
 Individually, MRS1 and MRS2 both significantly outperformed the standard PRS method (both P values < $10^{-15}$) according to a Wilcoxon signed rank test.
 As the amount of main effects increases (Fig. {@fig:improvements} left column), MRS1 increasingly performs better than PRS, which is likely because encodings are inferred (top left).
 Meanwhile, MRS2's accuracy remain mostly similar to that of PRS (middle left).
 On the other hand, when the amount of interaction effects increases (Fig. {@fig:improvements} right column), MRS1 performs mostly on par to PRS while MRS2 increasingly performs better than PRS.
 Combining the gain from both MRS1 and MRS2, MRS's performance progressively increases compared to the standard PRS.
+
+All computation of MRS1 and MRS2 on 450 simulated datasets finished in less than 20 minutes on a desktop with an Intel Xeon W-2104 CPU and 32GB of RAM.
 
 ![Combining 1-way (MRS1) and 2-way (MRS2) risk scores, MRS shows increasing outperformance to standard PRS as dataset contains more main and interaction effects.](images/improvements_train_ms.svg){#fig:improvements width="70%"}
 
